@@ -1,3 +1,5 @@
+The repository if a fork of https://github.com/ForensicArtifacts/artifacts
+
 ## Digital Forensics Artifact Repository
 
 A free, community-sourced, machine-readable knowledge base of digital forensic
@@ -11,9 +13,9 @@ follow the specification.
 
 ### Project status
 
-[Travis-CI](https://travis-ci.org/) | [AppVeyor](https://ci.appveyor.com) | [Codecov](https://codecov.io/)
---- | --- | ---
-[![Build Status](https://travis-ci.org/ForensicArtifacts/artifacts.svg?branch=master)](https://travis-ci.org/ForensicArtifacts/artifacts) | [![Build status](https://ci.appveyor.com/api/projects/status/7gv9fwr269527cj1?svg=true)](https://ci.appveyor.com/project/forensicartifacts/artifacts) | [![codecov](https://codecov.io/gh/ForensicArtifacts/artifacts/branch/master/graph/badge.svg)](https://codecov.io/gh/ForensicArtifacts/artifacts)
+| [Travis-CI](https://travis-ci.org/)                                                                                                     | [Codecov](https://codecov.io/)                                                                                                                 |
+|-----------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|
+| [![Build Status](https://travis-ci.org/forensicanalysis/artifacts.svg?branch=master)](https://travis-ci.org/forensicanalysis/artifacts) | [![codecov](https://codecov.io/gh/forensicanalysis/artifacts/branch/master/graph/badge.svg)](https://codecov.io/gh/forensicanalysis/artifacts) |
 
 ## Artifact Definitions
 
@@ -22,28 +24,28 @@ and the format is described in detail in the [Style Guide](https://github.com/Fo
 
 As of 2019-06-10 the repository contains:
 
-| **File paths covered** | **1013** |
-| :------------------ | ------: |
-| **Registry keys covered** | **635** |
-| **Total artifacts** | **525** |
+| **File paths covered**    | **1013** |
+|:--------------------------|---------:|
+| **Registry keys covered** |  **635** |
+| **Total artifacts**       |  **525** |
 
 **Artifacts by type**
 
 | ARTIFACT_GROUP | COMMAND | DIRECTORY | FILE | PATH | REGISTRY_KEY | REGISTRY_VALUE | WMI |
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| 21 | 9 | 14 | 283 | 8 | 50 | 114 | 26 |
+|:--------------:|:-------:|:---------:|:----:|:----:|:------------:|:--------------:|:---:|
+|       21       |    9    |    14     | 283  |  8   |      50      |      114       | 26  |
 
 **Artifacts by OS**
 
 | Darwin | Linux | Windows |
-| :---: | :---: | :---: |
-| 33 | 25 | 23 |
+|:------:|:-----:|:-------:|
+|   33   |  25   |   23    |
 
 **Artifacts by label**
 
 | Antivirus | Authentication | Browser | Cloud | Cloud Storage | Configuration Files | Docker | External Media | ExternalAccount | Hadoop | History Files | Logs | Mail | Network | Software | System | Users | iOS |
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| 6 | 18 | 21 | 2 | 4 | 41 | 2 | 2 | 3 | 1 | 3 | 46 | 15 | 15 | 43 | 104 | 68 | 5 |
+|:---------:|:--------------:|:-------:|:-----:|:-------------:|:-------------------:|:------:|:--------------:|:---------------:|:------:|:-------------:|:----:|:----:|:-------:|:--------:|:------:|:-----:|:---:|
+|     6     |       18       |   21    |   2   |       4       |         41          |   2    |       2        |        3        |   1    |       3       |  46  |  15  |   15    |    43    |  104   |  68   |  5  |
 
 ## Background/History
 
@@ -60,7 +62,7 @@ and [youtube video](https://www.youtube.com/watch?v=ren6QSvwFvg) from the GRR te
 
 ## Contributing
 
-Please send us your contribution! See [the developers guide](https://github.com/ForensicArtifacts/artifacts/wiki/Developers-guide) for instructions.
+Please send us your contribution!
 
 ## External links
 
@@ -68,6 +70,5 @@ Please send us your contribution! See [the developers guide](https://github.com/
 
 ## Contact
 
-* [forensicartifacts@googlegroups.com](https://groups.google.com/forum/#!forum/forensicartifacts)
 * Artifacts channel of [Open Source DFIR Slack](https://github.com/open-source-dfir/slack)
 
