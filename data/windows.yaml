@@ -2577,17 +2577,12 @@ doc: Windows setup API logs.
 sources:
 - type: FILE
   attributes:
-    paths: ['%%environ_systemroot%%\setupapi.log']
-    separator: '\'
-  conditions: [os_major_version < 6]
-- type: FILE
-  attributes:
-    paths:
+    paths: 
+    - '%%environ_systemroot%%\setupapi.log'
     - '%%environ_systemroot%%\inf\setupapi.app.log'
     - '%%environ_systemroot%%\inf\setupapi.dev.log'
     - '%%environ_systemroot%%\inf\setupapi.offline.log'
     separator: '\'
-  conditions: [os_major_version >= 6]
 labels: [Logs]
 supported_os: [Windows]
 urls: ['http://www.forensicswiki.org/wiki/Setup_API_Logs']
