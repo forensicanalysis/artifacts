@@ -9,7 +9,7 @@ doc: The %ProgramData% environment variable.
 sources:
 - type: REGISTRY_VALUE
   attributes: {key_value_pairs: [{key: 'HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\ProfileList', value: 'ProgramData'}]}
-provides: [environ_allusersappdata]
+  provides: [{key: environ_allusersappdata}]
 supported_os: [Windows]
 urls: ['http://environmentvariables.org/ProgramData']
 ---
@@ -21,7 +21,7 @@ sources:
     keys:
     - 'HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\ProfileList\ProfilesDirectory'
     - 'HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\ProfileList\AllUsersProfile'
-provides: [environ_allusersprofile]
+  provides: [{key: environ_allusersprofile}]
 supported_os: [Windows]
 urls: ['http://support.microsoft.com/kb//214653']
 ---
@@ -30,7 +30,7 @@ doc: The control set the system is currently using.
 sources:
 - type: REGISTRY_VALUE
   attributes: {key_value_pairs: [{key: 'HKEY_LOCAL_MACHINE\SYSTEM\Select', value: 'Current'}]}
-provides: [current_control_set]
+  provides: [{key: current_control_set}]
 supported_os: [Windows]
 urls: ['https://github.com/libyal/winreg-kb/blob/master/documentation/System%20keys.asciidoc']
 ---
@@ -53,18 +53,6 @@ provides: [os_release, os_major_version, os_minor_version]
 labels: [Software]
 supported_os: [Linux]
 ---
-name: OSXUsers
-doc: Users directories in /Users
-sources:
-- type: DIRECTORY
-  attributes: {paths: ['/Users/*']}
-labels: [Users]
-supported_os: [Darwin]
-provides: [users.username]
-urls:
-- 'http://forensicswiki.org/wiki/Mac_OS_X'
-- 'http://forensicswiki.org/wiki/Mac_OS_X_10.9_-_Artifacts_Location#Users'
----
 name: ProgramFiles
 doc: The %ProgramFiles% environment variable.
 sources:
@@ -74,7 +62,7 @@ sources:
     separator: '\'
 - type: REGISTRY_VALUE
   attributes: {key_value_pairs: [{key: 'HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion', value: 'ProgramFilesDir'}]}
-provides: [environ_programfiles]
+  provides: [{key: environ_programfiles}]
 supported_os: [Windows]
 urls: ['http://environmentvariables.org/ProgramFiles']
 ---
@@ -87,7 +75,7 @@ sources:
     separator: '\'
 - type: REGISTRY_VALUE
   attributes: {key_value_pairs: [{key: 'HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion', value: 'ProgramFilesDir (x86)'}]}
-provides: [environ_programfilesx86]
+  provides: [{key: environ_programfilesx86}]
 supported_os: [Windows]
 urls: ['http://environmentvariables.org/ProgramFiles']
 ---
@@ -100,7 +88,7 @@ doc: |
 sources:
 - type: REGISTRY_VALUE
   attributes: {key_value_pairs: [{key: 'HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion', value: 'SystemRoot'}]}
-provides: [environ_systemdrive]
+  provides: [{key: environ_systemdrive, regex: '^(..)'}]
 supported_os: [Windows]
 urls:
 - 'http://environmentvariables.org/SystemDrive'
@@ -119,7 +107,7 @@ sources:
     separator: '\'
 - type: REGISTRY_VALUE
   attributes: {key_value_pairs: [{key: 'HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion', value: 'SystemRoot'}]}
-provides: [environ_systemroot]
+  provides: [{key: environ_systemroot}]
 supported_os: [Windows]
 urls: ['http://environmentvariables.org/SystemRoot']
 ---
@@ -128,7 +116,7 @@ doc: The %TEMP% environment variable.
 sources:
 - type: REGISTRY_VALUE
   attributes: {key_value_pairs: [{key: 'HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\Environment', value: 'TEMP'}]}
-provides: [environ_temp]
+  provides: [{key: environ_temp}]
 supported_os: [Windows]
 urls: ['http://environmentvariables.org/WinDir']
 ---
@@ -137,7 +125,7 @@ doc: The codepage of the system.
 sources:
 - type: REGISTRY_VALUE
   attributes: {key_value_pairs: [{key: 'HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Nls\CodePage', value: 'ACP'}]}
-provides: [code_page]
+  provides: [{key: code_page}]
 supported_os: [Windows]
 urls: ['http://en.wikipedia.org/wiki/Windows_code_page']
 ---
@@ -154,7 +142,7 @@ sources:
     separator: '\'
 - type: REGISTRY_VALUE
   attributes: {key_value_pairs: [{key: 'HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\Environment', value: 'windir'}]}
-provides: [environ_windir]
+  provides: [{key: environ_windir}]
 supported_os: [Windows]
 urls: ['http://environmentvariables.org/WinDir']
 ---
@@ -163,7 +151,7 @@ doc: The Windows domain the system is connected to.
 sources:
 - type: REGISTRY_VALUE
   attributes: {key_value_pairs: [{key: 'HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Tcpip\Parameters', value: 'Domain'}]}
-provides: [domain]
+  provides: [{key: domain}]
 supported_os: [Windows]
 ---
 name: WindowsEnvironmentVariableAllUsersAppData
@@ -173,7 +161,7 @@ sources:
   attributes:
     key_value_pairs:
     - {key: 'HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\ProfileList', value: 'ProgramData'}
-provides: [environ_allusersappdata]
+  provides: [{key: environ_allusersappdata}]
 supported_os: [Windows]
 urls: ['http://environmentvariables.org/ProgramData']
 ---
@@ -182,7 +170,7 @@ doc: The %PATH% environment variable.
 sources:
 - type: REGISTRY_VALUE
   attributes: {key_value_pairs: [{key: 'HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\Environment', value: 'Path'}]}
-provides: [environ_path]
+  provides: [{key: environ_path}]
 supported_os: [Windows]
 urls: ['http://environmentvariables.org/WinDir']
 ---
@@ -191,6 +179,6 @@ doc: The timezone of the system in Olson format.
 sources:
 - type: REGISTRY_VALUE
   attributes: {key_value_pairs: [{key: 'HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation', value: 'StandardName'}]}
-provides: [time_zone]
+  provides: [{key: time_zone}]
 supported_os: [Windows]
 urls: ['https://github.com/libyal/winreg-kb/blob/master/documentation/Time%20zone%20keys.asciidoc']

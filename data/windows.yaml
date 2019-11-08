@@ -330,7 +330,8 @@ sources:
   attributes:
     key_value_pairs:
     - {key: 'HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Nls\CodePage', value: 'ACP'}
-provides: [code_page]
+  provides:
+    - key: code_page
 supported_os: [Windows]
 urls: ['http://en.wikipedia.org/wiki/Windows_code_page']
 ---
@@ -619,7 +620,8 @@ sources:
   attributes:
     key_value_pairs:
     - {key: 'HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Tcpip\Parameters', value: 'Domain'}
-provides: [domain]
+  provides:
+    - key: domain
 supported_os: [Windows]
 ---
 name: WindowsEnvironmentUserLoginScripts
@@ -646,7 +648,8 @@ sources:
   attributes:
     key_value_pairs:
     - {key: 'HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\ProfileList', value: 'AllUsersProfile'}
-provides: [environ_allusersprofile]
+  provides:
+    - key: environ_allusersprofile
 supported_os: [Windows]
 urls:
 - 'https://www.microsoft.com/en-us/wdsi/help/folder-variables'
@@ -675,7 +678,8 @@ sources:
   attributes:
     key_value_pairs:
     - {key: 'HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\Environment', value: 'Path'}
-provides: [environ_path]
+  provides:
+    - key: environ_path
 supported_os: [Windows]
 urls: ['http://environmentvariables.org/Path']
 ---
@@ -686,7 +690,8 @@ sources:
   attributes:
     key_value_pairs:
     - {key: 'HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\ProfileList', value: 'ProfilesDirectory'}
-provides: [environ_profilesdirectory]
+  provides:
+    - key: environ_profilesdirectory
 supported_os: [Windows]
 urls:
 - 'https://msdn.microsoft.com/en-us/library/windows/desktop/bb776892(v=vs.85).aspx'
@@ -700,7 +705,8 @@ sources:
   attributes:
     key_value_pairs:
     - {key: 'HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\ProfileList', value: 'ProgramData'}
-provides: [environ_programdata]
+  provides:
+    - key: environ_programdata
 supported_os: [Windows]
 urls: ['http://environmentvariables.org/ProgramData']
 ---
@@ -715,7 +721,8 @@ sources:
   attributes:
     key_value_pairs:
     - {key: 'HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion', value: 'ProgramFilesDir'}
-provides: [environ_programfiles]
+  provides: 
+    - key: environ_programfiles
 supported_os: [Windows]
 urls: ['http://environmentvariables.org/ProgramFiles']
 ---
@@ -730,7 +737,7 @@ sources:
   attributes:
     key_value_pairs:
     - {key: 'HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion', value: 'ProgramFilesDir (x86)'}
-provides: [environ_programfilesx86]
+  provides: [{key: environ_programfilesx86}]
 supported_os: [Windows]
 urls: ['http://environmentvariables.org/ProgramFiles']
 ---
@@ -743,7 +750,7 @@ doc: |
 sources:
 - type: ARTIFACT_GROUP
   attributes: {names: ['WindowsEnvironmentVariableSystemRoot']}
-provides: [environ_systemdrive]
+  provides: [{key: environ_systemdrive}]
 supported_os: [Windows]
 urls:
 - 'http://environmentvariables.org/SystemDrive'
@@ -764,7 +771,7 @@ sources:
   attributes:
     key_value_pairs:
     - {key: 'HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion', value: 'SystemRoot'}
-provides: [environ_systemroot]
+  provides: [{key: environ_systemroot}]
 supported_os: [Windows]
 urls: ['http://environmentvariables.org/SystemRoot']
 ---
@@ -775,7 +782,7 @@ sources:
   attributes:
     key_value_pairs:
     - {key: 'HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\Environment', value: 'TEMP'}
-provides: [environ_temp]
+  provides: [{key: environ_temp}]
 supported_os: [Windows]
 urls: ['http://environmentvariables.org/Temp']
 ---
@@ -794,7 +801,7 @@ sources:
   attributes:
     key_value_pairs:
     - {key: 'HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\Environment', value: 'windir'}
-provides: [environ_windir]
+  provides: [{key: environ_windir}]
 supported_os: [Windows]
 urls: ['http://environmentvariables.org/WinDir']
 ---
@@ -1682,7 +1689,7 @@ doc: The current control set of the Windows Registry.
 sources:
 - type: REGISTRY_VALUE
   attributes: {key_value_pairs: [{key: 'HKEY_LOCAL_MACHINE\System\Select', value: 'Current'}]}
-provides: [current_control_set]
+  provides: [{key: current_control_set}]
 supported_os: [Windows]
 urls: ['https://github.com/libyal/winreg-kb/blob/master/documentation/System%20keys.asciidoc']
 ---
@@ -1699,17 +1706,31 @@ sources:
 labels: [System,Users]
 supported_os: [Windows]
 ---
+name: WindowsRegistryProfileSIDs
+doc: Get SIDs for all users on the system with profiles present in the Registry.
+labels: [Users]
+sources:
+- type: REGISTRY_KEY
+  attributes: {keys: ['HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\ProfileList\*']}
+  provides: 
+    - key: users.sid
+      regex: 'ProfileList\\(.+)$'
+supported_os: [Windows]
+urls: ['http://msdn.microsoft.com/en-us/library/windows/desktop/bb776892(v=vs.85).aspx']
+---
 name: WindowsRegistryProfiles
 doc: |
   Get SIDs for all users on the system with profiles present in the Registry.
 
   This looks in the Windows Registry where the profiles are stored and retrieves
   the paths for each profile.
+labels: [Users]
 sources:
 - type: REGISTRY_VALUE
   attributes: {key_value_pairs: [{key: 'HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\ProfileList\*', value: 'ProfileImagePath'}]}
-labels: [Users]
-provides: [users.sid, users.userprofile, users.homedir, users.username]
+  provides: 
+    - key: users.userprofile
+    - key: users.homedir
 supported_os: [Windows]
 urls: ['http://msdn.microsoft.com/en-us/library/windows/desktop/bb776892(v=vs.85).aspx']
 ---
@@ -2895,7 +2916,7 @@ sources:
     key_value_pairs:
       - {key: 'HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation', value: 'StandardName'}
       - {key: 'HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation', value: 'TimeZoneKeyName'}
-provides: [time_zone]
+  provides: [{key: time_zone}]
 supported_os: [Windows]
 urls: ['https://github.com/libyal/winreg-kb/blob/master/documentation/Time%20zone%20keys.asciidoc']
 ---
@@ -3052,28 +3073,81 @@ sources:
 labels: [Users]
 supported_os: [Windows]
 ---
+name: WindowsUserShellFoldersOfInterest
+doc: The Shell Folders information for Windows users, defined as single values for knowledge base extraction
+sources:
+- type: REGISTRY_VALUE
+  attributes:
+    key_value_pairs:
+        - {key: 'HKEY_USERS\%%users.sid%%\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders', value: 'AppData'}
+  provides: [{key: users.appdata}]
+- type: REGISTRY_VALUE
+  attributes:
+    key_value_pairs:
+        - {key: 'HKEY_USERS\%%users.sid%%\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders', value: 'Cookies'}
+  provides: [{key: users.cookies}]
+- type: REGISTRY_VALUE
+  attributes:
+    key_value_pairs:
+        - {key: 'HKEY_USERS\%%users.sid%%\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders', value: 'Startup'}
+  provides: [{key: users.startup}]
+- type: REGISTRY_VALUE
+  attributes:
+    key_value_pairs:
+        - {key: 'HKEY_USERS\%%users.sid%%\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders', value: 'Personal'}
+  provides: [{key: users.documents}]
+- type: REGISTRY_VALUE
+  attributes:
+    key_value_pairs:
+        - {key: 'HKEY_USERS\%%users.sid%%\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders', value: 'Desktop'}
+  provides: [{key: users.desktop}]
+- type: REGISTRY_VALUE
+  attributes:
+    key_value_pairs:
+        - {key: 'HKEY_USERS\%%users.sid%%\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders', value: 'Cache'}
+  provides: [{key: users.internet_cache}]
+- type: REGISTRY_VALUE
+  attributes:
+    key_value_pairs:
+        - {key: 'HKEY_USERS\%%users.sid%%\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders', value: 'Local AppData'}
+  provides: [{key: users.localappdata}]
+- type: REGISTRY_VALUE
+  attributes:
+    key_value_pairs:
+        - {key: 'HKEY_USERS\%%users.sid%%\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders', value: '{A520A1A4-1780-4FF6-BD18-167343C5AF16}'}
+  provides: [{key: users.localappdata_low}]
+- type: REGISTRY_VALUE
+  attributes:
+    key_value_pairs:
+        - {key: 'HKEY_USERS\%%users.sid%%\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders', value: 'Recent'}
+  provides: [{key: users.recent}]
+- type: REGISTRY_VALUE
+  attributes:
+    key_value_pairs:
+        - {key: 'HKEY_USERS\%%users.sid%%\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders', value: 'AppData'}
+  provides: [{key: users.appdata}]
+- type: REGISTRY_VALUE
+  attributes:
+    key_value_pairs:
+        - {key: 'HKEY_USERS\%%users.sid%%\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders', value: 'AppData'}
+  provides: [{key: users.appdata}]
+- type: REGISTRY_VALUE
+  attributes:
+    key_value_pairs:
+        - {key: 'HKEY_USERS\%%users.sid%%\Environment', value: 'TEMP'}
+        - {key: 'HKEY_USERS\%%users.sid%%\Environment', value: 'TMP'}
+  provides: [{key: users.temp}]
+supported_os: [Windows]
+---
 name: WindowsUserShellFolders
 doc: The Shell Folders information for Windows users.
 sources:
 - type: REGISTRY_KEY
   attributes:
     keys:
-    - 'HKEY_USERS\%%users.sid%%\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders\*'
-    - 'HKEY_USERS\%%users.sid%%\Environment\*'
-    - 'HKEY_USERS\%%users.sid%%\Volatile Environment\*'
-provides:
-- users.cookies
-- users.appdata
-- users.personal
-- users.startup
-- users.homedir
-- users.desktop
-- users.internet_cache
-- users.localappdata
-- users.localappdata_low
-- users.recent
-- users.userprofile
-- users.temp
+    - 'HKEY_USERS\%%users.sid%%\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders'
+    - 'HKEY_USERS\%%users.sid%%\Environment'
+    - 'HKEY_USERS\%%users.sid%%\Volatile Environment'
 supported_os: [Windows]
 ---
 name: WindowsWinlogonGinaDLL
