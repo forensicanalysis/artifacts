@@ -2400,8 +2400,8 @@ sources:
 - type: REGISTRY_KEY
   attributes:
     keys:
-    - 'HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Explorer\ShellExecuteHooks\*'
-    - 'HKEY_LOCAL_MACHINE\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Explorer\ShellExecuteHooks\*'
+    - 'HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Explorer\ShellExecuteHooks'
+    - 'HKEY_LOCAL_MACHINE\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Explorer\ShellExecuteHooks'
 supported_os: [Windows]
 urls:
 - 'http://gladiator-antivirus.com/forum/index.php?showtopic=24610'
