@@ -1,0 +1,52 @@
+# USB Artifacts
+
+name: WindowsUSBInformation
+doc: Windows Event logs.
+sources:
+- type: ARTIFACT_GROUP
+  attributes:
+    names:
+    - 'WindowsUSBDeviceInformations'
+    - 'WindowsUSBVolumeAndDriveMapping'
+    - 'WindowsUSBUserMountedDevices'
+    - 'WindowsDeviceSetup'
+supported_os: [Windows]
+---
+name: WindowsUSBDeviceInformations
+doc: |
+  Windows USB Device Informations.
+
+  USBSTOR subkey only exists when there ever was an USB device mounted.
+sources:
+- type: REGISTRY_KEY
+  attributes:
+    keys:
+    - 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Enum\USBSTOR\**'
+supported_os: [Windows]
+urls: ['https://www.researchgate.net/publication/318514858_USB_Storage_Device_Forensics_for_Windows_10']
+---
+name: WindowsUSBVolumeAndDriveMapping
+doc: |
+  Windows USB volume and drive mapping.
+
+  Displays the mapping of USB devices to drives and volumes.
+sources:
+- type: REGISTRY_KEY
+  attributes:
+    keys:
+    - 'HKEY_LOCAL_MACHINE\SYSTEM\MountedDevices'
+supported_os: [Windows]
+urls: ['https://www.forensicswiki.org/wiki/USB_History_Viewing']
+---
+name: WindowsUSBUserMountedDevices
+doc: |
+  Windows USB user mounted devices.
+
+  Shows the GUIDs of all devices the user has ever mounted.
+sources:
+- type: REGISTRY_KEY
+  attributes:
+    keys:
+    - 'HKEY_USERS\%%users.sid%%\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\**'
+supported_os: [Windows]
+urls: ['http://techgenix.com/extracting-usb-artifacts-from-windows-7/']
