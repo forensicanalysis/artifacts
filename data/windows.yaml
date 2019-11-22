@@ -717,12 +717,12 @@ sources:
   attributes:
     paths: ['\Program Files']
     separator: '\'
+  provides: [{key: environ_programfiles}]
 - type: REGISTRY_VALUE
   attributes:
     key_value_pairs:
     - {key: 'HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion', value: 'ProgramFilesDir'}
-  provides: 
-    - key: environ_programfiles
+  provides: [{key: environ_programfiles}]
 supported_os: [Windows]
 urls: ['http://environmentvariables.org/ProgramFiles']
 ---
@@ -733,6 +733,7 @@ sources:
   attributes:
     paths: ['\Program Files (x86)']
     separator: '\'
+  provides: [{key: environ_programfilesx86}]
 - type: REGISTRY_VALUE
   attributes:
     key_value_pairs:
@@ -766,6 +767,7 @@ sources:
     - '\WINNT35'
     - '\WTSRV'
     separator: '\'
+  provides: [{key: environ_systemroot}]
 - type: REGISTRY_VALUE
   attributes:
     key_value_pairs:
@@ -796,6 +798,7 @@ sources:
     - '\WINNT35'
     - '\WTSRV'
     separator: '\'
+  provides: [{key: environ_windir}]
 - type: REGISTRY_VALUE
   attributes:
     key_value_pairs:
