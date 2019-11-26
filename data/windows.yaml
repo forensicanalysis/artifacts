@@ -638,16 +638,29 @@ urls:
 - 'http://www.hexacorn.com/blog/2014/11/14/beyond-good-ol-run-key-part-18/'
 - 'https://social.msdn.microsoft.com/Forums/windowsdesktop/en-US/cb6f1d6f-60a6-4369-803e-ec03d902e638/gina-how-to-run-domain-scripts-after-logon'
 ---
-name: WindowsEnvironmentVariableAllUsersProfile
+name: WindowsAllUsersProfile
 doc: |
   The %AllUsersProfile% environment variable
-
   May or may not depend on registry keys - see urls
 sources:
 - type: REGISTRY_VALUE
   attributes:
     key_value_pairs:
     - {key: 'HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\ProfileList', value: 'AllUsersProfile'}
+  provides:
+    - key: environ_allusersprofile
+- type: REGISTRY_VALUE
+  attributes:
+    key_value_pairs:
+    - {key: 'HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\ProfileList', value: 'ProgramData'}
+  provides:
+    - key: environ_allusersprofile
+- type: PATH
+  attributes:
+    paths:
+      - '\ProgramData'
+      - '\Documents and Settings\All Users'
+    separator: '\'
   provides:
     - key: environ_allusersprofile
 supported_os: [Windows]
