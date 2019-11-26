@@ -941,7 +941,6 @@ sources:
     - key: users.username
       regex: '/Users/([^/]+)'
     - key: users.homedir
-      regex: '/Users/([^/]+)'
 labels: [Users]
 supported_os: [Darwin]
 urls:

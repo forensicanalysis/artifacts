@@ -4,7 +4,7 @@ name: AnacronFiles
 doc: Anacron files.
 sources:
 - type: FILE
-  attributes: 
+  attributes:
     paths:
     - '/etc/anacrontab'
     - '/etc/cron.daily/*'

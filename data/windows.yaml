@@ -766,13 +766,16 @@ sources:
     - '\WINNT35'
     - '\WTSRV'
     separator: '\'
-  provides: [{key: environ_systemroot}]
+  provides:
+    - key: environ_systemroot
+    - key: environ_systemdrive
+      regex: '^(..)'
 - type: REGISTRY_VALUE
   attributes:
     key_value_pairs:
     - {key: 'HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion', value: 'SystemRoot'}
   provides: 
-    - {key: environ_systemroot}
+    - key: environ_systemroot
     - key: environ_systemdrive
       regex: '^(..)'
 supported_os: [Windows]
