@@ -971,9 +971,12 @@ doc: Users directories in /Users
 sources:
 - type: DIRECTORY
   attributes: {paths: ['/Users/*']}
+  provides:
+    - key: users.username
+      regex: '/Users/([^/]+)'
+    - key: users.homedir
 labels: [Users]
 supported_os: [Darwin]
-provides: [users.username]
 urls:
 - 'http://forensicswiki.org/wiki/Mac_OS_X'
 - 'http://forensicswiki.org/wiki/Mac_OS_X_10.9_-_Artifacts_Location#Users'
