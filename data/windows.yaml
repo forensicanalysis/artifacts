@@ -270,7 +270,7 @@ doc: Databases that contain the Windows BITS jobs definition and state.
 sources:
 - type: FILE
   attributes:
-    paths: ['%%environ_allusersprofile%%\Microsoft\Network\Downloader\qmgr*.dat']
+    paths: ['%%environ_allusersappdata%%\Microsoft\Network\Downloader\qmgr*.dat']
     separator: '\'
 supported_os: [Windows]
 urls: ['http://dfrws.org/2015/proceedings/presentations/DFRWS2015-pres3.pdf']
@@ -638,9 +638,9 @@ urls:
 - 'http://www.hexacorn.com/blog/2014/11/14/beyond-good-ol-run-key-part-18/'
 - 'https://social.msdn.microsoft.com/Forums/windowsdesktop/en-US/cb6f1d6f-60a6-4369-803e-ec03d902e638/gina-how-to-run-domain-scripts-after-logon'
 ---
-name: WindowsAllUsersProfile
+name: Windowsallusersappdata
 doc: |
-  The %AllUsersProfile% environment variable
+  The %allusersappdata% environment variable
   May or may not depend on registry keys - see urls
 sources:
 - type: REGISTRY_VALUE
@@ -648,13 +648,13 @@ sources:
     key_value_pairs:
     - {key: 'HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\ProfileList', value: 'AllUsersProfile'}
   provides:
-    - key: environ_allusersprofile
+    - key: environ_allusersappdata
 - type: REGISTRY_VALUE
   attributes:
     key_value_pairs:
     - {key: 'HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\ProfileList', value: 'ProgramData'}
   provides:
-    - key: environ_allusersprofile
+    - key: environ_allusersappdata
 - type: PATH
   attributes:
     paths:
@@ -662,7 +662,7 @@ sources:
       - '\Documents and Settings\All Users'
     separator: '\'
   provides:
-    - key: environ_allusersprofile
+    - key: environ_allusersappdata
 supported_os: [Windows]
 urls:
 - 'https://www.microsoft.com/en-us/wdsi/help/folder-variables'
@@ -755,20 +755,6 @@ sources:
 supported_os: [Windows]
 urls: ['http://environmentvariables.org/ProgramFiles']
 ---
-name: WindowsEnvironmentVariableSystemDrive
-doc: |
-  The %SystemDrive% environment variable, usually "C:".
-
-  This value isn't actually present in the Registry but with some parsing we
-  can figure it out from SystemRoot.
-sources:
-- type: ARTIFACT_GROUP
-  attributes: {names: ['WindowsEnvironmentVariableSystemRoot']}
-supported_os: [Windows]
-urls:
-- 'http://environmentvariables.org/SystemDrive'
-- 'https://msdn.microsoft.com/en-us/library/cc231436.aspx'
----
 name: WindowsEnvironmentVariableSystemRoot
 doc: The system root directory path, defined by %SystemRoot%, typically "C:\Windows".
 sources:
@@ -785,7 +771,10 @@ sources:
   attributes:
     key_value_pairs:
     - {key: 'HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion', value: 'SystemRoot'}
-  provides: [{key: environ_systemroot}]
+  provides: 
+    - {key: environ_systemroot}
+    - key: environ_systemdrive
+      regex: '^(..)'
 supported_os: [Windows]
 urls: ['http://environmentvariables.org/SystemRoot']
 ---
@@ -2669,8 +2658,8 @@ sources:
 - type: FILE
   attributes:
     paths:
-    - '%%environ_allusersprofile%%\Microsoft\Windows\Start Menu\Programs\Startup\*'
-    - '%%environ_allusersprofile%%\Start Menu\Programs\Startup\*'
+    - '%%environ_allusersappdata%%\Microsoft\Windows\Start Menu\Programs\Startup\*'
+    - '%%environ_allusersappdata%%\Start Menu\Programs\Startup\*'
     - '%%users.appdata%%\Microsoft\Windows\Start Menu\Programs\Startup\*'
     - '%%users.userprofile%%\Start Menu\Programs\Startup\*'
     separator: '\'
@@ -3357,3 +3346,12 @@ sources:
 labels: [System, Network]
 supported_os: [Windows]
 urls: ['https://technet.microsoft.com/en-us/library/dd197418(v=ws.10).aspx']
+---
+name: CurrentControlSet
+doc: The control set the system is currently using.
+sources:
+- type: REGISTRY_VALUE
+  attributes: {key_value_pairs: [{key: 'HKEY_LOCAL_MACHINE\SYSTEM\Select', value: 'Current'}]}
+  provides: [{key: current_control_set}]
+supported_os: [Windows]
+urls: ['https://github.com/libyal/winreg-kb/blob/master/documentation/System%20keys.asciidoc']
