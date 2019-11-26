@@ -134,15 +134,15 @@ sources:
 - type: FILE
   attributes:
     paths:
-    - '%%environ_windir%%\AppPatch\drvmain.sdb'
-    - '%%environ_windir%%\AppPatch\frxmain.sdb'
-    - '%%environ_windir%%\AppPatch\msimain.sdb'
-    - '%%environ_windir%%\AppPatch\pcamain.sdb'
-    - '%%environ_windir%%\AppPatch\sysmain.sdb'
-    - '%%environ_windir%%\AppPatch\AppPatch64\Custom\*'
-    - '%%environ_windir%%\AppPatch\Custom\*'
-    - '%%environ_windir%%\AppPatch\Custom\Custom64\*'
-    - '%%environ_windir%%\AppPatch\CustomSDB\*'
+    - '%%environ_systemroot%%\AppPatch\drvmain.sdb'
+    - '%%environ_systemroot%%\AppPatch\frxmain.sdb'
+    - '%%environ_systemroot%%\AppPatch\msimain.sdb'
+    - '%%environ_systemroot%%\AppPatch\pcamain.sdb'
+    - '%%environ_systemroot%%\AppPatch\sysmain.sdb'
+    - '%%environ_systemroot%%\AppPatch\AppPatch64\Custom\*'
+    - '%%environ_systemroot%%\AppPatch\Custom\*'
+    - '%%environ_systemroot%%\AppPatch\Custom\Custom64\*'
+    - '%%environ_systemroot%%\AppPatch\CustomSDB\*'
     separator: '\'
 labels: [Users]
 supported_os: [Windows]
@@ -223,7 +223,7 @@ sources:
   attributes:
     paths:
     - '%%environ_systemdrive%%\autoexec.bat'
-    - '%%environ_windir%%\autoexec.nt'
+    - '%%environ_systemroot%%\autoexec.nt'
     separator: '\'
 supported_os: [Windows]
 ---
@@ -299,7 +299,7 @@ sources:
   attributes:
     paths:
     # Windows 95 OSR 2.5, 98, Millennium Edition (Me)
-    - '%%environ_windir%%\System\Wbem\Repository\cim.rep'
+    - '%%environ_systemroot%%\System\Wbem\Repository\cim.rep'
     # Windows NT4 and 2000
     - '%%environ_systemroot%%\System32\wbem\Repository\CIM.REC'
     - '%%environ_systemroot%%\System32\wbem\Repository\CIM.REP'
@@ -515,7 +515,7 @@ sources:
   attributes:
     paths:
     - '%%environ_systemdrive%%\config.sys'
-    - '%%environ_windir%%\config.nt'
+    - '%%environ_systemroot%%\config.nt'
     separator: '\'
 supported_os: [Windows]
 ---
@@ -788,26 +788,6 @@ sources:
   provides: [{key: environ_temp}]
 supported_os: [Windows]
 urls: ['http://environmentvariables.org/Temp']
----
-name: WindowsEnvironmentVariableWinDir
-doc: The %WinDir% environment variable.
-sources:
-- type: PATH
-  attributes:
-    paths:
-    - '\Windows'
-    - '\WinNT'
-    - '\WINNT35'
-    - '\WTSRV'
-    separator: '\'
-  provides: [{key: environ_windir}]
-- type: REGISTRY_VALUE
-  attributes:
-    key_value_pairs:
-    - {key: 'HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\Environment', value: 'windir'}
-  provides: [{key: environ_windir}]
-supported_os: [Windows]
-urls: ['http://environmentvariables.org/WinDir']
 ---
 name: WindowsEventLogs
 doc: Windows Event logs.
@@ -2725,8 +2705,8 @@ sources:
   attributes:
     paths:
     - '%%environ_systemdrive%%\system.ini'
-    - '%%environ_windir%%\win.ini'
-    - '%%environ_windir%%\wininit.ini'
+    - '%%environ_systemroot%%\win.ini'
+    - '%%environ_systemroot%%\wininit.ini'
     separator: '\'
 supported_os: [Windows]
 ---
@@ -2920,7 +2900,6 @@ sources:
     key_value_pairs:
       - {key: 'HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation', value: 'StandardName'}
       - {key: 'HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation', value: 'TimeZoneKeyName'}
-  provides: [{key: time_zone}]
 supported_os: [Windows]
 urls: ['https://github.com/libyal/winreg-kb/blob/master/documentation/Time%20zone%20keys.asciidoc']
 ---
@@ -3271,8 +3250,8 @@ sources:
 - type: FILE
   attributes:
     paths:
-    - '%%environ_windir%%\winstart.bat'
-    - '%%environ_windir%%\dosstart.bat'
+    - '%%environ_systemroot%%\winstart.bat'
+    - '%%environ_systemroot%%\dosstart.bat'
     separator: '\'
 supported_os: [Windows]
 ---
