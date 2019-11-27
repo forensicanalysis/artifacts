@@ -1910,8 +1910,8 @@ sources:
 - type: REGISTRY_KEY
   attributes:
     keys:
-    - 'HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\*\*'
-    - 'HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\*\Parameters\*'
+    - 'HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\*'
+    - 'HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\*\Parameters'
 labels: [Software]
 supported_os: [Windows]
 urls:
