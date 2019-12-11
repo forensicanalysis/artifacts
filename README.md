@@ -11,16 +11,7 @@ to do is read YAML**. That is it, no other dependencies. The Python code in
 this project is just used to validate all the artifacts to make sure they
 follow the specification.
 
-### Project status
-
-| [Travis-CI](https://travis-ci.org/)                                                                                                     | [Codecov](https://codecov.io/)                                                                                                                 |
-|-----------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|
-| [![Build Status](https://travis-ci.org/forensicanalysis/artifacts.svg?branch=master)](https://travis-ci.org/forensicanalysis/artifacts) | [![codecov](https://codecov.io/gh/forensicanalysis/artifacts/branch/master/graph/badge.svg)](https://codecov.io/gh/forensicanalysis/artifacts) |
-
 ## Artifact Definitions
-
-The artifact definitions can be found in the [data directory](https://github.com/ForensicArtifacts/artifacts/tree/master/data)
-and the format is described in detail in the [Style Guide](https://github.com/ForensicArtifacts/artifacts/blob/master/docs/Artifacts%20definition%20format%20and%20style%20guide.asciidoc).
 
 As of 2019-06-10 the repository contains:
 
@@ -71,4 +62,3 @@ Please send us your contribution!
 ## Contact
 
 * Artifacts channel of [Open Source DFIR Slack](https://github.com/open-source-dfir/slack)
-
