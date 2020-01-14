@@ -16,4 +16,4 @@ jobs:
       - name: Install artifactvalidator
         run: go get github.com/forensicanalysis/artifactlib/cmd/artifactvalidator
       - name: Validate artifacts
-        run: artifactvalidator *.yaml
+        run: artifactvalidator -vv *.yaml
