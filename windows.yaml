@@ -655,6 +655,7 @@ sources:
     - {key: 'HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\ProfileList', value: 'ProgramData'}
   provides:
     - key: environ_allusersappdata
+    - key: environ_programdata
 - type: PATH
   attributes:
     paths:
@@ -710,18 +711,6 @@ urls:
 - 'https://msdn.microsoft.com/en-us/library/windows/desktop/bb776892(v=vs.85).aspx'
 - 'https://docs.microsoft.com/en-us/windows/deployment/usmt/usmt-recognized-environment-variables'
 - 'http://support.microsoft.com/kb//214653'
----
-name: WindowsEnvironmentVariableProgramData
-doc: The %ProgramData% environment variable.
-sources:
-- type: REGISTRY_VALUE
-  attributes:
-    key_value_pairs:
-    - {key: 'HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\ProfileList', value: 'ProgramData'}
-  provides:
-    - key: environ_programdata
-supported_os: [Windows]
-urls: ['http://environmentvariables.org/ProgramData']
 ---
 name: WindowsEnvironmentVariableProgramFiles
 doc: The %ProgramFiles% environment variable.
@@ -2626,13 +2615,17 @@ sources:
     - {key: 'HKEY_LOCAL_MACHINE\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders', value: 'Common Startup'}
     - {key: 'HKEY_LOCAL_MACHINE\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders', value: 'Startup'}
     - {key: 'HKEY_USERS\%%users.sid%%\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders', value: 'Common Startup'}
-    - {key: 'HKEY_USERS\%%users.sid%%\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders', value: 'Startup'}
     - {key: 'HKEY_USERS\%%users.sid%%\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders', value: 'Common Startup'}
     - {key: 'HKEY_USERS\%%users.sid%%\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders', value: 'Startup'}
     - {key: 'HKEY_USERS\%%users.sid%%\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders', value: 'Common Startup'}
     - {key: 'HKEY_USERS\%%users.sid%%\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders', value: 'Startup'}
     - {key: 'HKEY_USERS\%%users.sid%%\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders', value: 'Common Startup'}
     - {key: 'HKEY_USERS\%%users.sid%%\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders', value: 'Startup'}
+- type: REGISTRY_VALUE
+  attributes:
+    key_value_pairs:
+      - {key: 'HKEY_USERS\%%users.sid%%\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders', value: 'Startup'}
+  provides: [{key: users.startup}]
 supported_os: [Windows]
 ---
 name: WindowsStartupFolders
@@ -3075,11 +3068,6 @@ sources:
 - type: REGISTRY_VALUE
   attributes:
     key_value_pairs:
-        - {key: 'HKEY_USERS\%%users.sid%%\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders', value: 'Startup'}
-  provides: [{key: users.startup}]
-- type: REGISTRY_VALUE
-  attributes:
-    key_value_pairs:
         - {key: 'HKEY_USERS\%%users.sid%%\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders', value: 'Personal'}
   provides: [{key: users.documents}]
 - type: REGISTRY_VALUE
@@ -3107,16 +3095,6 @@ sources:
     key_value_pairs:
         - {key: 'HKEY_USERS\%%users.sid%%\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders', value: 'Recent'}
   provides: [{key: users.recent}]
-- type: REGISTRY_VALUE
-  attributes:
-    key_value_pairs:
-        - {key: 'HKEY_USERS\%%users.sid%%\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders', value: 'AppData'}
-  provides: [{key: users.appdata}]
-- type: REGISTRY_VALUE
-  attributes:
-    key_value_pairs:
-        - {key: 'HKEY_USERS\%%users.sid%%\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders', value: 'AppData'}
-  provides: [{key: users.appdata}]
 - type: REGISTRY_VALUE
   attributes:
     key_value_pairs:
