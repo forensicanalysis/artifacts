@@ -3,7 +3,7 @@ on: [push]
 
 jobs:
   validate:
-    name: artifactcollector
+    name: validate
     runs-on: ubuntu-latest
     steps:
       - name: Setup go 1.13
