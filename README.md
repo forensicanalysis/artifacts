@@ -1,6 +1,6 @@
-The repository if a fork of https://github.com/ForensicArtifacts/artifacts
+## Digital Forensics Artifact Repository (*forensicanalysis edition*)
 
-## Digital Forensics Artifact Repository
+The repository if a fork of ForensicArtifacts/artifacts: [More information](#backgroundhistory)
 
 A free, community-sourced, machine-readable knowledge base of digital forensic
 artifacts that the world can use both as an information source and within other
@@ -13,32 +13,42 @@ follow the specification.
 
 ## Artifact Definitions
 
-As of 2019-06-10 the repository contains:
+The artifact definition format is described in detail in the [Style Guide](https://github.com/forensicanalysis/artifactlib/blob/master/docs/style_guide.md).
 
-| **File paths covered**    | **1013** |
-|:--------------------------|---------:|
-| **Registry keys covered** |  **635** |
-| **Total artifacts**       |  **525** |
+As of 2020-01-12 the repository contains:
 
-**Artifacts by type**
+**Artifact definition by type**
 
-| ARTIFACT_GROUP | COMMAND | DIRECTORY | FILE | PATH | REGISTRY_KEY | REGISTRY_VALUE | WMI |
-|:--------------:|:-------:|:---------:|:----:|:----:|:------------:|:--------------:|:---:|
-|       21       |    9    |    14     | 283  |  8   |      50      |      114       | 26  |
+| ARTIFACT GROUP | COMMAND | DIRECTORY | FILE | PATH | REGISTRY KEY | REGISTRY VALUE | WMI |
+|----------------|---------|-----------|------|------|--------------|----------------|-----|
+|             23 |       9 |        13 |  290 |    4 |           53 |            116 |  26 |
 
-**Artifacts by OS**
+**Artifact definition by OS**
 
-| Darwin | Linux | Windows |
-|:------:|:-----:|:-------:|
-|   33   |  25   |   23    |
+| DARWIN | LINUX | WINDOWS |
+|--------|-------|---------|
+|    135 |   120 |     285 |
 
-**Artifacts by label**
+**Artifact definition by label**
 
-| Antivirus | Authentication | Browser | Cloud | Cloud Storage | Configuration Files | Docker | External Media | ExternalAccount | Hadoop | History Files | Logs | Mail | Network | Software | System | Users | iOS |
-|:---------:|:--------------:|:-------:|:-----:|:-------------:|:-------------------:|:------:|:--------------:|:---------------:|:------:|:-------------:|:----:|:----:|:-------:|:--------:|:------:|:-----:|:---:|
-|     6     |       18       |   21    |   2   |       4       |         41          |   2    |       2        |        3        |   1    |       3       |  46  |  15  |   15    |    43    |  104   |  68   |  5  |
+| ANTIVIRUS | AUTHENTICATION | BROWSER | CLOUD | CLOUD STORAGE | CONFIGURATION FILES | DOCKER | EXTERNAL MEDIA | EXTERNALACCOUNT | HADOOP | HISTORY FILES | LOGS | MAIL | NETWORK | SOFTWARE | SYSTEM | USERS | IOS |
+|-----------|----------------|---------|-------|---------------|---------------------|--------|----------------|-----------------|--------|---------------|------|------|---------|----------|--------|-------|-----|
+|         7 |             18 |      22 |     2 |             4 |                  45 |      2 |              2 |               3 |      1 |             3 |   63 |   17 |      20 |       69 |    197 |   104 |   5 |
 
 ## Background/History
+
+The repository if a fork of https://github.com/ForensicArtifacts/artifacts with the 
+following changes: 
+ - `conditions` are ignored as they have some issues ([#274](https://github.com/ForensicArtifacts/artifacts/issues/274))
+ - `provides` on the artifact definition are deprecated, as they do not enable extraction of parameters without further parsing information
+ - `provides` on source level are added to enable extraction of parameters
+ - All source types are distinctly defined, including the `DIRECTORY` type ([#286](https://github.com/ForensicArtifacts/artifacts/issues/286)).
+ - Parameter expansion and globing is defined, including `**` ([#342](https://github.com/ForensicArtifacts/artifacts/issues/342)).
+ - Inconsistent trailing `\*` in REGISTRY_KEYs are removed ([#255](https://github.com/ForensicArtifacts/artifacts/issues/255)).
+ - Validate path separators ([#265](https://github.com/ForensicArtifacts/artifacts/issues/265)).
+ - More validations, smaller documentation fixes ([#23](https://github.com/ForensicArtifacts/artifacts/issues/23#issuecomment-469063370)), ... 
+ 
+See [Updated Style Guide](https://github.com/forensicanalysis/artifactlib/blob/master/docs/style_guide.md)
 
 The [ForensicArtifacts.com](http://forensicartifacts.com/) artifact repository
 was forked from the [GRR project](https://github.com/google/grr) artifact
