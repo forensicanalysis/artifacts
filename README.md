@@ -1,6 +1,6 @@
 ## Digital Forensics Artifact Repository (*forensicanalysis edition*)
 
-The repository if a fork of ForensicArtifacts/artifacts: [More information](#backgroundhistory)
+The repository is a fork of ForensicArtifacts/artifacts: [More information](#backgroundhistory)
 
 A free, community-sourced, machine-readable knowledge base of digital forensic
 artifacts that the world can use both as an information source and within other
@@ -37,7 +37,7 @@ As of 2020-01-12 the repository contains:
 
 ## Background/History
 
-The repository if a fork of https://github.com/ForensicArtifacts/artifacts with the 
+The repository is a fork of https://github.com/ForensicArtifacts/artifacts with the 
 following changes: 
  - `conditions` are ignored as they have some issues ([#274](https://github.com/ForensicArtifacts/artifacts/issues/274))
  - `provides` on the artifact definition are deprecated, as they do not enable extraction of parameters without further parsing information
