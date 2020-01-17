@@ -650,6 +650,7 @@ sources:
     - {key: 'HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\ProfileList', value: 'AllUsersProfile'}
   provides:
     - key: environ_allusersappdata
+    - key: environ_programdata
 - type: REGISTRY_VALUE
   attributes:
     key_value_pairs:
@@ -665,6 +666,7 @@ sources:
     separator: '\'
   provides:
     - key: environ_allusersappdata
+    - key: environ_programdata
 supported_os: [Windows]
 urls:
 - 'https://www.microsoft.com/en-us/wdsi/help/folder-variables'
