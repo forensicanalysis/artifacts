@@ -365,7 +365,24 @@ doc: |
 sources:
 - type: FILE
   attributes: {paths: ['/etc/passwd']}
+  provides:
+    - key: users.username
+      regex: '(.*?):.*'
+    - key: users.homedir
+      regex: '.*:(.*?):.*'
 labels: [Configuration Files, System]
+supported_os: [Linux]
+---
+name: LinuxHome
+doc: Users directories in /home
+sources:
+- type: DIRECTORY
+  attributes: {paths: ['/home/*']}
+  provides:
+    - key: users.username
+      regex: '/home/([^/]+)'
+    - key: users.homedir
+labels: [Users]
 supported_os: [Linux]
 ---
 name: LinuxReleaseInfo

@@ -759,6 +759,7 @@ sources:
     - '\WTSRV'
     separator: '\'
   provides:
+    - key: environ_windir
     - key: environ_systemroot
     - key: environ_systemdrive
       regex: '^(..)'
@@ -1710,6 +1711,8 @@ sources:
   provides:
     - key: users.userprofile
     - key: users.homedir
+    - key: users.username
+      regex: '.*\\(.+)'
 supported_os: [Windows]
 urls: ['http://msdn.microsoft.com/en-us/library/windows/desktop/bb776892(v=vs.85).aspx']
 ---
