@@ -361,6 +361,7 @@ sources:
     paths:
     - '%%users.appdata%%\Microsoft\Windows\Cookies\index.dat'
     - '%%users.appdata%%\Microsoft\Windows\Cookies\Low\index.dat'
+    - '%%users.userprofile%%\Cookies\index.dat'
     separator: '\'
 labels: [Browser]
 supported_os: [Windows]
@@ -386,6 +387,9 @@ sources:
     - '%%users.localappdata%%\Microsoft\Windows\Temporary Internet Files\Low\Content.IE5\index.dat'
     - '%%users.localappdata%%\Microsoft\Windows\WebCache\WebCacheV*.dat'
     - '%%users.userprofile%%\Local Settings\History\History.IE5\index.dat'
+    - '%%users.userprofile%%\Local Settings\History\History.IE5\*\index.dat'
+    - '%%users.userprofile%%\Local Settings\History\Temporary Internet Files\Content.IE5\index.dat'
+    - '%%users.userprofile%%\Local Settings\Temporary Internet Files\Content.IE5\index.dat'
     separator: '\'
 labels: [Browser]
 supported_os: [Windows]
