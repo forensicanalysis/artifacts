@@ -3325,7 +3325,6 @@ urls: ['https://github.com/libyal/winreg-kb/blob/master/documentation/System%20k
 ---
 name: WindowsJobFiles
 doc: Files for the Windows Task Scheduler
-supported_os: [Windows]
 sources:
 - type: FILE
   attributes:
@@ -3333,4 +3332,5 @@ sources:
     - '%%environ_systemroot%%\system32\Tasks\**10'
     - '%%environ_systemroot%%\Tasks\**10'
     separator: '\'
+supported_os: [Windows]
 urls: ['https://stackoverflow.com/questions/2913816/how-to-find-the-location-of-the-scheduled-tasks-folder']
