@@ -1410,6 +1410,7 @@ sources:
     - WindowsPersistenceRegistryKeys
     - WindowsPowerShellDefaultProfiles
     - WindowsServices
+    - WindowsJobFiles
 labels: [Software]
 supported_os: [Windows]
 ---
@@ -3321,3 +3322,15 @@ sources:
   provides: [{key: current_control_set}]
 supported_os: [Windows]
 urls: ['https://github.com/libyal/winreg-kb/blob/master/documentation/System%20keys.asciidoc']
+---
+name: WindowsJobFiles
+doc: Files for the Windows Task Scheduler
+sources:
+- type: FILE
+  attributes:
+    paths:
+    - '%%environ_systemroot%%\system32\Tasks\**10'
+    - '%%environ_systemroot%%\Tasks\**10'
+    separator: '\'
+supported_os: [Windows]
+urls: ['https://stackoverflow.com/questions/2913816/how-to-find-the-location-of-the-scheduled-tasks-folder']
