@@ -262,28 +262,28 @@ sources:
 - type: FILE
   attributes:
     paths:
-    - '%%users.localappdata%%\Mozilla\Firefox\Profiles\*.default\Cache\*'
-    - '%%users.localappdata%%\Mozilla\Firefox\Profiles\*.default\cache2\*'
-    - '%%users.localappdata%%\Mozilla\Firefox\Profiles\*.default\cache2\doomed\*'
-    - '%%users.localappdata%%\Mozilla\Firefox\Profiles\*.default\cache2\entries\*'
+    - '%%users.localappdata%%\Mozilla\Firefox\Profiles\*.default*\Cache\*'
+    - '%%users.localappdata%%\Mozilla\Firefox\Profiles\*.default*\cache2\*'
+    - '%%users.localappdata%%\Mozilla\Firefox\Profiles\*.default*\cache2\doomed\*'
+    - '%%users.localappdata%%\Mozilla\Firefox\Profiles\*.default*\cache2\entries\*'
     separator: '\'
   supported_os: [Windows]
 - type: FILE
   attributes:
     paths:
-    - '%%users.homedir%%/Library/Caches/Firefox/Profiles/*.default/Cache/*'
-    - '%%users.homedir%%/Library/Caches/Firefox/Profiles/*.default/cache2/*'
-    - '%%users.homedir%%/Library/Caches/Firefox/Profiles/*.default/cache2/doomed/*'
-    - '%%users.homedir%%/Library/Caches/Firefox/Profiles/*.default/cache2/entries/*'
+    - '%%users.homedir%%/Library/Caches/Firefox/Profiles/*.default*/Cache/*'
+    - '%%users.homedir%%/Library/Caches/Firefox/Profiles/*.default*/cache2/*'
+    - '%%users.homedir%%/Library/Caches/Firefox/Profiles/*.default*/cache2/doomed/*'
+    - '%%users.homedir%%/Library/Caches/Firefox/Profiles/*.default*/cache2/entries/*'
   supported_os: [Darwin]
 - type: FILE
   attributes:
     paths:
-    - '%%users.homedir%%/.mozilla/firefox/*.default/Cache/*'
-    - '%%users.homedir%%/.cache/mozilla/firefox/*.default/Cache/*'
-    - '%%users.homedir%%/.cache/mozilla/firefox/*.default/cache2/*'
-    - '%%users.homedir%%/.cache/mozilla/firefox/*.default/cache2/doomed/*'
-    - '%%users.homedir%%/.cache/mozilla/firefox/*.default/cache2/entries/*'
+    - '%%users.homedir%%/.mozilla/firefox/*.default*/Cache/*'
+    - '%%users.homedir%%/.cache/mozilla/firefox/*.default*/Cache/*'
+    - '%%users.homedir%%/.cache/mozilla/firefox/*.default*/cache2/*'
+    - '%%users.homedir%%/.cache/mozilla/firefox/*.default*/cache2/doomed/*'
+    - '%%users.homedir%%/.cache/mozilla/firefox/*.default*/cache2/entries/*'
   supported_os: [Linux]
 supported_os: [Windows,Darwin,Linux]
 labels: [Browser]
