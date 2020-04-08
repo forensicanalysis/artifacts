@@ -17,7 +17,7 @@ sources:
 - type: WMI
   attributes: {query: SELECT * FROM Win32_UserAccount WHERE name='%%users.username%%'}
 labels: [Users]
-provides: [users.userdomain]
+# provides: [users.userdomain]
 supported_os: [Windows]
 urls: ['http://msdn.microsoft.com/en-us/library/windows/desktop/aa394507(v=vs.85).aspx']
 ---
@@ -205,7 +205,7 @@ sources:
 - type: WMI
   attributes: {query: SELECT * FROM Win32_UserProfile WHERE SID='%%users.sid%%'}
 labels: [Users]
-provides: [users.homedir]
+# provides: [users.homedir]
 supported_os: [Windows]
 urls: ['http://msdn.microsoft.com/en-us/library/windows/desktop/ee886409(v=vs.85).aspx']
 ---
