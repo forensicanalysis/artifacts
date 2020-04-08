@@ -378,6 +378,14 @@ doc: Users directories in /home
 sources:
 - type: DIRECTORY
   attributes: {paths: ['/home/*']}
+labels: [Users]
+supported_os: [Linux]
+---
+name: LinuxHomePath
+doc: Users directories in /home
+sources:
+- type: PATH
+  attributes: {paths: ['/home/*']}
   provides:
     - key: users.username
       regex: '/home/([^/]+)'
@@ -394,7 +402,6 @@ sources:
     - LinuxDistributionRelease
     - LinuxLSBRelease
     - LinuxSystemdOSRelease
-  provides: [{key: os_release}]
 labels: [Software]
 supported_os: [Linux]
 ---
