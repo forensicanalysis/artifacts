@@ -13,7 +13,7 @@ follow the specification.
 
 ## Artifact Definitions
 
-The artifact definition format is described in detail in the [Style Guide](https://github.com/forensicanalysis/artifactlib/blob/master/docs/style_guide.md).
+The artifact definition format is described in detail in the [Style Guide](style_guide.md).
 
 As of 2020-01-12 the repository contains:
 
@@ -37,8 +37,8 @@ As of 2020-01-12 the repository contains:
 
 ## Background/History
 
-The repository is a fork of https://github.com/ForensicArtifacts/artifacts with the 
-following changes: 
+The repository is a fork of https://github.com/ForensicArtifacts/artifacts with the
+following changes:
  - `conditions` are ignored as they have some issues ([#274](https://github.com/ForensicArtifacts/artifacts/issues/274))
  - `provides` on the artifact definition are deprecated, as they do not enable extraction of parameters without further parsing information
  - `provides` on source level are added to enable extraction of parameters
@@ -46,9 +46,9 @@ following changes:
  - Parameter expansion and globing is defined, including `**` ([#342](https://github.com/ForensicArtifacts/artifacts/issues/342)).
  - Inconsistent trailing `\*` in REGISTRY_KEYs are removed ([#255](https://github.com/ForensicArtifacts/artifacts/issues/255)).
  - Validate path separators ([#265](https://github.com/ForensicArtifacts/artifacts/issues/265)).
- - More validations, smaller documentation fixes ([#23](https://github.com/ForensicArtifacts/artifacts/issues/23#issuecomment-469063370)), ... 
- 
-See [Updated Style Guide](https://github.com/forensicanalysis/artifactlib/blob/master/docs/style_guide.md)
+ - More validations, smaller documentation fixes ([#23](https://github.com/ForensicArtifacts/artifacts/issues/23#issuecomment-469063370)), ...
+
+See [Updated Style Guide](style_guide.md)
 
 The [ForensicArtifacts.com](http://forensicartifacts.com/) artifact repository
 was forked from the [GRR project](https://github.com/google/grr) artifact
