@@ -342,6 +342,7 @@ sources:
   attributes:
     key_value_pairs:
     - {key: 'HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\ComputerName\ComputerName', value: 'ComputerName'}
+    - {key: 'HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\ComputerName\ActiveComputerName', value: 'ComputerName'}
 supported_os: [Windows]
 ---
 name: WindowsCommandProcessorAutoRun
@@ -3335,31 +3336,14 @@ sources:
 supported_os: [Windows]
 urls: ['https://stackoverflow.com/questions/2913816/how-to-find-the-location-of-the-scheduled-tasks-folder']
 ---
-name: WindowsHostnameDomain
-doc: Current host name and domain information
-sources:
-- type: REGISTRY_VALUE
-  attributes:
-    key_value_pairs:
-      - {key: 'HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\ComputerName\ComputerName', value: 'ComputerName'}
-      - {key: 'HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\ComputerName\ActiveComputerName', value: 'ComputerName'}
-      - {key: 'HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Tcpip\Parameters', value: 'Hostname'}
-      - {key: 'HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Tcpip\Parameters', value: 'Domain'}
-supported_os: [Windows]
----
-name: WindowsNetworkIPs
-doc: Windows Registry Keys that contain DNS and DHCP settings.
+name: WindowsNetworkInterfaceInformation
+doc: Details for network interfaces and their names
 sources:
 - type: REGISTRY_KEY
   attributes:
     keys:
       - 'HKEY_LOCAL_MACHINE\SYSTEM\ControlSet*\Services\Tcpip\Parameters\Interfaces\*'
       - 'HKEY_LOCAL_MACHINE\SYSTEM\ControlSet*\Control\Network\{4D36E972-E325-11CE-BFC1-08002BE10318}\*\Connection'
-- type: REGISTRY_VALUE
-  attributes:
-    key_value_pairs:
-      - {key: 'HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Tcpip\Parameters', value: 'NameServer'}
-      - {key: 'HKEY_LOCAL_MACHINE\SYSTEM\CurrenControlSet\Services\Dnscache\Parameters', value: 'NameServer'}
 labels: [System, Network]
 supported_os: [Windows]
 ---
