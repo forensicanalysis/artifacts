@@ -342,6 +342,7 @@ sources:
   attributes:
     key_value_pairs:
     - {key: 'HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\ComputerName\ComputerName', value: 'ComputerName'}
+    - {key: 'HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\ComputerName\ActiveComputerName', value: 'ComputerName'}
 supported_os: [Windows]
 ---
 name: WindowsCommandProcessorAutoRun
@@ -3334,3 +3335,26 @@ sources:
     separator: '\'
 supported_os: [Windows]
 urls: ['https://stackoverflow.com/questions/2913816/how-to-find-the-location-of-the-scheduled-tasks-folder']
+---
+name: WindowsNetworkInterfaceInformation
+doc: Details for network interfaces and their names
+sources:
+- type: REGISTRY_KEY
+  attributes:
+    keys:
+      - 'HKEY_LOCAL_MACHINE\SYSTEM\ControlSet*\Services\Tcpip\Parameters\Interfaces\*'
+      - 'HKEY_LOCAL_MACHINE\SYSTEM\ControlSet*\Control\Network\{4D36E972-E325-11CE-BFC1-08002BE10318}\*\Connection'
+labels: [System, Network]
+supported_os: [Windows]
+---
+name: WindowsHotfixes
+doc: Windows Registry Keys that contain Hotfix information
+sources:
+- type: REGISTRY_KEY
+  attributes:
+    keys:
+      - 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages\*'
+      - 'HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Updates\*\*'
+      - 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Updates\*\*'
+labels: [System]
+supported_os: [Windows]
