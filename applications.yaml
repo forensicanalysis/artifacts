@@ -73,6 +73,17 @@ labels: [Users, Mail]
 supported_os: [Windows]
 urls: ['http://www.forensicswiki.org/wiki/Personal_Folder_File_(PAB,_PST,_OST)']
 ---
+name: MicrosoftOutlookDownloadedDirectory
+doc: Microsoft Outlook Downloads
+sources:
+- type: DIRECTORY
+  attributes:
+    paths:
+    - '%%users.localappdata%%\Temporary Internet Files\Content.Outlook\**'
+    separator: '\'
+labels: [Users, Mail]
+supported_os: [Windows]
+---
 name: WinRARExternalViewer
 doc: Executable run when a file is opened by WinRAR inside an archive.
 sources:
