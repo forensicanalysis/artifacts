@@ -43,15 +43,15 @@ doc: Artifacts supported by elementary (https://github.com/forensicanalysis/elem
 sources:
   - type: ARTIFACT_GROUP
     attributes:
-    names:
-      - 'WindowsEventLogs'
-      - 'WindowsRunKeys'
-      - 'WindowsUninstallKeys'
-      - 'WindowsServices'
-      - 'WindowsUSBInformation'
-      - 'WindowsComputerName'
-      - 'WindowsNetworkInterfaceInformation'
-      - 'WindowsHotfixes'
+      names:
+        - 'WindowsEventLogs'
+        - 'WindowsRunKeys'
+        - 'WindowsUninstallKeys'
+        - 'WindowsServices'
+        - 'WindowsUSBInformation'
+        - 'WindowsComputerName'
+        - 'WindowsNetworkInterfaceInformation'
+        - 'WindowsHotfixes'
 ---
 # Artifacts from the SANS FOR500 course
 
