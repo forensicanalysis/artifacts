@@ -94,7 +94,7 @@ sources:
     attributes:
       names:
         # UserAssist
-        - WindowsActivitiesCache
+        - WindowsActivitiesCacheDatabase
         - WindowsMostRecentApplication
         - WindowsAppCompatCache # Shimcache
         # JumpLists

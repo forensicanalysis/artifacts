@@ -684,7 +684,6 @@ sources:
   attributes:
     key_value_pairs:
     - {key: 'HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion', value: 'CommonFilesDir'}
-provides: [environ_commonprogramfiles]
 supported_os: [Windows]
 urls: ['https://github.com/ForensicArtifacts/artifacts-kb/blob/master/windows/EnvironmentVariables.md']
 ---
@@ -695,7 +694,6 @@ sources:
   attributes:
     key_value_pairs:
     - {key: 'HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion', value: 'CommonFilesDir (x86)'}
-provides: [environ_commonprogramfilesx86]
 supported_os: [Windows]
 urls: ['https://github.com/ForensicArtifacts/artifacts-kb/blob/master/windows/EnvironmentVariables.md']
 ---
@@ -706,7 +704,6 @@ sources:
   attributes:
     key_value_pairs:
     - {key: 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment', value: 'ComSpec'}
-provides: [environ_comspec]
 supported_os: [Windows]
 urls: ['https://github.com/ForensicArtifacts/artifacts-kb/blob/master/windows/EnvironmentVariables.md']
 ---
@@ -717,7 +714,6 @@ sources:
   attributes:
     key_value_pairs:
     - {key: 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment', value: 'DriverData'}
-provides: [environ_driverdata]
 supported_os: [Windows]
 conditions: [os_major_version >= 10]
 urls: ['https://github.com/ForensicArtifacts/artifacts-kb/blob/master/windows/EnvironmentVariables.md']
@@ -743,17 +739,6 @@ sources:
     - {key: 'HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\ProfileList', value: 'ProfilesDirectory'}
   provides:
     - key: environ_profilesdirectory
-supported_os: [Windows]
-urls: ['https://github.com/ForensicArtifacts/artifacts-kb/blob/master/windows/EnvironmentVariables.md']
----
-name: WindowsEnvironmentVariableProgramData
-doc: The %ProgramData% environment variable contains a path of the "Program Data" directory.
-sources:
-- type: REGISTRY_VALUE
-  attributes:
-    key_value_pairs:
-    - {key: 'HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\ProfileList', value: 'ProgramData'}
-provides: [environ_programdata]
 supported_os: [Windows]
 urls: ['https://github.com/ForensicArtifacts/artifacts-kb/blob/master/windows/EnvironmentVariables.md']
 ---
@@ -842,7 +827,6 @@ sources:
   attributes:
     key_value_pairs:
     - {key: 'HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\Environment', value: 'windir'}
-provides: [environ_windir]
 supported_os: [Windows]
 urls: ['https://github.com/ForensicArtifacts/artifacts-kb/blob/master/windows/EnvironmentVariables.md']
 ---
