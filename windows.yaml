@@ -786,7 +786,6 @@ sources:
     - '\WTSRV'
     separator: '\'
   provides:
-    - key: environ_windir
     - key: environ_systemroot
     - key: environ_systemdrive
       regex: '^(..)'
@@ -823,10 +822,14 @@ sources:
     - '\WINNT35'
     - '\WTSRV'
     separator: '\'
+  provides:
+    - key: environ_windir
 - type: REGISTRY_VALUE
   attributes:
     key_value_pairs:
     - {key: 'HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\Environment', value: 'windir'}
+  provides:
+    - key: environ_windir
 supported_os: [Windows]
 urls: ['https://github.com/ForensicArtifacts/artifacts-kb/blob/master/windows/EnvironmentVariables.md']
 ---
