@@ -157,7 +157,7 @@ sources:
   supported_os: [Linux]
 supported_os: [Windows,Darwin,Linux]
 labels: [Browser]
-urls: ['http://www.forensicswiki.org/wiki/Google_Chrome']
+urls: ['https://forensicswiki.xyz/wiki/index.php?title=Google_Chrome']
 ---
 name: ChromeExtensionActivity
 doc: Chrome Extension Activity database.
@@ -185,7 +185,7 @@ sources:
   supported_os: [Linux]
 supported_os: [Windows,Darwin,Linux]
 labels: [Browser]
-urls: ['http://forensicswiki.org/wiki/Google_Chrome#Extension_Activity_database']
+urls: ['https://forensicswiki.xyz/wiki/index.php?title=Google_Chrome#Extension_Activity_database']
 ---
 name: ChromeExtensions
 doc: Chrome browser extension files.
@@ -214,7 +214,7 @@ sources:
   supported_os: [Linux]
 supported_os: [Windows, Darwin, Linux]
 labels: [Browser]
-urls: ['http://forensicswiki.org/wiki/Google_Chrome#Extensions']
+urls: ['https://forensicswiki.xyz/wiki/index.php?title=Google_Chrome#Extensions']
 ---
 name: ChromeExtensionRegistryKeys
 doc: Chrome extensions installed by writing windows registry keys.
@@ -254,7 +254,7 @@ sources:
   supported_os: [Linux]
 supported_os: [Windows,Darwin,Linux]
 labels: [Browser]
-urls: ['http://forensicswiki.org/wiki/Google_Chrome#Configuration']
+urls: ['https://forensicswiki.xyz/wiki/index.php?title=Google_Chrome#Configuration']
 ---
 name: FirefoxCache
 doc: Mozilla Firefox browser caches.
@@ -315,7 +315,7 @@ sources:
   supported_os: [Linux]
 supported_os: [Windows,Darwin,Linux]
 labels: [Browser]
-urls: ['http://www.forensicswiki.org/wiki/Mozilla_Firefox']
+urls: ['https://forensicswiki.xyz/wiki/index.php?title=Mozilla_Firefox']
 ---
 name: InternetExplorerBrowserHelperObjects
 doc: Loaded on Internet Explorer startup
@@ -348,7 +348,7 @@ sources:
     separator: '\'
 labels: [Browser]
 supported_os: [Windows]
-urls: ['http://www.forensicswiki.org/wiki/Internet_Explorer']
+urls: ['https://forensicswiki.xyz/wiki/index.php?title=Internet_Explorer']
 ---
 name: InternetExplorerCookies
 doc: |
@@ -365,7 +365,7 @@ sources:
     separator: '\'
 labels: [Browser]
 supported_os: [Windows]
-urls: ['http://www.forensicswiki.org/wiki/Internet_Explorer']
+urls: ['https://forensicswiki.xyz/wiki/index.php?title=Internet_Explorer']
 ---
 name: InternetExplorerHistory
 doc: |
@@ -393,7 +393,7 @@ sources:
     separator: '\'
 labels: [Browser]
 supported_os: [Windows]
-urls: ['http://www.forensicswiki.org/wiki/Internet_Explorer']
+urls: ['https://forensicswiki.xyz/wiki/index.php?title=Internet_Explorer']
 ---
 name: InternetExplorerProtectedModeElevationPolicies
 doc: |
@@ -484,7 +484,7 @@ sources:
   attributes: {keys: ['HKEY_USERS\%%users.sid%%\Software\Microsoft\Internet Explorer\TypedURLs\*']}
 labels: [Browser]
 supported_os: [Windows]
-urls: ['http://www.forensicswiki.org/wiki/Internet_Explorer#Typed_URLs']
+urls: ['https://forensicswiki.xyz/wiki/index.php?title=Internet_Explorer#Typed_URLs']
 ---
 name: OperaHistory
 doc: Opera browser history (global_history.dat).
@@ -504,7 +504,7 @@ sources:
   supported_os: [Windows]
 supported_os: [Windows,Darwin,Linux]
 labels: [Browser]
-urls: ['http://www.forensicswiki.org/wiki/Opera']
+urls: ['https://forensicswiki.xyz/wiki/index.php?title=Opera']
 ---
 name: SafariCache
 doc: Safari browser cache (cache.db).
@@ -522,7 +522,7 @@ sources:
   supported_os: [Darwin]
 supported_os: [Windows, Darwin]
 labels: [Browser]
-urls: ['http://www.forensicswiki.org/wiki/Apple_Safari']
+urls: ['https://forensicswiki.xyz/wiki/index.php?title=Apple_Safari']
 ---
 name: SafariDownloads
 doc: Safari downloads history (Downloads.plist).
@@ -540,8 +540,8 @@ sources:
 labels: [Users, Browser]
 supported_os: [Darwin, Windows]
 urls:
-- 'http://forensicswiki.org/wiki/Mac_OS_X'
-- 'http://forensicswiki.org/wiki/Mac_OS_X_10.9_-_Artifacts_Location#Safari'
+- 'https://forensicswiki.xyz/wiki/index.php?title=Mac_OS_X'
+- 'https://forensicswiki.xyz/wiki/index.php?title=Mac_OS_X_10.9_-_Artifacts_Location#Safari'
 - 'https://www.forensicswiki.org/wiki/Apple_Safari'
 ---
 name: SafariHistory
@@ -562,5 +562,15 @@ sources:
     - '%%users.homedir%%/Library/Safari/History.db-wal'
   supported_os: [Darwin]
 supported_os: [Windows, Darwin]
+labels: [Browser]
+urls: ['https://forensicswiki.xyz/wiki/index.php?title=Apple_Safari']
+---
+name: SafariExtensions
+doc: Safari browser Extensions.
+sources:
+- type: FILE
+  attributes: {paths: ['%%users.homedir%%/Library/Safari/Extensions/**']}
+  supported_os: [Darwin]
+supported_os: [Darwin]
 labels: [Browser]
 urls: ['http://www.forensicswiki.org/wiki/Apple_Safari']
