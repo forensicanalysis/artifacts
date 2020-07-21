@@ -15,25 +15,25 @@ follow the specification.
 
 The artifact definition format is described in detail in the [Style Guide](style_guide.md).
 
-As of 2020-01-12 the repository contains:
+As of 2020-07-21 the repository contains:
 
 **Artifact definition by type**
 
 | ARTIFACT GROUP | COMMAND | DIRECTORY | FILE | PATH | REGISTRY KEY | REGISTRY VALUE | WMI |
 |----------------|---------|-----------|------|------|--------------|----------------|-----|
-|             23 |       9 |        13 |  290 |    4 |           53 |            116 |  26 |
+|             34 |       9 |        15 |  300 |   20 |           56 |            121 |  26 |
 
 **Artifact definition by OS**
 
 | DARWIN | LINUX | WINDOWS |
 |--------|-------|---------|
-|    135 |   120 |     285 |
+|    140 |   125 |     307 |
 
 **Artifact definition by label**
 
 | ANTIVIRUS | AUTHENTICATION | BROWSER | CLOUD | CLOUD STORAGE | CONFIGURATION FILES | DOCKER | EXTERNAL MEDIA | EXTERNALACCOUNT | HADOOP | HISTORY FILES | LOGS | MAIL | NETWORK | SOFTWARE | SYSTEM | USERS | IOS |
 |-----------|----------------|---------|-------|---------------|---------------------|--------|----------------|-----------------|--------|---------------|------|------|---------|----------|--------|-------|-----|
-|         7 |             18 |      22 |     2 |             4 |                  45 |      2 |              2 |               3 |      1 |             3 |   63 |   17 |      20 |       69 |    197 |   104 |   5 |
+|         6 |             18 |      22 |     2 |             4 |                  46 |      2 |              2 |               3 |      1 |             3 |   47 |   16 |      18 |       42 |    116 |    77 |   5 |
 
 ## Background/History
 
