@@ -3419,20 +3419,20 @@ sources:
       paths:
         - '%%environ_systemdrive%%\Users'
       separator: '\'
-      provides: [{key: environ_profilesdirectory}]
+    provides: [{key: environ_profilesdirectory}]
   - type: PATH
     attributes:
       paths:
         - '%%environ_systemroot%%\TEMP'
       separator: '\'
-      provides: [{key: environ_temp}]
+    provides: [{key: environ_temp}]
   - type: PATH
     attributes:
       paths:
         - '%%environ_profilesdirectory%%\*'
         - '\Users\*'
       separator: '\'
-      provides:
+    provides:
         - {key: users.userprofile}
         - {key: users.username, regex: '.*\\(.+)'}
   - type: PATH
@@ -3440,61 +3440,61 @@ sources:
       paths:
         - '%%users.userprofile%%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup'
       separator: '\'
-      provides: [{key: users.startup}]
+    provides: [{key: users.startup}]
   - type: PATH
     attributes:
       paths:
         - '%%users.userprofile%%\AppData\Roaming'
       separator: '\'
-      provides: [{key: users.appdata}]
+    provides: [{key: users.appdata}]
   - type: PATH
     attributes:
       paths:
         - '%%users.userprofile%%\AppData\Local\Microsoft\Windows\INetCookies'
       separator: '\'
-      provides: [{key: users.cookies}]
+    provides: [{key: users.cookies}]
   - type: PATH
     attributes:
       paths:
         - '%%users.userprofile%%\Documents'
       separator: '\'
-      provides: [{key: users.documents}]
+    provides: [{key: users.documents}]
   - type: PATH
     attributes:
       paths:
         - '%%users.userprofile%%\Desktop'
       separator: '\'
-      provides: [{key: users.desktop}]
+    provides: [{key: users.desktop}]
   - type: PATH
     attributes:
       paths:
         - '%%users.userprofile%%\AppData\Local\Microsoft\Windows\INetCache'
       separator: '\'
-      provides: [{key: users.internet_cache}]
+    provides: [{key: users.internet_cache}]
   - type: PATH
     attributes:
       paths:
         - '%%users.userprofile%%\AppData\Local'
       separator: '\'
-      provides: [{key: users.localappdata}]
+    provides: [{key: users.localappdata}]
   - type: PATH
     attributes:
       paths:
         - '%%users.userprofile%%\AppData\LocalLow'
       separator: '\'
-      provides: [{key: users.localappdata_low}]
+    provides: [{key: users.localappdata_low}]
   - type: PATH
     attributes:
       paths:
         - '%%users.userprofile%%\AppData\Local\Temp'
       separator: '\'
-      provides: [{key: users.temp}]
+    provides: [{key: users.temp}]
   - type: PATH
     attributes:
       paths:
         - '%%users.userprofile%%\AppData\Roaming\Microsoft\Windows\Recent'
       separator: '\'
-      provides: [{key: users.recent}]
+    provides: [{key: users.recent}]
 supported_os: [Windows]
 ---
 name: UserSIDDefaultKeys
@@ -3504,5 +3504,5 @@ sources:
     attributes:
       keys:
         - 'HKEY_USERS\*'
-      provides: [{key: users.sid, regex: '.*\\(.+)'}]
+    provides: [{key: users.sid, regex: '.*\\(.+)'}]
 supported_os: [Windows]
