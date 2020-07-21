@@ -3438,19 +3438,20 @@ sources:
   - type: PATH
     attributes:
       paths:
-        - '%%users.userprofile%%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup'
+        - '%%users.appdata%%\Microsoft\Windows\Start Menu\Programs\Startup'
       separator: '\'
     provides: [{key: users.startup}]
   - type: PATH
     attributes:
       paths:
-        - '%%users.userprofile%%\AppData\Roaming'
+        - '%%environ_profilesdirectory%%\*\AppData\Roaming'
+        - '\Users\*\AppData\Roaming'
       separator: '\'
     provides: [{key: users.appdata}]
   - type: PATH
     attributes:
       paths:
-        - '%%users.userprofile%%\AppData\Local\Microsoft\Windows\INetCookies'
+        - '%%users.localappdata%%\Microsoft\Windows\INetCookies'
       separator: '\'
     provides: [{key: users.cookies}]
   - type: PATH
@@ -3468,13 +3469,14 @@ sources:
   - type: PATH
     attributes:
       paths:
-        - '%%users.userprofile%%\AppData\Local\Microsoft\Windows\INetCache'
+        - '%%users.localappdata%%\Microsoft\Windows\INetCache'
       separator: '\'
     provides: [{key: users.internet_cache}]
   - type: PATH
     attributes:
       paths:
-        - '%%users.userprofile%%\AppData\Local'
+        - '%%environ_profilesdirectory%%\*\AppData\Local'
+        - '\Users\*\AppData\Local'
       separator: '\'
     provides: [{key: users.localappdata}]
   - type: PATH
@@ -3486,13 +3488,13 @@ sources:
   - type: PATH
     attributes:
       paths:
-        - '%%users.userprofile%%\AppData\Local\Temp'
+        - '%%users.localappdata%%\Temp'
       separator: '\'
     provides: [{key: users.temp}]
   - type: PATH
     attributes:
       paths:
-        - '%%users.userprofile%%\AppData\Roaming\Microsoft\Windows\Recent'
+        - '%%users.appdata%%\Microsoft\Windows\Recent'
       separator: '\'
     provides: [{key: users.recent}]
 supported_os: [Windows]
