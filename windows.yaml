@@ -3482,7 +3482,8 @@ sources:
   - type: PATH
     attributes:
       paths:
-        - '%%users.userprofile%%\AppData\LocalLow'
+        - '%%environ_profilesdirectory%%\*\AppData\LocalLow'
+        - '\Users\*\AppData\LocalLow'
       separator: '\'
     provides: [{key: users.localappdata_low}]
   - type: PATH
