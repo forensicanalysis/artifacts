@@ -2886,6 +2886,7 @@ sources:
     - '%%environ_systemroot%%\Temp\*'
     - '%%users.localappdata%%\Temp\*'
     separator: '\'
+
 supported_os: [Windows]
 ---
 name: WindowsTerminalServerRunKeys
@@ -3408,4 +3409,100 @@ sources:
       - 'HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Updates\*\*'
       - 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Updates\*\*'
 labels: [System]
+supported_os: [Windows]
+---
+name: WindowsDefaultPaths
+doc: Default Paths for many parameters
+sources:
+  - type: PATH
+    attributes:
+      paths:
+        - '%%environ_systemdrive%%\Users'
+      separator: '\'
+      provides: [{key: environ_profilesdirectory}]
+  - type: PATH
+    attributes:
+      paths:
+        - '%%environ_systemroot%%\TEMP'
+      separator: '\'
+      provides: [{key: environ_temp}]
+  - type: PATH
+    attributes:
+      paths:
+        - '%%environ_profilesdirectory%%\*'
+        - '\Users\*'
+      separator: '\'
+      provides:
+        - {key: users.userprofile}
+        - {key: users.username, regex: '.*\\(.+)'}
+  - type: PATH
+    attributes:
+      paths:
+        - '%%users.userprofile%%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup'
+      separator: '\'
+      provides: [{key: users.startup}]
+  - type: PATH
+    attributes:
+      paths:
+        - '%%users.userprofile%%\AppData\Roaming'
+      separator: '\'
+      provides: [{key: users.appdata}]
+  - type: PATH
+    attributes:
+      paths:
+        - '%%users.userprofile%%\AppData\Local\Microsoft\Windows\INetCookies'
+      separator: '\'
+      provides: [{key: users.cookies}]
+  - type: PATH
+    attributes:
+      paths:
+        - '%%users.userprofile%%\Documents'
+      separator: '\'
+      provides: [{key: users.documents}]
+  - type: PATH
+    attributes:
+      paths:
+        - '%%users.userprofile%%\Desktop'
+      separator: '\'
+      provides: [{key: users.desktop}]
+  - type: PATH
+    attributes:
+      paths:
+        - '%%users.userprofile%%\AppData\Local\Microsoft\Windows\INetCache'
+      separator: '\'
+      provides: [{key: users.internet_cache}]
+  - type: PATH
+    attributes:
+      paths:
+        - '%%users.userprofile%%\AppData\Local'
+      separator: '\'
+      provides: [{key: users.localappdata}]
+  - type: PATH
+    attributes:
+      paths:
+        - '%%users.userprofile%%\AppData\LocalLow'
+      separator: '\'
+      provides: [{key: users.localappdata_low}]
+  - type: PATH
+    attributes:
+      paths:
+        - '%%users.userprofile%%\AppData\Local\Temp'
+      separator: '\'
+      provides: [{key: users.temp}]
+  - type: PATH
+    attributes:
+      paths:
+        - '%%users.userprofile%%\AppData\Roaming\Microsoft\Windows\Recent'
+      separator: '\'
+      provides: [{key: users.recent}]
+supported_os: [Windows]
+---
+name: UserSIDDefaultKeys
+doc: Bruteforce SIDs
+sources:
+  - type: REGISTRY_KEY
+    attributes:
+      keys:
+        - 'HKEY_USERS\*'
+      provides: [{key: users.sid, regex: '.*\\(.+)'}]
 supported_os: [Windows]
