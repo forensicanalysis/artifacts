@@ -1,3 +1,5 @@
+# Arifacts used for persistence on Windows.
+
 name: WindowsPersistence
 doc: Windows persistence mechanisms.
 sources:
@@ -11,6 +13,7 @@ sources:
         - 'WindowsAppCertDLLsAlt'
         - 'WindowsCOMProperties'
         - 'WindowsBrowserPersistenceKeys'
+        - 'InternetExplorerBrowserHelperObjects'
         - 'WindowsBrowserPersistenceFiles'
         - 'WindowsFileAssociation'
         - 'WindowsScheduledTasks'
@@ -19,6 +22,8 @@ sources:
         - 'WindowsKnownDLLs'
         - 'WindowsOfficeApplicationStartup'
         - 'WindowsImageHijacks'
+        - 'WindowsCommandProcessorAutoRun'
+        - 'WindowsDebugger'
         - 'WindowsCodecs'
         - 'WindowsFontDriversAlt'
         - 'WindowsStartupFolders'
@@ -34,8 +39,8 @@ sources:
   - type: REGISTRY_KEY
     attributes:
       keys:
-        - 'HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Explorer\Browser Helper Objects\*'
-        - 'HKEY_LOCAL_MACHINE\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Explorer\Browser Helper Objects\*'
+        # - 'HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Explorer\Browser Helper Objects\*'
+        # - 'HKEY_LOCAL_MACHINE\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Explorer\Browser Helper Objects\*'
         - 'HKEY_LOCAL_MACHINE\Software\Microsoft\Internet Explorer\Extensions\*'
         - 'HKEY_LOCAL_MACHINE\Software\Wow6432Node\Microsoft\Internet Explorer\Extensions\*'
 supported_os: [Windows]
@@ -46,7 +51,7 @@ sources:
 - type: FILE
   attributes:
     paths:
-    - '%%users.homedir%%\AppData\Roaming\Mozilla\Firefox\Profiles\*\extensions.json'
+    - '%%users.userprofile%%\AppData\Roaming\Mozilla\Firefox\Profiles\*\extensions.json'
     separator: '\'
 supported_os: [Windows]
 ---
@@ -67,16 +72,16 @@ sources:
   - type: REGISTRY_VALUE
     attributes:
       key_value_pairs:
-        - {key: 'HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\*', value: 'Debugger'}
-        - {key: 'HKEY_LOCAL_MACHINE\Software\Wow6432Node\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\*', value: 'Debugger'}
-        - {key: 'HKEY_USERS\%%users.sid%%\Software\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\*', value: 'Debugger'}
-        - {key: 'HKEY_USERS\%%users.sid%%\Software\Wow6432Node\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\*', value: 'Debugger'}
+        # - {key: 'HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\*', value: 'Debugger'}
+        # - {key: 'HKEY_LOCAL_MACHINE\Software\Wow6432Node\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\*', value: 'Debugger'}
+        # - {key: 'HKEY_USERS\%%users.sid%%\Software\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\*', value: 'Debugger'}
+        # - {key: 'HKEY_USERS\%%users.sid%%\Software\Wow6432Node\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\*', value: 'Debugger'}
         - {key: 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SilentProcessExit\*', value: 'MonitorProcess'}
-        - {key: 'HKEY_USERS\%%users.sid%%\Software\Microsoft\Command Processor', value: 'AutoRun'}
-        - {key: 'HKEY_LOCAL_MACHINE\Software\Microsoft\Command Processor', value: 'AutoRun'}
-        - {key: 'HKEY_LOCAL_MACHINE\Software\Wow6432Node\Microsoft\Command Processor', value: 'AutoRun'}
-        - {key: 'HKEY_USERS\%%users.sid%%\Software\Microsoft\Command Processor', value: 'AutoRun'}
-        - {key: 'HKEY_USERS\%%users.sid%%\Software\Wow6432Node\Microsoft\Command Processor', value: 'AutoRun'}
+        # - {key: 'HKEY_USERS\%%users.sid%%\Software\Microsoft\Command Processor', value: 'AutoRun'}
+        # - {key: 'HKEY_LOCAL_MACHINE\Software\Microsoft\Command Processor', value: 'AutoRun'}
+        # - {key: 'HKEY_LOCAL_MACHINE\Software\Wow6432Node\Microsoft\Command Processor', value: 'AutoRun'}
+        # - {key: 'HKEY_USERS\%%users.sid%%\Software\Microsoft\Command Processor', value: 'AutoRun'}
+        # - {key: 'HKEY_USERS\%%users.sid%%\Software\Wow6432Node\Microsoft\Command Processor', value: 'AutoRun'}
         - {key: 'HKEY_LOCAL_MACHINE\Software\Classes\Exefile\Shell\Open\Command', value: ''}
         - {key: 'HKEY_USERS\%%users.sid%%\Software\Classes\Exefile\Shell\Open\Command', value: ''}
         - {key: 'HKEY_LOCAL_MACHINE\Software\Classes\Htmlfile\Shell\Open\Command', value: ''}
