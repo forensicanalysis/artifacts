@@ -44,14 +44,15 @@ sources:
   - type: ARTIFACT_GROUP
     attributes:
       names:
-        - 'WindowsEventLogs'
-        - 'WindowsRunKeys'
-        - 'WindowsUninstallKeys'
-        - 'WindowsServices'
-        - 'WindowsUSBInformation'
         - 'WindowsComputerName'
-        - 'WindowsNetworkInterfaceInformation'
+        - 'WindowsEventLogs'
         - 'WindowsHotfixes'
+        - 'WindowsNetworkInterfaceInformation'
+        - 'WindowsPersistence'
+        - 'WindowsRunKeys'
+        - 'WindowsServices'
+        - 'WindowsUninstallKeys'
+        - 'WindowsUSBInformation'
 ---
 # Artifacts from the SANS FOR500 course
 
