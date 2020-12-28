@@ -51,7 +51,7 @@ sources:
 - type: FILE
   attributes:
     paths:
-    - '%%users.userprofile%%\AppData\Roaming\Mozilla\Firefox\Profiles\*\extensions.json'
+    - '%%users.appdata%%\Mozilla\Firefox\Profiles\*\extensions.json'
     separator: '\'
 supported_os: [Windows]
 ---
