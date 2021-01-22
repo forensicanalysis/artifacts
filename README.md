@@ -15,7 +15,7 @@ follow the specification.
 
 The artifact definition format is described in detail in the [Style Guide](style_guide.md).
 
-As of 2021-07-21 the repository contains:
+As of 2021-01-22 the repository contains:
 
 **Artifact definition by type**
 
