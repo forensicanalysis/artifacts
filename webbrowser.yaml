@@ -448,17 +448,6 @@ supported_os: [Windows, Darwin, Linux]
 labels: [Browser]
 urls: ['https://forensicswiki.xyz/wiki/index.php?title=Google_Chrome#Extensions']
 ---
-name: ChromeExtensionRegistryKeys
-doc: Chrome extensions installed by writing windows registry keys.
-sources:
-- type: REGISTRY_KEY
-  attributes:
-    keys:
-    - 'HKEY_LOCAL_MACHINE\Software\Google\Chrome\Extensions\**5'
-    - 'HKEY_LOCAL_MACHINE\Software\Wow6432Node\Google\Chrome\Extensions\**5'
-supported_os: [Windows]
-labels: [Browser]
----
 name: ChromePreferences
 doc: Chrome Preferences file.
 sources:
