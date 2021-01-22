@@ -634,11 +634,8 @@ urls:
 - 'http://www.hexacorn.com/blog/2014/11/14/beyond-good-ol-run-key-part-18/'
 - 'https://social.msdn.microsoft.com/Forums/windowsdesktop/en-US/cb6f1d6f-60a6-4369-803e-ec03d902e638/gina-how-to-run-domain-scripts-after-logon'
 ---
-name: Windowsallusersappdata
-doc: |
-  The %allusersappdata% environment variable
-
-  May or may not depend on registry keys - see urls
+name: WindowsEnvironmentVariableAllUsersProfile
+doc: The system-wide %AllUsersProfile% environment variable contains the path of the of the "All Users" or "Common" profile directory.
 sources:
 - type: REGISTRY_VALUE
   attributes:
