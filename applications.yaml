@@ -83,6 +83,7 @@ sources:
     separator: '\'
 labels: [Users, Mail]
 supported_os: [Windows]
+urls: ['https://forensicswiki.xyz/wiki/index.php?title=Personal_Folder_File_(PAB,_PST,_OST)']
 ---
 name: WinRARExternalViewer
 doc: Executable run when a file is opened by WinRAR inside an archive.
