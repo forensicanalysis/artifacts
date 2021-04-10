@@ -833,6 +833,15 @@ sources:
 supported_os: [Windows]
 urls: ['https://github.com/ForensicArtifacts/artifacts-kb/blob/master/windows/EnvironmentVariables.md']
 ---
+name: WindowsEventLogProviders
+doc: Windows EventLog provider Registry keys.
+sources:
+- type: REGISTRY_KEY
+  attributes:
+    keys: ['HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\EventLog\*\*']
+supported_os: [Windows]
+urls: ['https://winreg-kb.readthedocs.io/en/latest/sources/EventLog-keys.html']
+---
 name: WindowsEventLogs
 doc: Windows Event logs.
 sources:
