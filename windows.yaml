@@ -833,6 +833,15 @@ sources:
 supported_os: [Windows]
 urls: ['https://github.com/ForensicArtifacts/artifacts-kb/blob/master/windows/EnvironmentVariables.md']
 ---
+name: WindowsEventLogProviders
+doc: Windows EventLog provider Registry keys.
+sources:
+- type: REGISTRY_KEY
+  attributes:
+    keys: ['HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\EventLog\*\*']
+supported_os: [Windows]
+urls: ['https://winreg-kb.readthedocs.io/en/latest/sources/EventLog-keys.html']
+---
 name: WindowsEventLogs
 doc: Windows Event logs.
 sources:
@@ -1604,6 +1613,18 @@ supported_os: [Windows]
 urls:
 - 'https://technet.microsoft.com/library/hh847748.aspx'
 - 'http://www.hexacorn.com/blog/2014/08/27/beyond-good-ol-run-key-part-16/'
+---
+name: WindowsPowerShellHistory
+doc: History of commands executed in an interactive PowerShell session.
+sources:
+- type: FILE
+  attributes:
+    paths: ['%%users.appdata%%\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt']
+    separator: '\'
+supported_os: [Windows]
+urls:
+- 'https://0xdf.gitlab.io/2018/11/08/powershell-history-file.html'
+- 'https://docs.microsoft.com/en-us/powershell/module/psreadline/get-psreadlineoption?view=powershell-7.1'
 ---
 name: WindowsPrefetchFiles
 doc: Windows Prefetch files.
@@ -2980,6 +3001,7 @@ sources:
   attributes:
       keys:
       - 'HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Uninstall\*'
+      - 'HKEY_LOCAL_MACHINE\Software\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*'
       - 'HKEY_USERS\%%users.sid%%\Software\Microsoft\Windows\CurrentVersion\Uninstall\*'
 supported_os: [Windows]
 urls: ['https://msdn.microsoft.com/en-us/library/aa372105(v=vs.85).aspx']
