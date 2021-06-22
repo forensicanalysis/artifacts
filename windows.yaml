@@ -3544,3 +3544,13 @@ sources:
       - 'HKEY_USERS\%%users.sid%%\Software\Microsoft\Windows\CurrentVersion\Explorer\UserAssist\{F4E57C4B-2036-45F0-A9AB-443BCFE33D9F}\Count'
 supported_os: [Windows]
 urls: ['https://www.aldeid.com/wiki/Windows-userassist-keys']
+---
+name: WindowsRDPClientBitmapCache
+doc: Artifacts of RDP connection contents
+sources:
+- type: FILE
+  attributes:
+    paths: ['%%users.localappdata%%\Microsoft\Terminal Server Client\Cache\*.*']
+    separator: '\'
+supported_os: [Windows]
+urls: ['https://github.com/BSI-Bund/RdpCacheStitcher']
