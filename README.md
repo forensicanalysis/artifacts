@@ -67,10 +67,6 @@ and [youtube video](https://www.youtube.com/watch?v=ren6QSvwFvg) from the GRR te
 
 Please send us your contribution!
 
-## External links
-
-* [GRR Artifacts](https://www.blackhat.com/docs/us-14/materials/us-14-Castle-GRR-Find-All-The-Badness-Collect-All-The-Things-WP.pdf), by Greg Castle, Blackhat 2014
-
 ## Contact
 
 * Artifacts channel of [Open Source DFIR Slack](https://github.com/open-source-dfir/slack)

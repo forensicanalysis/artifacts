@@ -140,7 +140,10 @@ sources:
   supported_os: [Linux]
 supported_os: [Windows,Darwin,Linux]
 labels: [Browser]
-urls: ['https://github.com/ForensicArtifacts/artifacts-kb/blob/master/webbrowser/ChromeCache.md']
+urls:
+- 'https://developer.chrome.com/apps/fileSystem'
+- 'https://developer.mozilla.org/en-US/docs/Web/API/FileSystem'
+- 'https://dfir.blog/deciphering-browser-hieroglyphics-leveldb-filesystem/'
 ---
 name: ChromeCookies
 doc: Chrome Cookies database.
@@ -545,7 +548,7 @@ sources:
   supported_os: [Linux]
 supported_os: [Windows,Darwin,Linux]
 labels: [Browser]
-urls: ['https://github.com/ForensicArtifacts/artifacts-kb/blob/master/webbrowser/FirefoxCache.md']
+urls: ['https://artifacts-kb.readthedocs.io/en/latest/sources/webbrowser/FirefoxCache.html']
 ---
 name: FirefoxHistory
 doc: Firefox browser history (places.sqlite).
