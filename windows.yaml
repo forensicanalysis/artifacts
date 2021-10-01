@@ -842,18 +842,6 @@ sources:
   attributes:
     keys: ['HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\EventLog\*\*']
 supported_os: [Windows]
-<<<<<<< HEAD:windows.yaml
-=======
-urls: ['https://artifacts-kb.readthedocs.io/en/latest/sources/windows/EnvironmentVariables.html']
----
-name: WindowsEventLogProviders
-doc: Windows EventLog provider Registry keys.
-sources:
-- type: REGISTRY_KEY
-  attributes:
-    keys: ['HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\EventLog\*\*']
-supported_os: [Windows]
->>>>>>> fa/main:data/windows.yaml
 urls: ['https://winreg-kb.readthedocs.io/en/latest/sources/EventLog-keys.html']
 ---
 name: WindowsEventLogs
@@ -1771,6 +1759,18 @@ sources:
 labels: [System,Users]
 supported_os: [Windows]
 urls: ['https://artifacts-kb.readthedocs.io/en/latest/sources/windows/RegistryFiles.html']
+---
+name: WindowsRegistryProfileSIDs
+doc: Get SIDs for all users on the system with profiles present in the Registry.
+labels: [Users]
+sources:
+- type: REGISTRY_KEY
+  attributes: {keys: ['HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\ProfileList\*']}
+  provides:
+    - key: users.sid
+      regex: 'ProfileList\\(.+)$'
+supported_os: [Windows]
+urls: ['http://msdn.microsoft.com/en-us/library/windows/desktop/bb776892(v=vs.85).aspx']
 ---
 name: WindowsRegistryProfiles
 doc: |
