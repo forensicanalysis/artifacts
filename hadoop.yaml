@@ -12,7 +12,7 @@ sources:
       - '/**2/hadoop/**1/yarn/system/rmstore/FSRMStateRoot/RMAppRoot/application_*/application_*'
 labels: [Hadoop]
 supported_os: [Linux]
-
+---
 name: HadoopYarnLogs
 doc: Location where Hadoop Yarn LevelDB/Timeline files are stored
 sources:
