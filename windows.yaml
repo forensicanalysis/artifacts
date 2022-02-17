@@ -533,6 +533,14 @@ urls:
 - 'http://www.geoffchappell.com/studies/windows/shell/shell32/classes/controlpanel.htm'
 - 'https://msdn.microsoft.com/en-us/library/windows/desktop/ms683844(v=vs.85).aspx'
 ---
+name: WindowsNetworkProviderOrder
+doc: Windows Network Provider list that can be used to steal credentials
+sources:
+- type: REGISTRY_VALUE
+  attributes: {key_value_pairs: [{key: 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\NetworkProvider\Order', value: 'ProviderOrder'}]}
+supported_os: [Windows]
+urls: ['https://github.com/gtworek/PSBits/tree/master/PasswordStealing/NPPSpy']
+---
 name: WindowsCredentialProviderFilters
 doc: Windows Credential Provider Filters
 sources:
