@@ -3721,6 +3721,14 @@ sources:
         - '%%environ_systemroot%%\System32\WDI\LogFiles\*.etl.0*'
         - '%%environ_systemroot%%\System32\WDI\{86432a0b-3c7d-4ddf-a89c-172faa90485d}\*\*.etl'
       separator: '\'
-conditions: [os_major_version >= 6]
-supported_os: [Windows]
-urls: ['https://forensicswiki.xyz/wiki/index.php?title=Event_Tracing_for_Windows_(ETW)']
+conditions: [ os_major_version >= 6 ]
+supported_os: [ Windows ]
+urls: [ 'https://forensicswiki.xyz/wiki/index.php?title=Event_Tracing_for_Windows_(ETW)' ]
+---
+name: WindowsMountedDevices
+doc: Windows mounted devices
+sources:
+  - type: REGISTRY_KEY
+    attributes: { keys: [ 'HKEY_LOCAL_MACHINE\System\MountedDevices' ] }
+supported_os: [ Windows ]
+urls: [ 'https://winreg-kb.readthedocs.io/en/latest/sources/system-keys/Mounted-devices.html' ]
