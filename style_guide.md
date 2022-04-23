@@ -2,10 +2,10 @@
 
 ## Summary
 
-This guide contains a description of the forensics artifacts definitions. The 
-artifacts definitions are [YAML](http://www.yaml.org/spec/1.2/spec.html)-based. 
-The format is currently still under development and is likely to undergo some 
-change. One of the goals of this guide is to ensure consistency and readbility 
+This guide contains a description of the forensics artifacts definitions. The
+artifacts definitions are [YAML](http://www.yaml.org/spec/1.2/spec.html)-based.
+The format is currently still under development and is likely to undergo some
+change. One of the goals of this guide is to ensure consistency and readability
 of the artifacts definitions.
 
 ## Revision history
@@ -29,11 +29,11 @@ The goal of the format is to provide a way to describe the majority of forensic
 artifacts in a language that is readable by humans and machines.
 
 The format is designed to be simple and straight forward, so that a digital
-forensic analysist is able to quickly write artifact definitions during an
+forensic analyst is able to quickly write artifact definitions during an
 investigation without having to rely on complex standards or tooling.
 
 The format is intended to describe forensically-relevant data on a machine,
-while being tool agnostic. In particular we intentionally avoided adding
+while being tool agnostic. In particular, we intentionally avoided adding
 IOC-like logic, or describing how the data should be collected since this
 varies between tools.
 
@@ -66,19 +66,25 @@ forensic (legal) context.
 
 ### Knowledge Base
 
-The knowledge base is a data store that is used for storing entries about 
+The knowledge base is a data store that is used for storing entries about
 the host, users and other system properties. Every entry maps a key to a list
 of values e.g.
 
 ```json
 {
-  "users.username": ["root", "bob"],
-  "users.homedir": ["/root", "/home/bob"]
+  "users.username": [
+    "root",
+    "bob"
+  ],
+  "users.homedir": [
+    "/root",
+    "/home/bob"
+  ]
 }
 ```
 
-It is filled via the `provides` attribute of sources and 
-can be used in artifact conditions (*deprecated*) and in 
+It is filled via the `provides` attribute of sources and
+can be used in artifact conditions (*deprecated*) and in
 [parameter expansion](#parameter-expansion-and-globs).
 
 ## The artifact definition
@@ -91,11 +97,11 @@ Logs.
 name: WindowsSystemEventLogEvtx
 doc: Windows System Event log for Vista or later systems.
 sources:
-- type: FILE
-  attributes: {paths: ['%%environ_systemroot%%\System32\winevt\Logs\System.evtx']}
-labels: [Logs]
-supported_os: [Windows]
-urls: ['http://www.forensicswiki.org/wiki/Windows_XML_Event_Log_(EVTX)']
+  - type: FILE
+    attributes: { paths: [ '%%environ_systemroot%%\System32\winevt\Logs\System.evtx' ] }
+labels: [ Logs ]
+supported_os: [ Windows ]
+urls: [ 'http://www.forensicswiki.org/wiki/Windows_XML_Event_Log_(EVTX)' ]
 ```
 
 The artifact definition can have the following values:
@@ -113,15 +119,16 @@ The artifact definition can have the following values:
 
 ### Name
 
-*Style note*: The name of an artifact defintion should be in CamelCase name 
+*Style note*: The name of an artifact definition should be in CamelCase name
 without spaces.
 
 Naming convention for artifact definition names:
 
-* Prefix platform specific artifact definitions with the name of the operating system using "Linux", "MacOS" or "Windows"
+* Prefix platform specific artifact definitions with the name of the operating system using "Linux", "MacOS" or "
+  Windows"
 * If not platform specific:
-  * prefix with the application name, for example "ChromeHistory".
-  * prefix with the name of the subsystem, for example "WMIComputerSystemProduct".
+    * prefix with the application name, for example "ChromeHistory".
+    * prefix with the name of the subsystem, for example "WMIComputerSystemProduct".
 
 *Style note*: If the sole source of the artifact definition for example are
 files use "BrowserHistoryFiles" instead of "BrowserHistory" to reduce ambiguity.
@@ -150,35 +157,35 @@ Every source definition starts with a `type` followed by arguments e.g.
 
 ```yaml
 sources:
-- type: COMMAND
-  attributes:
-    args: [-qa]
-    cmd: /bin/rpm
+  - type: COMMAND
+    attributes:
+      args: [ -qa ]
+      cmd: /bin/rpm
 ```
 
 ```yaml
 sources:
-- type: FILE
-  attributes:
-    paths:
-      - /root/.bashrc
-      - /root/.cshrc
-      - /root/.ksh
-      - /root/.logout
-      - /root/.profile
-      - /root/.tcsh
-      - /root/.zlogin
-      - /root/.zlogout
-      - /root/.zprofile
-      - /root/.zprofile
+  - type: FILE
+    attributes:
+      paths:
+        - /root/.bashrc
+        - /root/.cshrc
+        - /root/.ksh
+        - /root/.logout
+        - /root/.profile
+        - /root/.tcsh
+        - /root/.zlogin
+        - /root/.zlogout
+        - /root/.zprofile
+        - /root/.zprofile
 ```
 
-*Style note*: where sources take a single argument with a single value, the 
+*Style note*: where sources take a single argument with a single value, the
 one-line {} form should be used to save on line breaks as below:
 
 ```yaml
 - type: FILE
-  attributes: {paths: ['%%environ_systemroot%%\System32\winevt\Logs\System.evtx']}
+  attributes: { paths: [ '%%environ_systemroot%%\System32\winevt\Logs\System.evtx' ] }
 ```
 
 | Key            | Description                                                                                                                                        |
@@ -186,8 +193,8 @@ one-line {} form should be used to save on line breaks as below:
 | attributes     | A dictionary of keyword attributes specific to the type of source definition.                                                                      |
 | type           | The source type.                                                                                                                                   |
 | provides       | Optional list of dictonaries that describe knowledge base entries that this artifact can supply. See section: [Source provides](#source-provides). |
-| supported_os   | Optional list that indicates which operating systems the artifact definition applies to. |
-| ~~conditions~~ | **Deprecated** Optional list of conditions to when the artifact definition should apply.                   |
+| supported_os   | Optional list that indicates which operating systems the artifact definition applies to.                                                           |
+| ~~conditions~~ | **Deprecated** Optional list of conditions to when the artifact definition should apply.                                                           |
 
 ### Source types
 
@@ -210,33 +217,32 @@ A source provide defines a knowledge base entry that can be created using this s
 
 ```yaml
 sources:
-- type: PATH
-  attributes: {paths: ['/Users/*']}
-  provides:
-    - key: users.username
-      regex: '.*/(.*)'
+  - type: PATH
+    attributes: { paths: [ '/Users/*' ] }
+    provides:
+      - key: users.username
+        regex: '.*/(.*)'
 ```
 
 ```yaml
 sources:
-- type: WMI
-  attributes: {query: SELECT * FROM Win32_UserAccount WHERE name='%%users.username%%'}
-  provides: 
-    - key: users.userdomain
-      wmi_key: Domain
+  - type: WMI
+    attributes: { query: SELECT * FROM Win32_UserAccount WHERE name='%%users.username%%' }
+    provides:
+      - key: users.userdomain
+        wmi_key: Domain
 ```
 
 ```yaml
 sources:
-- type: FILE
-  attributes: {paths: ['/etc/passwd']}
-  provides: 
-    - key: users.username
-      regex: '(.*?):.*'
-    - key: users.homedir
-      regex: '.*:(.*?):.*'
+  - type: FILE
+    attributes: { paths: [ '/etc/passwd' ] }
+    provides:
+      - key: users.username
+        regex: '(.*?):.*'
+      - key: users.homedir
+        regex: '.*:(.*?):.*'
 ```
-
 
 | Key     | Description                                                                                                    |
 |---------|----------------------------------------------------------------------------------------------------------------|
@@ -244,7 +250,7 @@ sources:
 | wmi_key | Required for provides in WMI sources, disallowed otherwise. WMI object key to select the provided value.       |
 | regex   | Optional regular expression to filter the provided data. The first capturing group defines the provided value. |
 
-Provided values are dependend on the source type as follows:
+Provided values are dependent on the source type as follows:
 
 | Type           | Added entries to knowledge base          |
 |----------------|------------------------------------------|
@@ -257,18 +263,15 @@ Provided values are dependend on the source type as follows:
 
 Definition of type ARTIFACT_GROUP or DIRECTORY must not have a `provides` attribute.
 
-
-
-
 ### Artifact group source
 
-The artifact group source is a source that consists of a group of other 
+The artifact group source is a source that consists of a group of other
 artifacts e.g.
 
 ```yaml
 - type: ARTIFACT_GROUP
   attributes:
-    names: [WindowsRunKeys, WindowsServices]
+    names: [ WindowsRunKeys, WindowsServices ]
 ```
 
 Where `attributes` can contain the following values:
@@ -284,7 +287,7 @@ The command source is a source that consists of the output of a command e.g.
 ```yaml
 - type: COMMAND
   attributes:
-    args: [-qa]
+    args: [ -qa ]
     cmd: /bin/rpm
 ```
 
@@ -302,7 +305,7 @@ The directory source is a source that consists of a file listing of directory co
 ```yaml
 - type: DIRECTORY
   attributes:
-    paths: ['%%users.userprofile%%\Downloads\*']
+    paths: [ '%%users.userprofile%%\Downloads\*' ]
     separator: '\'
 ```
 
@@ -311,7 +314,7 @@ Where `attributes` can contain the following values:
 | Value     | Description                                                                                                                                                                                                                               |
 |-----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | paths     | A list of file paths that can potentially be collected. These paths should be absolute. The paths can use parameter expansion e.g. `%%environ_systemroot%%`. See section: [Parameter expansion and globs](#parameter-expansion-and-globs) |
-| separator | Optional path seperator e.g. '\' for Windows systems.                                                                                                                                                                                     |
+| separator | Optional path separator e.g. '\' for Windows systems.                                                                                                                                                                                     |
 
 ### File source
 
@@ -320,7 +323,7 @@ The file source is a source that consists of the binary contents of files e.g.
 ```yaml
 - type: FILE
   attributes:
-    paths: ['%%environ_systemroot%%\System32\winevt\Logs\System.evtx']
+    paths: [ '%%environ_systemroot%%\System32\winevt\Logs\System.evtx' ]
 ```
 
 Where `attributes` can contain the following values:
@@ -328,7 +331,7 @@ Where `attributes` can contain the following values:
 | Value     | Description                                                                                                                                                                                                                               |
 |-----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | paths     | A list of file paths that can potentially be collected. These paths should be absolute. The paths can use parameter expansion e.g. `%%environ_systemroot%%`. See section: [Parameter expansion and globs](#parameter-expansion-and-globs) |
-| separator | Optional path seperator e.g. '\' for Windows systems.                                                                                                                                                                                     |
+| separator | Optional path separator e.g. '\' for Windows systems.                                                                                                                                                                                     |
 
 ### Path source
 
@@ -337,16 +340,16 @@ The path source is a source that consists of a list of paths e.g.
 ```yaml
 - type: PATH
   attributes:
-    paths: ['\Program Files']
+    paths: [ '\Program Files' ]
     separator: '\'
 ```
 
 Where `attributes` can contain the following values:
 
-| Value     | Description                                                                                                                                                                                                                        |
-|-----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Value     | Description                                                                                                                                                                                                                         |
+|-----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | paths     | A list of file paths that can potentially be collected. These paths can should be absolute. The paths can use parameter expansion e.g. `%%environ_systemroot%%`. See section: [Parameter expansion and globs](#parameter-expansion) |
-| separator | Optional path seperator e.g. '\' for Windows systems.                                                                                                                                                                              |
+| separator | Optional path separator e.g. '\' for Windows systems.                                                                                                                                                                               |
 
 ### Windows Registry key source
 
@@ -357,16 +360,16 @@ Example:
 
 ```yaml
 sources:
-- type: REGISTRY_KEY
-  attributes:
-    keys:
-    - 'HKEY_USERS\%%users.sid%%\Software\Microsoft\Internet Explorer\TypedURLs\*'
+  - type: REGISTRY_KEY
+    attributes:
+      keys:
+        - 'HKEY_USERS\%%users.sid%%\Software\Microsoft\Internet Explorer\TypedURLs\*'
 ```
 
 Where `attributes` can contain the following values:
 
-| Value | Description                                                                                                                                                                                           |
-|-------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Value | Description                                                                                                                                                                                            |
+|-------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | keys  | A list of Windows Registry key paths that can potentially be collected. The paths can use parameter expansion e.g. `%%users.sid%%`. See section: [Parameter expansion and globs](#parameter-expansion) |
 
 ### Windows Registry value source
@@ -378,18 +381,18 @@ Windows registry values e.g.
 - type: REGISTRY_VALUE
   attributes:
     key_value_pairs:
-      - {key: 'HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Explorer\WindowsUpdate', value: 'CISCNF4654'}
+      - { key: 'HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Explorer\WindowsUpdate', value: 'CISCNF4654' }
 ```
 
 Where `attributes` can contain the following values:
 
-| Value           | Description                                                                                                                                                                                                              |
-|-----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Value           | Description                                                                                                                                                                                                               |
+|-----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | key_value_pairs | A list of Windows Registry key paths and value names that can potentially be collected. The key path can use parameter expansion e.g. `%%users.sid%%`. See section: [Parameter expansion and globs](#parameter-expansion) |
 
 ### Windows Management Instrumentation (WMI) query source
 
-The  Windows Management Instrumentation (WMI) query source is a source that
+The Windows Management Instrumentation (WMI) query source is a source that
 consists of the output of a Windows Management Instrumentation (WMI) query e.g.
 
 ```yaml
@@ -417,7 +420,7 @@ are:
 * Windows
 
 ```yaml
-supported_os: [Darwin, Linux, Windows]
+supported_os: [ Darwin, Linux, Windows ]
 ```
 
 ## Labels
@@ -455,7 +458,7 @@ $FILENAME.yaml
 
 Where $FILENAME is name of the file e.g. windows.yaml.
 
-Each defintion file should have a comment at the top of the file with a
+Each definition file should have a comment at the top of the file with a
 one-line summary describing the type of artifact definitions contained in the
 file e.g.
 
@@ -469,9 +472,9 @@ Generally use the short [] format for single-item lists that fit inside 80
 characters to save on unnecessary line breaks:
 
 ```yaml
-labels: [Logs]
-supported_os: [Windows]
-urls: ['http://www.forensicswiki.org/wiki/Windows_XML_Event_Log_(EVTX)']
+labels: [ Logs ]
+supported_os: [ Windows ]
+urls: [ 'http://www.forensicswiki.org/wiki/Windows_XML_Event_Log_(EVTX)' ]
 ```
 
 and the bulleted list form for multi-item lists or long lines:
@@ -493,15 +496,15 @@ like labels and supported_os.
 Paths and URLs should use single quotes to avoid the need for manual escaping.
 
 ```yaml
-paths: ['%%environ_temp%%\*.exe']
-urls: ['http://www.forensicswiki.org/wiki/Windows_XML_Event_Log_(EVTX)']
+paths: [ '%%environ_temp%%\*.exe' ]
+urls: [ 'http://www.forensicswiki.org/wiki/Windows_XML_Event_Log_(EVTX)' ]
 ```
 
 Double quotes should be used where escaping causes problems, such as
 regular expressions:
 
 ```yaml
-content_regex_list: ["^%%users.username%%:[^:]*\n"]
+content_regex_list: [ "^%%users.username%%:[^:]*\n" ]
 ```
 
 ### Minimize the number of definitions by using multiple sources
@@ -514,33 +517,33 @@ having FirefoxHistoryWindows, FirefoxHistoryLinux, FirefoxHistoryDarwin, do:
 name: FirefoxHistory
 doc: Firefox places.sqlite files.
 sources:
-- type: FILE
-  attributes:
-    paths:
-      - %%users.localappdata%%\Mozilla\Firefox\Profiles\*\places.sqlite
-      - %%users.appdata%%\Mozilla\Firefox\Profiles\*\places.sqlite
-  supported_os: [Windows]
-- type: FILE
-  attributes:
-    paths: [%%users.homedir%%/Library/Application Support/Firefox/Profiles/*/places.sqlite]
-  supported_os: [Darwin]
-- type: FILE
-  attributes:
-    paths: ['%%users.homedir%%/.mozilla/firefox/*/places.sqlite']
-  supported_os: [Linux]
-labels: [Browser]
-supported_os: [Windows, Linux, Darwin]
+  - type: FILE
+    attributes:
+      paths:
+        - %%users.localappdata%%\Mozilla\Firefox\Profiles\*\places.sqlite
+        - %%users.appdata%%\Mozilla\Firefox\Profiles\*\places.sqlite
+    supported_os: [ Windows ]
+  - type: FILE
+    attributes:
+      paths: [ %%users.homedir%%/Library/Application Support/Firefox/Profiles/*/places.sqlite ]
+    supported_os: [ Darwin ]
+  - type: FILE
+    attributes:
+      paths: [ '%%users.homedir%%/.mozilla/firefox/*/places.sqlite' ]
+    supported_os: [ Linux ]
+labels: [ Browser ]
+supported_os: [ Windows, Linux, Darwin ]
 ```
 
 ## Parameter expansion and globs
 
 ### Parameter expansion
 
-Path, keys, key and query attributes can contain parameter expansion and 
+Path, keys, key and query attributes can contain parameter expansion and
 globing. This allows for flexible creation of artifact locations.
 
-Parameter expansions values are enclosed by double percent symbols e.g. 
-`%%environ_systemroot%%`. The parameter expansion value can be replaced by the 
+Parameter expansions values are enclosed by double percent symbols e.g.
+`%%environ_systemroot%%`. The parameter expansion value can be replaced by the
 corresponding value from the [knowledge base](#knowledge-base).
 
 For every expansion that is used in an artifact, there should be another artifact
@@ -549,10 +552,10 @@ to precompute parameter values from sources outside of these definitions.
 
 ### Parameter Globs
 
-Parameters can also contain regular glob elements (`**`, or `*`). 
-For example, having files `foo`, `bar`, `baz` glob expansion of `ba*` 
+Parameters can also contain regular glob elements (`**`, or `*`).
+For example, having files `foo`, `bar`, `baz` glob expansion of `ba*`
 will yield `bar` and `baz`. A recursive component (specified as `**`)
-matches any directory tree up to some specified depth (3 by default). 
+matches any directory tree up to some specified depth (3 by default).
 `**` does not match the current directory.
 The search depth can optionally be specified by appending a number, e.g.
 `**9` will match up to 9 levels of a directory hierarchy.
