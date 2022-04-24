@@ -15,27 +15,19 @@ follow the specification.
 
 The artifact definition format is described in detail in the [Style Guide](style_guide.md).
 
-As of 2021-01-22 the repository contains:
+As of 2022-04-24 the repository contains:
 
 **Artifact definition by type**
 
 | ARTIFACT GROUP | COMMAND | DIRECTORY | FILE | PATH | REGISTRY KEY | REGISTRY VALUE | WMI |
 |----------------|---------|-----------|------|------|--------------|----------------|-----|
-|             36 |       9 |        15 |  318 |   20 |           64 |            124 |  26 |
+|             37 |       9 |        15 |  367 |   26 |           69 |            126 |  27 |
 
 **Artifact definition by OS**
 
 | DARWIN | LINUX | WINDOWS |
 |--------|-------|---------|
-|    146 |   132 |     326 |
-
-
-**Artifact definition by label**
-
-| ANTIVIRUS | AUTHENTICATION | BROWSER | CLOUD | CLOUD STORAGE | CONFIGURATION FILES | DOCKER | EXTERNAL MEDIA | EXTERNALACCOUNT | HADOOP | HISTORY FILES | LOGS | MAIL | NETWORK | SOFTWARE | SYSTEM | USERS | IOS |
-|-----------|----------------|---------|-------|---------------|---------------------|--------|----------------|-----------------|--------|---------------|------|------|---------|----------|--------|-------|-----|
-|         6 |             19 |      28 |     2 |             4 |                  46 |      2 |              2 |               3 |      1 |             3 |   48 |   16 |      18 |       43 |    116 |    77 |   5 |
-
+|    151 |   152 |     365 |
 
 ## Background/History
 
