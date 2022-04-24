@@ -418,23 +418,41 @@ sources:
 - type: FILE
   attributes:
     paths:
-    - '%%users.localappdata%%\Google\Chrome\User Data\*\Extension Activity'
-    - '%%users.localappdata%%\Google\Chrome SxS\User Data\*\Extension Activity'
-    - '%%users.localappdata%%\Chromium\User Data\*\Extension Activity'
+      - '%%users.appdata%%\Brave\*\Extension Activity'
+      - '%%users.appdata%%\Opera Software\Opera Stable\*\Extension Activity'
+      - '%%users.localappdata%%\Chromium\*\Extension Activity'
+      - '%%users.localappdata%%\Chromium\User Data\*\Extension Activity'
+      - '%%users.localappdata%%\Google\Chrome SxS\User Data\*\Extension Activity'
+      - '%%users.localappdata%%\Google\Chrome\User Data\*\Extension Activity'
+      - '%%users.localappdata%%\Microsoft\Edge Beta\User Data\*\Extension Activity'
+      - '%%users.localappdata%%\Microsoft\Edge\User Data\*\Extension Activity'
+      - '%%users.localappdata%%\Yandex\YandexBrowser\User Data\*\Extension Activity'
     separator: '\'
   supported_os: [Windows]
 - type: FILE
   attributes:
     paths:
-    - '%%users.homedir%%/Library/Application Support/Google/Chrome/*/Extension Activity'
-    - '%%users.homedir%%/Library/Application Support/Google/Chrome Canary/*/Extension Activity'
+    - '%%users.homedir%%/Library/Application Support/BraveSoftware/Brave-Browser/*/Extension Activity'
     - '%%users.homedir%%/Library/Application Support/Chromium/*/Extension Activity'
+    - '%%users.homedir%%/Library/Application Support/Google/Chrome Canary/*/Extension Activity'
+    - '%%users.homedir%%/Library/Application Support/Google/Chrome/*/Extension Activity'
+    - '%%users.homedir%%/Library/Application Support/Microsoft Edge Beta/*/Extension Activity'
+    - '%%users.homedir%%/Library/Application Support/Microsoft Edge/*/Extension Activity'
+    - '%%users.homedir%%/Library/Application Support/Yandex/YandexBrowser/*/Extension Activity'
+    - '%%users.homedir%%/Library/Application Support/com.operasoftware.Opera/*/Extension Activity'
   supported_os: [Darwin]
 - type: FILE
   attributes:
     paths:
-    - '%%users.homedir%%/.config/google-chrome/*/Extension Activity'
-    - '%%users.homedir%%/.config/chromium/*/Extension Activity'
+      - '%%users.homedir%%/.config/BraveSoftware/Brave-Browser/*/Extension Activity'
+      - '%%users.homedir%%/.config/chrome-remote-desktop/chrome-config/google-chrome/*/Extension Activity'
+      - '%%users.homedir%%/.config/chrome-remote-desktop/chrome-profile/*/Extension Activity'
+      - '%%users.homedir%%/.config/chromium/*/Extension Activity'
+      - '%%users.homedir%%/.config/google-chrome-beta/*/Extension Activity'
+      - '%%users.homedir%%/.config/google-chrome/*/Extension Activity'
+      - '%%users.homedir%%/.config/opera/*/Extension Activity'
+      - '%%users.homedir%%/.config/yandex-browser-beta/*/Extension Activity'
+      - '%%users.homedir%%/snap/chromium/common/chromium/*/Extension Activity'
   supported_os: [Linux]
 supported_os: [Windows,Darwin,Linux]
 labels: [Browser]

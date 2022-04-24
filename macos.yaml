@@ -6,8 +6,8 @@ sources:
 - type: FILE
   attributes:
     paths:
-    - '/private/var/log/asl/*'
-    - '/var/log/asl/*'
+    - '/private/var/log/asl/*.asl'
+    - '/var/log/asl/*.asl'
 labels: [System, Logs]
 supported_os: [Darwin]
 urls:
@@ -29,7 +29,7 @@ name: MacOSApplicationsRecentItems
 doc: Recent Items application specific
 sources:
 - type: FILE
-  attributes: {paths: ['%%users.homedir%%/Library/Preferences/*LSSharedFileList.plist']}
+  attributes: {paths: ['%%users.homedir%%/Library/Preferences/*.LSSharedFileList.plist']}
 labels: [Users, Software]
 supported_os: [Darwin]
 urls:
@@ -285,7 +285,7 @@ name: MacOSKeychains
 doc: Keychain Directory
 sources:
 - type: FILE
-  attributes: {paths: ['%%users.homedir%%/Library/Keychains/*']}
+  attributes: {paths: ['%%users.homedir%%/Library/Keychains/*.keychain']}
 labels: [Users]
 supported_os: [Darwin]
 urls:
@@ -333,9 +333,9 @@ sources:
 - type: FILE
   attributes:
     paths:
-    - '/Library/LaunchAgents/*'
-    - '/System/Library/LaunchAgents/*'
-    - '%%users.homedir%%/Library/LaunchAgents/*'
+    - '/Library/LaunchAgents/*.plist'
+    - '/System/Library/LaunchAgents/*.plist'
+    - '%%users.homedir%%/Library/LaunchAgents/*.plist'
 labels: [System]
 supported_os: [Darwin]
 urls:
@@ -348,9 +348,9 @@ sources:
 - type: FILE
   attributes:
     paths:
-    - '/Library/LaunchDaemons/*'
-    - '/System/Library/LaunchDaemons/*'
-    - '%%users.homedir%%/Library/LaunchDaemons/*'
+    - '/Library/LaunchDaemons/*.plist'
+    - '/System/Library/LaunchDaemons/*.plist'
+    - '%%users.homedir%%/Library/LaunchDaemons/*.plist'
 labels: [System]
 supported_os: [Darwin]
 urls:
@@ -700,8 +700,8 @@ sources:
 - type: FILE
   attributes:
     paths:
-    - '/Library/StartupItems/*'
-    - '/System/Library/StartupItems/*'
+    - '/Library/StartupItems/*.plist'
+    - '/System/Library/StartupItems/*.plist'
 labels: [System]
 supported_os: [Darwin]
 urls:
@@ -762,7 +762,7 @@ name: MacOSSystemPreferencesPlistFiles
 doc: System Preferences plist files
 sources:
 - type: FILE
-  attributes: {paths: ['/Library/Preferences/**']}
+  attributes: {paths: ['/Library/Preferences/**/*.plist']}
 labels: [System]
 supported_os: [Darwin]
 urls:
@@ -1023,8 +1023,10 @@ sources:
 - type: FILE
   attributes:
     paths:
+    - '/private/var/log/btmp'
     - '/private/var/run/utmp'
     - '/private/var/log/wtmp'
+    - '/var/run/btmp'
     - '/var/run/utmp'
     - '/var/log/wtmp'
 labels: [Logs, Authentication]
