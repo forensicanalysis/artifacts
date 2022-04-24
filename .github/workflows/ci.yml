@@ -18,3 +18,6 @@ jobs:
         run: go get github.com/forensicanalysis/artifactlib/cmd/artifactvalidator
       - name: Validate artifacts
         run: artifactvalidator -s *.yaml
+      - name: Show debug errors
+        run: artifactvalidator -v *.yaml
+        continue-on-error: true

@@ -1024,11 +1024,11 @@ sources:
   attributes:
     paths:
     - '/private/var/log/btmp'
-    - '/private/var/run/utmp'
     - '/private/var/log/wtmp'
-    - '/var/run/btmp'
-    - '/var/run/utmp'
+    - '/private/var/run/utmp'
+    - '/var/log/btmp'
     - '/var/log/wtmp'
+    - '/var/run/utmp'
 labels: [Logs, Authentication]
 supported_os: [Darwin]
 urls: ['https://github.com/libyal/dtformats/blob/main/documentation/Utmp%20login%20records%20format.asciidoc']

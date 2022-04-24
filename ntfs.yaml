@@ -36,6 +36,7 @@ supported_os: [Windows]
 name: NTFSUSNJournal
 doc: |
   The NTFS $UsnJnrl file system metadata file.
+
   Note that this currently does not include the $J alternate data stream name.
 sources:
   - type: FILE

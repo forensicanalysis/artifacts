@@ -34,7 +34,7 @@ urls: ['https://artifacts-kb.readthedocs.io/en/latest/sources/windows/EventLog.h
 name: WindowsAllEventLogs
 doc: All Windows Event log locations.
 sources:
-  - type: File
+  - type: FILE
     attributes:
       paths:
         - '%%windows_event_logs%%\*.evt'
