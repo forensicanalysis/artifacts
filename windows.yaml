@@ -3764,3 +3764,35 @@ sources:
       keys: ['HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\WINEVT\Publishers\*']
 supported_os: [Windows]
 urls: ['https://winreg-kb.readthedocs.io/en/latest/sources/EventLog-keys.html']
+---
+name: WindowsCortanaDatabase
+doc: Windows Cortana database
+sources:
+  - type: FILE
+    attributes:
+      paths:
+        - '%%users.localappdata%%\Packages\Microsoft.Windows.Cortana_*\AppData\Indexed DB\IndexedDB.edb'
+        - '%%users.localappdata%%\Packages\Microsoft.Windows.Cortana_*\LocalState\ESEDatabase_CortanaCoreInstance\CortanaCoreDb.dat'
+      separator: '\'
+supported_os: [Windows]
+urls: ['https://forensicswiki.xyz/wiki/index.php?title=Cortana']
+---
+name: WindowsCryptnetUrlCacheContent
+doc: |
+  Content of a Windows cache of files downloaded from the internet.
+
+  Helpful when investigating the use of "Living of the Land" tools that allow
+  attackers to download arbitrary files from the internet, such as
+  "certutil.exe".
+sources:
+  - type: FILE
+    attributes:
+      paths:
+        - '%%environ_systemroot%%\System32\config\systemprofile\AppData\LocalLow\Microsoft\CryptnetUrlCache\Content\*'
+        - '%%environ_systemroot%%\SysWOW64\config\systemprofile\AppData\LocalLow\Microsoft\CryptnetUrlCache\Content\*'
+        - '%%users.userprofile%%\AppData\LocalLow\Microsoft\CryptnetUrlCache\Content\*'
+      separator: \
+supported_os:
+  - Windows
+urls:
+  - https://forensicswiki.xyz/wiki/index.php?title=Windows#Cryptnet_URL_Cache
