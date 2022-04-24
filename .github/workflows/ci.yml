@@ -18,6 +18,18 @@ jobs:
         run: go install github.com/forensicanalysis/artifactlib/cmd/artifactvalidator@v0.16.0
       - name: Validate artifacts
         run: artifactvalidator -s *.yaml
+
+  validate-debug:
+    name: validate-debug
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup go 1.18
+        uses: actions/setup-go@v3
+        with: {go-version: '1.18'}
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Install artifactvalidator
+        run: go install github.com/forensicanalysis/artifactlib/cmd/artifactvalidator@v0.16.0
       - name: Show debug errors
         run: artifactvalidator -v *.yaml
         continue-on-error: true
