@@ -258,7 +258,7 @@ labels: [Configuration Files, System]
 supported_os: [Linux]
 urls:
 - 'http://en.wikipedia.org/wiki/Initrd'
-- 'https://www.kernel.org/doc/Documentation/initrd.txt'
+- 'https://www.kernel.org/doc/html/latest/admin-guide/initrd.html'
 ---
 name: LinuxIssueFile
 doc: Linux prelogin message and identification (issue) file.
@@ -679,7 +679,7 @@ sources:
 labels: [System, Configuration Files]
 supported_os: [Linux]
 urls:
-- 'https://docs.pagure.org/SSSD.sssd/design_pages/secrets_service.html'
+- 'https://docs.pagure.org/sssd.sssd/design_pages/secrets_service.html'
 - 'https://www.fireeye.com/blog/threat-research/2020/04/kerberos-tickets-on-linux-red-teams.html'
 ---
 name: SSHHostPubKeys
@@ -710,7 +710,7 @@ sources:
     - '/etc/yum.repos.d/*.repo'
 labels: [Configuration Files, System]
 supported_os: [Linux]
-urls: ['https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/System_Administrators_Guide/sec-Configuring_Yum_and_Yum_Repositories.html']
+urls: ['https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/deployment_guide/sec-configuring_yum_and_yum_repositories']
 ---
 name: ZeitgeistDatabase
 doc: Zeitgeist user activity database.
