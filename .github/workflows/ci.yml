@@ -15,7 +15,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
       - name: Install artifactvalidator
-        run: go install github.com/forensicanalysis/artifactlib/cmd/artifactvalidator@v0.16.0
+        run: go install github.com/forensicanalysis/artifactlib/cmd/artifactvalidator@v0.16.1
       - name: Validate artifacts
         run: artifactvalidator -s *.yaml
 
@@ -29,7 +29,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
       - name: Install artifactvalidator
-        run: go install github.com/forensicanalysis/artifactlib/cmd/artifactvalidator@v0.16.0
+        run: go install github.com/forensicanalysis/artifactlib/cmd/artifactvalidator@v0.16.1
       - name: Show debug errors
         run: artifactvalidator -v *.yaml
         continue-on-error: true
