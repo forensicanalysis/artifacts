@@ -30,7 +30,7 @@ supported_os: [Darwin, Linux, Windows]
 urls: ['https://forensicswiki.xyz/wiki/index.php?title=Bash_shell']
 ---
 name: BashShellHistoryFile
-aliases: [MacOSBashHistory]
+#aliases: [MacOSBashHistory]
 doc: Bourne Again shell (bash) history files.
 sources:
 - type: FILE
@@ -46,7 +46,7 @@ supported_os: [Darwin, Linux, Windows]
 urls: ['https://forensicswiki.xyz/wiki/index.php?title=Bash_shell']
 ---
 name: BashShellSessionFile
-aliases: [MacOSBashSessions]
+#aliases: [MacOSBashSessions]
 doc: Bourne Again shell (bash) session files.
 sources:
 - type: FILE
@@ -148,7 +148,7 @@ sources:
 supported_os: [Darwin, Linux]
 ---
 name: ShellConfigurationFile
-aliases: [AllShellConfigs, GlobalShellConfigs, UsersShellConfigs]
+#aliases: [AllShellConfigs, GlobalShellConfigs, UsersShellConfigs]
 doc: Group of shell configuration files.
 sources:
 - type: ARTIFACT_GROUP
@@ -164,7 +164,7 @@ sources:
 supported_os: [Darwin, Linux, Windows]
 ---
 name: ShellHistoryFile
-aliases: [AllUsersShellHistory, UserShellHistory]
+#aliases: [AllUsersShellHistory, UserShellHistory]
 doc: Group of shell history files.
 sources:
 - type: ARTIFACT_GROUP
