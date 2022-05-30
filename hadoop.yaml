@@ -24,7 +24,6 @@ sources:
       - '/hadoop/*/yarn/timeline/leveldb-timeline-store.ldb/*'
       - '/**2/hadoop/*/yarn/timeline/leveldb-timeline-store.ldb/*'
       - '/**2/hadoop/*/yarn/timeline/leveldb-timeline-store.ldb/*'
-      
 labels: [Hadoop]
 supported_os: [Linux]
 ---
