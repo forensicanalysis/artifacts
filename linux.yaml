@@ -202,6 +202,7 @@ sources:
   attributes:
     paths:
     - '/etc/ca-certificates.conf'
+supported_os: [Linux]
 ---
 name: LinuxCACertificates
 doc: Linux CA Certificates.
