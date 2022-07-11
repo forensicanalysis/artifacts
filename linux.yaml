@@ -106,6 +106,37 @@ labels: [Configuration Files]
 supported_os: [Linux]
 urls: ['https://forensicswiki.xyz/wiki/index.php?title=Gnome_Desktop_Environment']
 ---
+name: FreeDesktopTrashInfoFiles
+doc: FreeDesktop.org Trash Info Files.
+sources:
+- type: FILE
+  attributes:
+    paths:
+    - '%%users.homedir%%/.local/share/Trash/info/*.trashinfo'
+supported_os: [Linux]
+urls:
+- 'https://specifications.freedesktop.org/trash-spec/trashspec-latest.html'
+---
+name: FreeDesktopTrashFiles
+doc: FreeDesktop.org Trash Files.
+sources:
+- type: FILE
+  attributes:
+    paths:
+    - '%%users.homedir%%/.local/share/Trash/files/*'
+supported_os: [Linux]
+urls:
+- 'https://specifications.freedesktop.org/trash-spec/trashspec-latest.html'
+---
+name: GTKRecentlyUsedDatabase
+doc: GTK Recent Manager database.
+sources:
+- type: FILE
+  attributes:
+    paths:
+    - '%%users.homedir%%/.local/share/recently-used.xbel'
+supported_os: [Linux]
+---
 name: HostAccessPolicyConfiguration
 doc: Linux files related to host access policy configuration.
 sources:
@@ -164,6 +195,26 @@ sources:
 labels: [Logs, Authentication]
 supported_os: [Linux]
 ---
+name: LinuxCACertificatesConfiguration
+doc: Linux CA Certificates configuration file.
+sources:
+- type: FILE
+  attributes:
+    paths:
+    - '/etc/ca-certificates.conf'
+supported_os: [Linux]
+---
+name: LinuxCACertificates
+doc: Linux CA Certificates.
+sources:
+- type: FILE
+  attributes:
+    paths:
+    - '/etc/ssl/certs/ca-certificates.crt'
+    - '/usr/share/ca-certificates/*'
+    - '/usr/local/share/ca-certificates/*'
+supported_os: [Linux]
+---
 name: LinuxCronLogs
 doc: Linux cron log files.
 sources:
@@ -190,6 +241,15 @@ sources:
 - type: FILE
   attributes: {paths: ['/var/log/daemon.log*']}
 labels: [Logs]
+supported_os: [Linux]
+---
+name: LinuxDHCPConfigurationFile
+doc: Linux DHCP Configuration File
+sources:
+- type: FILE
+  attributes:
+    paths:
+    - '/etc/dhcp/dhcp.conf'
 supported_os: [Linux]
 ---
 name: LinuxDistributionRelease
@@ -357,6 +417,24 @@ sources:
 labels: [System, Configuration Files]
 supported_os: [Linux]
 ---
+name: LinuxNetworkManager
+doc: Linux NetworkManager files.
+sources:
+- type: FILE
+  attributes:
+    paths:
+    - '/etc/NetworkManager/conf.d/name.conf'
+    - '/etc/NetworkManager/NetworkManager.conf'
+    - '/etc/NetworkManager/system-connections'
+    - '/run/NetworkManager/conf.d/name.conf'
+    - '/usr/lib/NetworkManager/conf.d/name.conf'
+    - '/var/lib/NetworkManager/NetworkManager-intern.conf'
+    - '/var/lib/NetworkManager/*'
+supported_os: [Linux]
+urls:
+- 'https://linux.die.net/man/5/networkmanager.conf'
+- 'https://man.archlinux.org/man/NetworkManager.conf.5.en#FILE_FORMAT'
+---
 name: LinuxPamConfigs
 doc: Configuration files for PAM.
 sources:
@@ -365,6 +443,7 @@ sources:
     paths:
     - '/etc/pam.conf'
     - '/etc/pam.d'
+    - '/etc/pam.d/common-password'
     - '/etc/pam.d/*'
 labels: [Authentication, Configuration Files]
 supported_os: [Linux]
@@ -473,6 +552,22 @@ sources:
   attributes: {paths: ['/var/log/sudo-io/**']}
 labels: [Logs, Authentication]
 supported_os: [Linux]
+---
+name: LinuxSysctlConfigurationFiles
+doc: Linux sysctl preload/configuration files.
+sources:
+- type: FILE
+  attributes:
+    paths:
+    - /etc/sysctl.d/*.conf
+    - /run/sysctl.d/*.conf
+    - /usr/local/lib/sysctl.d/*.conf
+    - /usr/lib/sysctl.d/*.conf
+    - /lib/sysctl.d/*.conf
+    - /etc/sysctl.con
+supported_os: [Linux]
+urls:
+- 'https://man7.org/linux/man-pages/man5/sysctl.conf.5.html'
 ---
 name: LinuxSysLogFiles
 doc: Linux syslog log files.
@@ -647,6 +742,15 @@ sources:
 labels: [Authentication, Configuration Files]
 supported_os: [Linux]
 ---
+name: MySQLHistoryFile
+doc: MySQL History file.
+sources:
+- type: FILE
+  attributes:
+    paths:
+    - '%%users.homedir%%/.mysql_history'
+supported_os: [Linux]
+---
 name: NetgroupConfiguration
 doc: Linux netgroup configuration.
 sources:
@@ -681,6 +785,42 @@ urls:
 - 'https://wiki.debian.org/HowToIdentifyADevice/PCI'
 supported_os: [Linux]
 ---
+name: PostgreSQLHistoryFile
+doc: PostgreSQL History file.
+sources:
+- type: FILE
+  attributes:
+    paths:
+    - '%%users.homedir%%/.psql_history'
+supported_os: [Linux]
+---
+name: PythonHistoryFile
+doc: Python REPL history file.
+sources:
+- type: FILE
+  attributes: {paths: ['%%users.homedir%%/.python_history']}
+supported_os: [Linux]
+---
+name: RHostsFile
+doc: RHosts file.
+sources:
+- type: FILE
+  attributes:
+    paths:
+    - '%%users.homedir%%/.rhosts'
+supported_os: [Linux]
+---
+name: SambaLogFiles
+doc: Samba log files.
+sources:
+- type: FILE
+  attributes:
+    paths:
+    - '/var/log/samba/*.log'
+supported_os: [Linux]
+urls:
+- 'https://wiki.samba.org/index.php/Configuring_Logging_on_a_Samba_Server'
+---
 name: SecretsServiceDatabaseFile
 doc: The System Security Services Daemon (SSSD) database file.
 sources:
@@ -695,6 +835,25 @@ urls:
 - 'https://docs.pagure.org/sssd.sssd/design_pages/secrets_service.html'
 - 'https://www.fireeye.com/blog/threat-research/2020/04/kerberos-tickets-on-linux-red-teams.html'
 ---
+name: SQLiteHistoryFile
+doc: SQLite History file.
+sources:
+- type: FILE
+  attributes:
+    paths:
+    - '%%users.homedir%%/.sqlite_history'
+supported_os: [Linux]
+---
+name: SSHAuthorizedKeysFiles
+doc: SSH authorized keys files.
+sources:
+- type: FILE
+  attributes:
+    paths:
+    - '%%users.homedir%%/.ssh/authorized_keys'
+    - '%%users.homedir%%/.ssh/authorized_keys2'
+supported_os: [Linux]
+---
 name: SSHHostPubKeys
 doc: SSH host public keys
 sources:
@@ -705,6 +864,16 @@ sources:
 labels: [Authentication, Configuration Files]
 supported_os: [Linux]
 ---
+name: SSHKnownHostsFiles
+doc: SSH known_hosts files.
+sources:
+- type: FILE
+  attributes:
+    paths:
+    - '%%users.homedir%%/.ssh/known_hosts'
+    - '/etc/ssh/known_hosts'
+supported_os: [Linux]
+---
 name: ThumbnailCacheFolder
 doc: Thumbnail cache folder.
 sources:
@@ -712,6 +881,46 @@ sources:
   attributes: {paths: ['%%users.homedir%%/.thumbnails/**3']}
 labels: [Users]
 supported_os: [Linux]
+---
+name: UFWConfigFiles
+doc: UFW Configuration files.
+sources:
+- type: FILE
+  attributes:
+    paths:
+    - '/etc/default/ufw'
+    - '/etc/ufw/sysctl.conf'
+    - '/etc/ufw/*.rules'
+    - '/etc/ufw/applications.d/*'
+supported_os: [Linux]
+---
+name: UFWLogFile
+doc: UFW Log file.
+sources:
+- type: FILE
+  attributes:
+    paths:
+    - '/var/log/ufw.log'
+supported_os: [Linux]
+---
+name: Viminfo
+doc: Viminfo file.
+sources:
+- type: FILE
+  attributes:
+    paths:
+    - '%%users.homedir%%/.viminfo'
+supported_os: [Linux]
+---
+name: WgetHSTSdatabase
+doc: Default wget HTTP Strict Transport Security (HSTS) database
+sources:
+- type: FILE
+  attributes:
+    paths:
+    - '%%users.homedir%%/.wget-hsts'
+supported_os: [Linux]
+urls: ['https://www.gnu.org/software/wget/manual/html_node/HTTPS-_0028SSL_002fTLS_0029-Options.html']
 ---
 name: YumSources
 doc: Yum package sources list
