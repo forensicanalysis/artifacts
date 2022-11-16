@@ -202,7 +202,7 @@ sources:
   attributes:
     paths:
     - '/var/log/auth.log*'
-    - '/var/log/secure.log*'
+    - '/var/log/secure*'
 labels: [Logs, Authentication]
 supported_os: [Linux]
 ---
