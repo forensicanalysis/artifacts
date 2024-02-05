@@ -18,6 +18,7 @@ labels: [ Logs ]
 supported_os: [ Windows ]
 urls: [ 'https://artifacts-kb.readthedocs.io/en/latest/sources/windows/EventLog.html' ]
 ---
+
 name: WindowsEventLogPath
 doc: Windows Event log locations.
 sources:
@@ -31,6 +32,7 @@ sources:
 supported_os: [Windows]
 urls: ['https://artifacts-kb.readthedocs.io/en/latest/sources/windows/EventLog.html']
 ---
+
 name: WindowsAllEventLogs
 doc: All Windows Event log locations.
 sources:
@@ -44,6 +46,7 @@ sources:
 supported_os: [Windows]
 urls: ['https://artifacts-kb.readthedocs.io/en/latest/sources/windows/EventLog.html']
 ---
+
 name: WindowsEventLogApplication
 doc: Application Windows Event Log.
 sources:
@@ -55,6 +58,7 @@ labels: [ Logs ]
 supported_os: [ Windows ]
 urls: [ 'https://artifacts-kb.readthedocs.io/en/latest/sources/windows/EventLog.html' ]
 ---
+
 name: WindowsEventLogSecurity
 doc: Security Windows Event Log.
 sources:
@@ -66,6 +70,7 @@ labels: [ Logs ]
 supported_os: [ Windows ]
 urls: [ 'https://artifacts-kb.readthedocs.io/en/latest/sources/windows/EventLog.html' ]
 ---
+
 name: WindowsEventLogSystem
 doc: System Windows Event Log.
 sources:
@@ -77,6 +82,7 @@ labels: [ Logs ]
 supported_os: [ Windows ]
 urls: [ 'https://artifacts-kb.readthedocs.io/en/latest/sources/windows/EventLog.html' ]
 ---
+
 name: WindowsXMLEventLogApplication
 doc: Application Windows XML Event Log.
 sources:
@@ -88,6 +94,7 @@ labels: [ Logs ]
 supported_os: [ Windows ]
 urls: [ 'https://artifacts-kb.readthedocs.io/en/latest/sources/windows/EventLog.html' ]
 ---
+
 name: WindowsXMLEventLogSecurity
 doc: Security Windows XML Event Log.
 sources:
@@ -99,6 +106,7 @@ labels: [ Logs ]
 supported_os: [ Windows ]
 urls: [ 'https://artifacts-kb.readthedocs.io/en/latest/sources/windows/EventLog.html' ]
 ---
+
 name: WindowsXMLEventLogSysmon
 doc: Sysmon Windows XML Event Log.
 sources:
@@ -110,6 +118,7 @@ labels: [ Logs ]
 supported_os: [ Windows ]
 urls: [ 'https://artifacts-kb.readthedocs.io/en/latest/sources/windows/EventLog.html' ]
 ---
+
 name: WindowsXMLEventLogSystem
 doc: System Windows XML Event Log.
 sources:
@@ -121,6 +130,7 @@ labels: [ Logs ]
 supported_os: [ Windows ]
 urls: [ 'https://artifacts-kb.readthedocs.io/en/latest/sources/windows/EventLog.html' ]
 ---
+
 name: WindowsXMLEventLogTerminalServices
 doc: TerminalServices Windows XML Event Log.
 sources:
@@ -131,3 +141,19 @@ sources:
 labels: [ Logs ]
 supported_os: [ Windows ]
 urls: [ 'https://artifacts-kb.readthedocs.io/en/latest/sources/windows/EventLog.html' ]
+---
+
+name: WindowsUpdateLogFile
+doc: Windows Update log files.
+sources:
+- type: FILE
+  attributes:
+    paths:
+    - '%%environ_programdata%%\USOShared\Logs\System\*.etl'
+    - '%%environ_systemroot%%\Logs\CBS\CBS*.log'
+    - '%%environ_systemroot%%\Logs\WindowsUpdate\WindowsUpdate*.etl'
+    separator: \
+supported_os:
+- Windows
+urls:
+- https://learn.microsoft.com/en-us/windows/deployment/update/windows-update-logs

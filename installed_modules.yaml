@@ -26,6 +26,7 @@ supported_os: [Linux]
 labels: [Software]
 urls: ['https://www.python.org/dev/peps/pep-0376/']
 ---
+
 name: PythonEggInfo
 doc: |
   Python module files distributed in .egg formats (currently linux only).
@@ -94,6 +95,7 @@ urls:
 - 'https://pythonhosted.org/setuptools/formats.html'
 - 'https://www.python.org/dev/peps/pep-0370/'
 ---
+
 name: PythonModuleInfo
 doc: Python module installation information.
 sources:
@@ -105,6 +107,7 @@ sources:
     - PythonWheelInfo
 labels: [Software]
 ---
+
 name: PythonWheelInfo
 doc: |
   Python module files distributed in the wheel format (currently linux only).
@@ -126,6 +129,7 @@ urls:
 - 'https://wheel.readthedocs.org/en/latest/'
 - 'http://pip.readthedocs.org/en/stable/reference/pip_install/'
 ---
+
 name: RubyGems
 doc: Ruby Gems (currently linux only).
 sources:

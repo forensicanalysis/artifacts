@@ -12,6 +12,7 @@ sources:
 labels: [Cloud Storage]
 supported_os: [Darwin,Linux,Windows]
 ---
+
 name: DropboxClient
 doc: Dropbox cloud storage client artifacts.
 sources:
@@ -33,6 +34,7 @@ supported_os: [Darwin,Linux,Windows]
 labels: [Cloud Storage]
 urls: ['https://forensicswiki.xyz/wiki/index.php?title=Dropbox']
 ---
+
 name: GoogleDriveClient
 doc: Google Drive cloud storage client artifacts.
 sources:
@@ -62,6 +64,7 @@ supported_os: [Darwin, Windows]
 labels: [Cloud Storage]
 urls: ['https://forensicswiki.xyz/wiki/index.php?title=Google_Drive']
 ---
+
 name: SkyDriveClient
 doc: |
   Microsoft Sky Drive cloud storage client artifacts.

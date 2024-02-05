@@ -15,6 +15,7 @@ labels: [Users]
 supported_os: [Windows]
 urls: ['https://forensicswiki.xyz/wiki/index.php?title=Windows#Microsoft_Office_Autosave']
 ---
+
 name: MicrosoftOfficeTrustRecords
 doc: Trust records showing document and locations with macros enabled
 sources:
@@ -28,6 +29,7 @@ supported_os: [Windows]
 urls:
   - 'https://twitter.com/inversecos/status/1494174785621819397'
 ---
+
 name: MicrosoftOfficeMRU
 doc: Microsoft Office Most Recently Used
 sources:
@@ -47,6 +49,7 @@ sources:
 supported_os: [Darwin, Windows]
 urls: ['https://github.com/mac4n6/macMRU-Parser']
 ---
+
 name: MicrosoftOutlookPABFiles
 doc: Microsoft Outlook PAB Files
 sources:
@@ -60,6 +63,7 @@ labels: [Users, Mail]
 supported_os: [Windows]
 urls: ['https://forensicswiki.xyz/wiki/index.php?title=Personal_Folder_File_(PAB,_PST,_OST)']
 ---
+
 name: MicrosoftOutlookPSTFiles
 doc: Microsoft Outlook PST Files
 sources:
@@ -73,6 +77,7 @@ labels: [Users, Mail]
 supported_os: [Windows]
 urls: ['https://forensicswiki.xyz/wiki/index.php?title=Personal_Folder_File_(PAB,_PST,_OST)']
 ---
+
 name: MicrosoftOutlookOSTFiles
 doc: Microsoft Outlook OST Files
 sources:
@@ -86,6 +91,7 @@ labels: [Users, Mail]
 supported_os: [Windows]
 urls: ['https://forensicswiki.xyz/wiki/index.php?title=Personal_Folder_File_(PAB,_PST,_OST)']
 ---
+
 name: MicrosoftOutlookDownloadedDirectory
 doc: Microsoft Outlook Downloads
 sources:
@@ -98,6 +104,7 @@ labels: [Users, Mail]
 supported_os: [Windows]
 urls: ['https://forensicswiki.xyz/wiki/index.php?title=Personal_Folder_File_(PAB,_PST,_OST)']
 ---
+
 name: NodeJSPackageManagerCacheFiles
 doc: Node JS package manager (NPM) cache files
 sources:
@@ -113,6 +120,7 @@ sources:
 supported_os: [Darwin, Linux, Windows]
 urls: ['https://docs.npmjs.com/cli/cache']
 ---
+
 name: WinRARExternalViewer
 doc: Executable run when a file is opened by WinRAR inside an archive.
 sources:
@@ -123,6 +131,7 @@ urls:
 - 'http://www.hexacorn.com/blog/2012/09/16/beyond-good-ol-run-key-part-2/'
 - 'http://acritum.com/software/manuals/winrar/html/helpinterfaceviewing.htm'
 ---
+
 name: WinRARAVScan
 doc: Executable run to scan a file when it is opened by WinRAR.
 sources:
@@ -133,6 +142,7 @@ urls:
 - 'http://www.hexacorn.com/blog/2012/09/16/beyond-good-ol-run-key-part-2/'
 - 'http://acritum.com/software/manuals/winrar/html/helpcommandsvirusscan.htm'
 ---
+
 name: MicrosoftSqlServerErrorLogs
 doc: Microsoft SQL Server's error log files.
 sources:
@@ -145,6 +155,7 @@ sources:
 labels: [Software, Logs]
 supported_os: [Windows]
 ---
+
 name: MozillaThunderbird
 doc: Mozilla Thunderbird files.
 sources:
@@ -152,6 +163,7 @@ sources:
   attributes: {paths: ['%%users.homedir%%/.thunderbird/**']}
 supported_os: [Linux]
 ---
+
 name: GnomeEvolution
 doc: Gnome Evolution files.
 sources:
@@ -162,3 +174,64 @@ sources:
     - '%%users.homedir%%/.config/evolution/**'
     - '%%users.homedir%%/.local/share/evolution/**'
 supported_os: [Linux]
+---
+
+name: VSCodeExtensionsPath
+doc: Get paths of Visual Studio Code extensions
+sources:
+- type: PATH
+  attributes:
+    paths:
+    - '%%users.userprofile%%/.vscode/extensions/*'
+  supported_os:
+  - Windows
+- type: PATH
+  attributes:
+    paths:
+    - '%%users.homedir%%/.vscode/extensions/*'
+  supported_os:
+  - Darwin
+  - Linux
+supported_os:
+- Darwin
+- Linux
+- Windows
+urls:
+- https://code.visualstudio.com/
+---
+
+name: WindowsSiemensWinCCLogFile
+doc: Siemens WinCC software logs.
+sources:
+- type: FILE
+  attributes:
+    paths:
+    - '%%environ_programfiles%%\Siemens\WinCC\Diagnose\*'
+    - '%%environ_programfiles%%\Common Files\Siemens\ace\bin\Diagnosis\*'
+    - '%%environ_programfilesx86%%\Siemens\WinCC\Diagnose\*'
+    - '%%environ_programfilesx86%%\Common Files\Siemens\ace\bin\Diagnosis\*'
+    - '%%environ_windir%%\security\SecurityController\*'
+    - '%%environ_allusersappdata%%\Siemens\Automation\Logfiles\*'
+    - '%%environ_allusersappdata%%\Siemens\Automation\Logfiles\Setup\*'
+    - '%%environ_allusersappdata%%\Siemens\Logs\*'
+    separator: \
+supported_os:
+- Windows
+urls:
+- https://cache.industry.siemens.com/dl/files/865/109757865/att_963121/v5/109757865_WinCC_Diagnostics_en.pdf
+---
+
+name: NpmPackagesPath
+doc: Get path of NPM packages that are globally installed (currently linux only).
+sources:
+- type: PATH
+  attributes:
+    paths:
+    - /usr/local/lib/node_modules/*
+    - /usr/lib/node_modules/*
+  supported_os:
+  - Linux
+supported_os:
+- Linux
+urls:
+- https://docs.npmjs.com/

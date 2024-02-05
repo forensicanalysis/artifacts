@@ -13,6 +13,7 @@ sources:
 labels: [Hadoop]
 supported_os: [Linux]
 ---
+
 name: HadoopYarnLogs
 doc: Location where Hadoop Yarn LevelDB/Timeline files are stored
 sources:
@@ -26,6 +27,7 @@ sources:
 labels: [Hadoop]
 supported_os: [Linux]
 ---
+
 name: HadoopAppLogs
 doc: Location where Hadoop application logs are stored
 sources:

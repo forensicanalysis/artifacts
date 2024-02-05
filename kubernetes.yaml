@@ -8,6 +8,7 @@ sources:
 labels: [ Kubernetes, Logs ]
 supported_os: [ Linux ]
 ---
+
 name: KubernetesCertificates
 doc: |
   Certificate files that are used for a Kubernetes cluster.
@@ -25,6 +26,7 @@ labels: [ Kubernetes, Configuration Files ]
 supported_os: [ Linux ]
 urls: [ 'https://kubernetes.io/docs/setup/best-practices/certificates/' ]
 ---
+
 name: KubernetesClusterDatabase
 doc: |
   Kubernetes cluster (etcd) database.
@@ -46,6 +48,7 @@ urls:
   - 'https://github.com/etcd-io/etcd'
   - 'https://github.com/etcd-io/etcd/tree/main/tools/etcd-dump-db'
 ---
+
 name: KubernetesKubelet
 doc: |
   Installation path of the (Kubernetes) Kubelet component.
@@ -58,6 +61,7 @@ labels: [ Kubernetes ]
 supported_os: [ Linux ]
 urls: [ 'https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/' ]
 ---
+
 name: KubernetesKubeletConfiguration
 doc: Files that stores the configuration of the local (Kubernetes) Kubelet.
 sources:
@@ -72,6 +76,7 @@ urls:
   - 'https://kubernetes.io/docs/tasks/administer-cluster/kubelet-config-file/'
   - 'https://kubernetes.io/docs/reference/config-api/kubelet-config.v1beta1/'
 ---
+
 name: KubernetesKubeletNetworkPKI
 doc: Certificates and other keyfiles used for Kubelet and Kubernetes general PKI.
 sources:
@@ -84,6 +89,7 @@ labels: [ Kubernetes, Configuration Files ]
 supported_os: [ Linux ]
 urls: [ 'https://kubernetes.io/docs/setup/best-practices/certificates' ]
 ---
+
 name: KubernetesKubeletPod
 doc: Path of (Kubernetes) Kubelet component information about Pods scheduled to run on a particular node.
 sources:
@@ -92,6 +98,7 @@ sources:
 labels: [ Kubernetes ]
 supported_os: [ Linux ]
 ---
+
 name: KubernetesKubeletPodManifest
 doc: |
   Manifest file that has been used to deploy a (Kubernetes) Pod.
@@ -103,6 +110,7 @@ sources:
 labels: [ Kubernetes ]
 supported_os: [ Linux ]
 ---
+
 name: KubernetesKubeletPodContainer
 doc: |
   Path where the container resources created within a (Kubernetes) Pod are located.
@@ -125,6 +133,7 @@ labels: [ Kubernetes ]
 supported_os: [ Linux ]
 urls: [ 'https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.22/#container-v1-core' ]
 ---
+
 name: KubernetesKubeletPodVolumes
 doc: |
   Volumes and other objects that are mounted into a (Kubernetes) Pod and respectively into the scheduled container(s).
@@ -144,6 +153,7 @@ urls:
   - 'https://kubernetes.io/docs/concepts/storage/projected-volumes/'
   - 'https://kubernetes.io/docs/concepts/storage/volumes/#configmap'
 ---
+
 name: KubernetesKubeletPodLogs
 doc: |
   Location where the log data of (Kubernetes) Pods can be found.

@@ -9,6 +9,7 @@ labels: [System]
 supported_os: [Linux]
 urls: ['https://www.kernel.org/doc/Documentation/sysctl/kernel.txt']
 ---
+
 name: LinuxIgnoreICMPBroadcasts
 doc: Whether the system ignores ICMP pings.
 sources:
@@ -18,6 +19,7 @@ labels: [Network, System]
 supported_os: [Linux]
 urls: ['https://www.kernel.org/doc/Documentation/networking/ip-sysctl.txt']
 ---
+
 name: LinuxKernelBootloader
 doc: Bootloader state acquired from the kernel.
 sources:
@@ -30,6 +32,7 @@ labels: [System]
 supported_os: [Linux]
 urls: ['https://www.kernel.org/doc/Documentation/sysctl/kernel.txt']
 ---
+
 name: LinuxKernelModuleRestrictions
 doc: Module loading controls.
 sources:
@@ -42,6 +45,7 @@ labels: [System]
 supported_os: [Linux]
 urls: ['https://www.kernel.org/doc/Documentation/sysctl/kernel.txt']
 ---
+
 name: LinuxKernelModuleTaintStatus
 doc: Taint state of loaded modules (binary blobs, unsigned modules etc).
 sources:
@@ -51,6 +55,7 @@ labels: [System]
 supported_os: [Linux]
 urls: ['https://www.kernel.org/doc/Documentation/sysctl/kernel.txt']
 ---
+
 name: LinuxNetworkIpForwardingState
 doc: IP forwarding states.
 sources:
@@ -64,6 +69,7 @@ labels: [Network, System]
 supported_os: [Linux]
 urls: ['https://www.kernel.org/doc/Documentation/networking/ip-sysctl.txt']
 ---
+
 name: LinuxNetworkPathFilteringSettings
 doc: States that determine how the system responds to route manipulation.
 sources:
@@ -77,6 +83,7 @@ labels: [Network, System]
 supported_os: [Linux]
 urls: ['https://www.kernel.org/doc/Documentation/networking/ip-sysctl.txt']
 ---
+
 name: LinuxNetworkRedirectState
 doc: Redirect send/receive states.
 sources:
@@ -90,6 +97,7 @@ labels: [Network, System]
 supported_os: [Linux]
 urls: ['https://www.kernel.org/doc/Documentation/networking/ip-sysctl.txt']
 ---
+
 name: LinuxProcArp
 doc: ARP table via /proc/net/arp.
 sources:
@@ -100,6 +108,7 @@ sources:
 labels: [Network]
 supported_os: [Linux]
 ---
+
 name: LinuxProcMounts
 doc: Current mounted filesystems.
 sources:
@@ -111,6 +120,7 @@ labels: [System]
 supported_os: [Linux]
 urls: ['https://www.kernel.org/doc/Documentation/filesystems/proc.txt']
 ---
+
 name: LinuxProcSysHardeningSettings
 doc: Linux sysctl settings obtained from /proc/sys.
 sources:
@@ -133,6 +143,7 @@ sources:
 labels: [System]
 supported_os: [Linux]
 ---
+
 name: LinuxRestrictedDmesgReadPrivileges
 doc: Restrict whether non-privileged users can read dmesg.
 sources:
@@ -144,6 +155,7 @@ labels: [System]
 supported_os: [Linux]
 urls: ['https://www.kernel.org/doc/Documentation/sysctl/kernel.txt']
 ---
+
 name: LinuxRestrictedKernelPointerReadPrivileges
 doc: Memory address obfuscation settings.
 sources:
@@ -153,6 +165,7 @@ labels: [System]
 supported_os: [Linux]
 urls: ['https://www.kernel.org/doc/Documentation/sysctl/kernel.txt']
 ---
+
 name: LinuxSecureFsLinks
 doc: Security controls to restrict operations on links in world writable directories.
 sources:
@@ -165,6 +178,7 @@ labels: [System]
 supported_os: [Linux]
 urls: ['https://www.kernel.org/doc/Documentation/sysctl/fs.txt']
 ---
+
 name: LinuxSecureSuidCoreDumps
 doc: Security controls for suid core dumps.
 sources:
@@ -174,6 +188,7 @@ labels: [System]
 supported_os: [Linux]
 urls: ['https://www.kernel.org/doc/Documentation/sysctl/fs.txt']
 ---
+
 name: LinuxSyncookieState
 doc: Whether the system uses syncookies.
 sources:
@@ -183,6 +198,7 @@ labels: [Network, System]
 supported_os: [Linux]
 urls: ['https://www.kernel.org/doc/Documentation/networking/ip-sysctl.txt']
 ---
+
 name: LinuxSysctlCmd
 doc: Linux output of systctl -a.
 sources:

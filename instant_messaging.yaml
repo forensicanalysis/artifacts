@@ -12,6 +12,7 @@ urls:
 - 'https://forensicswiki.xyz/wiki/index.php?title=Mac_OS_X'
 - 'https://forensicswiki.xyz/wiki/index.php?title=Mac_OS_X_10.9_-_Artifacts_Location#Skype'
 ---
+
 name: SkypeDb
 doc: Main Skype database
 sources:
@@ -24,6 +25,7 @@ urls:
 - 'https://forensicswiki.xyz/wiki/index.php?title=Mac_OS_X'
 - 'https://forensicswiki.xyz/wiki/index.php?title=Mac_OS_X_10.9_-_Artifacts_Location#Skype'
 ---
+
 name: SkypeMainDirectory
 doc: Skype Directory
 sources:
@@ -33,6 +35,7 @@ sources:
   supported_os: [Darwin]
 supported_os: [Darwin]
 ---
+
 name: SkypePreferences
 doc: Skype Preferences and Recent Searches
 sources:
@@ -45,6 +48,7 @@ urls:
 - 'https://forensicswiki.xyz/wiki/index.php?title=Mac_OS_X'
 - 'https://forensicswiki.xyz/wiki/index.php?title=Mac_OS_X_10.9_-_Artifacts_Location#Skype'
 ---
+
 name: SkypeUserProfile
 doc: Skype User profile
 sources:
@@ -55,6 +59,7 @@ sources:
 supported_os: [Darwin]
 urls: ['https://forensicswiki.xyz/wiki/index.php?title=Mac_OS_X_10.9_-_Artifacts_Location#Skype']
 ---
+
 name: SignalApplicationContent
 doc: Signal Application Content and Configuration
 sources:
@@ -68,6 +73,7 @@ sources:
   supported_os: [Linux]
 supported_os: [Linux]
 ---
+
 name: SignalDatabase
 doc: Signal Database file.
 sources:
@@ -76,6 +82,7 @@ sources:
   supported_os: [Linux]
 supported_os: [Linux]
 ---
+
 name: XChatLogs
 doc: XChat Log Files
 sources:

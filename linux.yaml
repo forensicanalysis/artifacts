@@ -18,6 +18,7 @@ sources:
 labels: [Configuration Files]
 supported_os: [Linux]
 ---
+
 name: AptitudeLogFiles
 doc: Linux aptitude package manager log files.
 sources:
@@ -26,6 +27,7 @@ sources:
 supported_os: [Linux]
 urls: ['https://www.debian.org/doc/manuals/aptitude/rn01re01.en.html']
 ---
+
 name: APTSources
 doc: APT package sources list
 sources:
@@ -38,6 +40,7 @@ labels: [Configuration Files, System]
 supported_os: [Linux]
 urls: ['http://manpages.ubuntu.com/manpages/trusty/en/man5/sources.list.5.html']
 ---
+
 name: APTTrustKeys
 doc: APT trusted keys
 sources:
@@ -52,6 +55,7 @@ labels: [Configuration Files, System]
 supported_os: [Linux]
 urls: ['https://wiki.debian.org/SecureApt']
 ---
+
 name: CronAtAllowDenyFiles
 doc: Files containing users authorised to run cron or at jobs.
 sources:
@@ -68,6 +72,7 @@ urls:
 - http://manpages.ubuntu.com/manpages/saucy/man5/at.allow.5.html
 - http://manpages.ubuntu.com/manpages/precise/en/man1/crontab.1.html
 ---
+
 name: DebianPackagesLogFiles
 doc: Linux dpkg log files.
 sources:
@@ -79,6 +84,7 @@ sources:
     - '/var/log/apt/term.log*'
 supported_os: [Linux]
 ---
+
 name: DebianPackagesStatus
 doc: Linux dpkg status file.
 sources:
@@ -87,6 +93,7 @@ sources:
 labels: [Software]
 supported_os: [Linux]
 ---
+
 name: DebianVersion
 doc: Debian version information.
 sources:
@@ -96,6 +103,7 @@ sources:
 labels: [Software]
 supported_os: [Linux]
 ---
+
 name: DNSResolvConfFile
 doc: DNS Resolver configuration file.
 sources:
@@ -105,6 +113,7 @@ labels: [Configuration Files]
 supported_os: [Linux]
 urls: ['http://man7.org/linux/man-pages/man5/resolv.conf.5.html']
 ---
+
 name: GnomeApplicationState
 doc: Gnome application state for frequent application data.
 sources:
@@ -114,6 +123,7 @@ labels: [Configuration Files]
 supported_os: [Linux]
 urls: ['https://forensicswiki.xyz/wiki/index.php?title=Gnome_Desktop_Environment']
 ---
+
 name: FreeDesktopTrashInfoFiles
 doc: FreeDesktop.org Trash Info Files.
 sources:
@@ -125,6 +135,7 @@ supported_os: [Linux]
 urls:
 - 'https://specifications.freedesktop.org/trash-spec/trashspec-latest.html'
 ---
+
 name: FreeDesktopTrashFiles
 doc: FreeDesktop.org Trash Files.
 sources:
@@ -136,6 +147,7 @@ supported_os: [Linux]
 urls:
 - 'https://specifications.freedesktop.org/trash-spec/trashspec-latest.html'
 ---
+
 name: GnomeTracker
 doc: Gnome Tracker database and backup files.
 sources:
@@ -147,6 +159,7 @@ sources:
 supported_os: [Linux]
 urls: ['https://wiki.gnome.org/Projects/Tracker/Documentation/GettingStarted']
 ---
+
 name: GTKRecentlyUsedDatabase
 doc: GTK Recent Manager database.
 sources:
@@ -156,6 +169,7 @@ sources:
     - '%%users.homedir%%/.local/share/recently-used.xbel'
 supported_os: [Linux]
 ---
+
 name: HostAccessPolicyConfiguration
 doc: Linux files related to host access policy configuration.
 sources:
@@ -167,6 +181,7 @@ sources:
 labels: [Configuration Files]
 supported_os: [Linux]
 ---
+
 name: IPTablesRules
 doc: List IPTables rules.
 sources:
@@ -177,6 +192,7 @@ sources:
 labels: [System]
 supported_os: [Linux]
 ---
+
 name: KernelModules
 doc: Kernel modules to be loaded on boot.
 sources:
@@ -187,6 +203,7 @@ sources:
     - '/etc/modprobe.d/*'
 supported_os: [Linux]
 ---
+
 name: LinuxAtJobs
 doc: Linux at jobs.
 sources:
@@ -195,6 +212,7 @@ sources:
 labels: [Configuration Files]
 supported_os: [Linux]
 ---
+
 name: LinuxAtJobsTemporaryOutputs
 doc: Linux at jobs temporary outputs.
 sources:
@@ -205,6 +223,7 @@ sources:
     - '/var/spool/cron/atspool/*'
 supported_os: [Linux]
 ---
+
 name: LinuxAuditLogs
 doc: Linux audit log files.
 sources:
@@ -213,6 +232,7 @@ sources:
 labels: [Logs]
 supported_os: [Linux]
 ---
+
 name: LinuxAuthLogs
 doc: Linux authentication log files.
 sources:
@@ -224,6 +244,7 @@ sources:
 labels: [Logs, Authentication]
 supported_os: [Linux]
 ---
+
 name: LinuxCACertificatesConfiguration
 doc: Linux CA Certificates configuration file.
 sources:
@@ -233,6 +254,7 @@ sources:
     - '/etc/ca-certificates.conf'
 supported_os: [Linux]
 ---
+
 name: LinuxCACertificates
 doc: Linux CA Certificates.
 sources:
@@ -244,6 +266,7 @@ sources:
     - '/usr/local/share/ca-certificates/*'
 supported_os: [Linux]
 ---
+
 name: LinuxCronLogs
 doc: Linux cron log files.
 sources:
@@ -252,6 +275,7 @@ sources:
 labels: [Logs]
 supported_os: [Linux]
 ---
+
 name: LinuxCronTabs
 doc: Crontab files.
 sources:
@@ -264,6 +288,7 @@ sources:
 labels: [Configuration Files]
 supported_os: [Linux]
 ---
+
 name: LinuxDaemonLogFiles
 doc: Linux daemon log files.
 sources:
@@ -272,6 +297,7 @@ sources:
 labels: [Logs]
 supported_os: [Linux]
 ---
+
 name: LinuxDHCPConfigurationFile
 doc: Linux DHCP Configuration File
 sources:
@@ -281,6 +307,7 @@ sources:
     - '/etc/dhcp/dhcp.conf'
 supported_os: [Linux]
 ---
+
 name: LinuxDistributionRelease
 doc: Linux distribution release information of non-LSB compliant systems.
 sources:
@@ -291,12 +318,14 @@ sources:
     - '/etc/enterprise-release'
     - '/etc/oracle-release'
     - '/etc/redhat-release'
+    - '/etc/rocky-release'
     - '/etc/SuSE-release'
     - '/etc/system-release'
   provides: [{key: os_release}]
 labels: [Software]
 supported_os: [Linux]
 ---
+
 name: LinuxDSDTTable
 doc: Linux file containing DSDT table.
 sources:
@@ -306,6 +335,7 @@ labels: [System]
 urls: ['https://www.kernel.org/doc/Documentation/acpi/initrd_table_override.txt']
 supported_os: [Linux]
 ---
+
 name: LinuxFstab
 doc: Linux fstab file.
 sources:
@@ -315,6 +345,7 @@ labels: [System, Configuration Files]
 supported_os: [Linux]
 urls: ['http://en.wikipedia.org/wiki/Fstab']
 ---
+
 name: LinuxGrubConfiguration
 doc: Linux grub configuration file.
 sources:
@@ -327,6 +358,7 @@ labels: [System, Configuration Files]
 supported_os: [Linux]
 urls: ['https://en.wikipedia.org/wiki/GNU_GRUB']
 ---
+
 name: LinuxHostnameFile
 doc: Linux hostname file.
 sources:
@@ -335,6 +367,7 @@ sources:
 labels: [Configuration Files, System]
 supported_os: [Linux]
 ---
+
 name: LinuxIfUpDownScripts
 doc: ifupdown scripts executed whenever a network interface goes up or down respectively.
 sources:
@@ -345,6 +378,7 @@ sources:
     - '/etc/network/if-down.d/*'
 supported_os: [Linux]
 ---
+
 name: LinuxInitrdFiles
 doc: Initrd (initramfs) files in /boot/ executed on startup.
 sources:
@@ -359,6 +393,7 @@ urls:
 - 'http://en.wikipedia.org/wiki/Initrd'
 - 'https://www.kernel.org/doc/html/latest/admin-guide/initrd.html'
 ---
+
 name: LinuxIssueFile
 doc: Linux prelogin message and identification (issue) file.
 sources:
@@ -371,6 +406,7 @@ labels: [Configuration Files, System]
 supported_os: [Linux]
 urls: ['https://linux.die.net/man/5/issue']
 ---
+
 name: LinuxKerberosConfiguration
 doc: Linux Kerberos configuration information.
 sources:
@@ -379,6 +415,7 @@ sources:
 supported_os: [Linux]
 urls: ['https://web.mit.edu/kerberos/krb5-1.12/doc/admin/conf_files/krb5_conf.html']
 ---
+
 name: LinuxKernelLogFiles
 doc: Linux kernel log files.
 sources:
@@ -387,6 +424,7 @@ sources:
 labels: [Logs]
 supported_os: [Linux]
 ---
+
 name: LinuxLastlogFile
 doc: Linux lastlog file.
 sources:
@@ -395,6 +433,7 @@ sources:
 labels: [Logs, Authentication]
 supported_os: [Linux]
 ---
+
 name: LinuxLoaderSystemPreloadFile
 doc: Linux dynamic linker/loader system-wide preload file (ld.so.preload).
 sources:
@@ -404,6 +443,7 @@ labels: [Configuration Files]
 supported_os: [Linux]
 urls: ['http://man7.org/linux/man-pages/man8/ld.so.8.html']
 ---
+
 name: LinuxLSBInit
 doc: Linux LSB-style init scripts.
 sources:
@@ -417,6 +457,7 @@ labels: [Configuration Files, System]
 supported_os: [Linux]
 urls: ['https://wiki.debian.org/LSBInitScripts']
 ---
+
 name: LinuxLocalTime
 doc: Local time zone configuation
 sources:
@@ -425,6 +466,7 @@ sources:
 labels: [System]
 supported_os: [Linux]
 ---
+
 name: LinuxLSBRelease
 doc: Linux Standard Base (LSB) release information
 sources:
@@ -435,6 +477,7 @@ labels: [Software]
 supported_os: [Linux]
 urls: ['https://linux.die.net/man/1/lsb_release']
 ---
+
 name: LinuxMessagesLogFiles
 doc: Linux messages log files.
 sources:
@@ -443,6 +486,7 @@ sources:
 labels: [Logs]
 supported_os: [Linux]
 ---
+
 name: LinuxMountCmd
 doc: Linux output of mount
 sources:
@@ -453,6 +497,7 @@ sources:
 labels: [System]
 supported_os: [Linux]
 ---
+
 name: LinuxMountInfo
 doc: Linux mount options.
 sources:
@@ -464,6 +509,7 @@ sources:
 labels: [System, Configuration Files]
 supported_os: [Linux]
 ---
+
 name: LinuxNetworkManager
 doc: Linux NetworkManager files.
 sources:
@@ -482,6 +528,7 @@ urls:
 - 'https://linux.die.net/man/5/networkmanager.conf'
 - 'https://man.archlinux.org/man/NetworkManager.conf.5.en#FILE_FORMAT'
 ---
+
 name: LinuxPamConfigs
 doc: Configuration files for PAM.
 sources:
@@ -496,6 +543,7 @@ labels: [Authentication, Configuration Files]
 supported_os: [Linux]
 urls: ['http://www.linux-pam.org/']
 ---
+
 name: LinuxPasswdFile
 doc: |
   Linux passwd file.
@@ -513,6 +561,7 @@ sources:
 labels: [Configuration Files, System]
 supported_os: [Linux]
 ---
+
 name: LinuxHome
 doc: Users directories in /home
 sources:
@@ -521,6 +570,7 @@ sources:
 labels: [Users]
 supported_os: [Linux]
 ---
+
 name: LinuxHomePath
 doc: Users directories in /home
 sources:
@@ -533,6 +583,7 @@ sources:
 labels: [Users]
 supported_os: [Linux]
 ---
+
 name: LinuxReleaseInfo
 doc: Release information for Linux platforms.
 sources:
@@ -545,6 +596,7 @@ sources:
 labels: [Software]
 supported_os: [Linux]
 ---
+
 name: LinuxRsyslogConfigs
 doc: Linux rsyslog configurations.
 sources:
@@ -558,6 +610,7 @@ labels: [Configuration Files, Logs]
 supported_os: [Linux]
 urls: ['http://www.rsyslog.com/doc/rsyslog_conf.html']
 ---
+
 name: LinuxScheduleFiles
 doc: All Linux job scheduling files.
 sources:
@@ -570,6 +623,7 @@ sources:
 labels: [Configuration Files]
 supported_os: [Linux]
 ---
+
 name: LinuxServices
 doc: Services running on a Linux system.
 sources:
@@ -583,6 +637,7 @@ sources:
 labels: [Configuration Files, System]
 supported_os: [Linux]
 ---
+
 name: LinuxSSDTTables
 doc: Linux files containing SSDT table.
 sources:
@@ -592,6 +647,7 @@ labels: [System]
 urls: ['https://www.kernel.org/doc/Documentation/acpi/initrd_table_override.txt']
 supported_os: [Linux]
 ---
+
 name: LinuxSudoReplayLogs
 doc: Linux sudoreplay log files.
 sources:
@@ -600,6 +656,7 @@ sources:
 labels: [Logs, Authentication]
 supported_os: [Linux]
 ---
+
 name: LinuxSysctlConfigurationFiles
 doc: Linux sysctl preload/configuration files.
 sources:
@@ -616,6 +673,7 @@ supported_os: [Linux]
 urls:
 - 'https://man7.org/linux/man-pages/man5/sysctl.conf.5.html'
 ---
+
 name: LinuxSysLogFiles
 doc: Linux syslog log files.
 sources:
@@ -624,6 +682,7 @@ sources:
 labels: [Logs]
 supported_os: [Linux]
 ---
+
 name: LinuxSyslogNgConfigs
 doc: Linux syslog-ng configurations.
 sources:
@@ -636,6 +695,7 @@ labels: [Configuration Files, Logs]
 supported_os: [Linux]
 urls: ['http://linux.die.net/man/5/syslog-ng.conf']
 ---
+
 name: LinuxSystemdJournalConfig
 doc: Linux systemd journal config file
 sources:
@@ -644,6 +704,7 @@ sources:
 supported_os: [Linux]
 urls: ['https://wiki.archlinux.org/title/Systemd/Journal']
 ---
+
 name: LinuxSystemdJournalLogs
 doc: Linux systemd journal log files
 sources:
@@ -655,6 +716,7 @@ sources:
 supported_os: [Linux]
 urls: ['https://wiki.archlinux.org/title/Systemd/Journal']
 ---
+
 name: LinuxSystemdOSRelease
 doc: Linux systemd /etc/os-release file
 sources:
@@ -668,6 +730,7 @@ labels: [Software]
 supported_os: [Linux]
 urls: ['https://www.freedesktop.org/software/systemd/man/os-release.html']
 ---
+
 name: LinuxSystemdServices
 doc: Linux systemd service unit files
 sources:
@@ -703,6 +766,7 @@ labels: [Configuration Files, System]
 supported_os: [Linux]
 urls: ['https://www.freedesktop.org/software/systemd/man/systemd.unit.html#System%20Unit%20Search%20Path']
 ---
+
 name: LinuxSystemdTimers
 doc: Linux systemd Timer files
 sources:
@@ -737,6 +801,7 @@ sources:
 supported_os: [Linux]
 urls: ['https://www.freedesktop.org/software/systemd/man/systemd.timer.html#']
 ---
+
 name: LinuxSysVInit
 doc: Services started by sysv-style init scripts.
 sources:
@@ -754,6 +819,7 @@ urls:
 - 'http://savannah.nongnu.org/projects/sysvinit'
 - 'http://docs.oracle.com/cd/E37670_01/E41138/html/ol_svcscripts.html'
 ---
+
 name: LinuxTimezoneFile
 doc: Linux timezone file.
 sources:
@@ -762,6 +828,7 @@ sources:
 labels: [Configuration Files, System]
 supported_os: [Linux]
 ---
+
 name: LinuxUdevRules
 doc: Linux udev rules for the events received by the udev's daemon from the Linux kernel.
 sources:
@@ -773,6 +840,7 @@ sources:
 supported_os: [Linux]
 urls: ['https://wiki.archlinux.org/title/Udev']
 ---
+
 name: LinuxUtmpFiles
 doc: Linux btmp, utmp and wtmp login record files.
 sources:
@@ -786,6 +854,7 @@ labels: [Logs, Authentication]
 supported_os: [Linux]
 urls: ['https://github.com/libyal/dtformats/blob/main/documentation/Utmp%20login%20records%20format.asciidoc']
 ---
+
 name: LinuxWtmp
 doc: Linux wtmp login record file
 sources:
@@ -795,6 +864,7 @@ labels: [Logs, Authentication]
 supported_os: [Linux]
 urls: ['https://github.com/libyal/dtformats/blob/main/documentation/Utmp%20login%20records%20format.asciidoc']
 ---
+
 name: LinuxXinetd
 doc: Linux xinetd configurations.
 sources:
@@ -807,6 +877,7 @@ labels: [Configuration Files, System]
 supported_os: [Linux]
 urls: ['http://en.wikipedia.org/wiki/Xinetd']
 ---
+
 name: ListProcessesPsCommand
 doc: Full process listing via the 'ps' command.
 sources:
@@ -817,6 +888,7 @@ sources:
 supported_os: [Linux]
 urls: ['https://gitlab.com/procps-ng/procps']
 ---
+
 name: LoadedKernelModules
 doc: Linux output of lsmod.
 sources:
@@ -826,6 +898,7 @@ sources:
     cmd: /sbin/lsmod
 supported_os: [Linux]
 ---
+
 name: LocateDatabase
 doc: locate/mlocate database and updatedb configuration.
 sources:
@@ -839,6 +912,7 @@ urls:
 - 'https://linux.die.net/man/8/updatedb'
 supported_os: [Linux]
 ---
+
 name: LoginPolicyConfiguration
 doc: Linux files related to login policy configuration.
 sources:
@@ -854,15 +928,19 @@ sources:
 labels: [Authentication, Configuration Files]
 supported_os: [Linux]
 ---
+
 name: MySQLHistoryFile
 doc: MySQL History file.
 sources:
 - type: FILE
   attributes:
     paths:
+    - /.mysql_history
+    - /root/.mysql_history
     - '%%users.homedir%%/.mysql_history'
 supported_os: [Linux]
 ---
+
 name: NanoHistoryFile
 doc: nano history file that logs search and replace strings.
 sources:
@@ -871,6 +949,7 @@ sources:
 supported_os: [Linux]
 urls: ['https://www.nano-editor.org/dist/v2.2/nano.html']
 ---
+
 name: NetgroupConfiguration
 doc: Linux netgroup configuration.
 sources:
@@ -879,6 +958,7 @@ sources:
 labels: [Authentication, Configuration Files]
 supported_os: [Linux]
 ---
+
 name: NtpConfFile
 doc: The configuration file for ntpd. e.g. ntp.conf.
 sources:
@@ -888,6 +968,7 @@ labels: [Configuration Files]
 supported_os: [Linux]
 urls: ['https://www.freebsd.org/cgi/man.cgi?query=ntp.conf&sektion=5']
 ---
+
 name: PCIDevicesInfoFiles
 doc: Info and config files for PCI devices located on the system.
 sources:
@@ -905,17 +986,21 @@ urls:
 - 'https://wiki.debian.org/HowToIdentifyADevice/PCI'
 supported_os: [Linux]
 ---
+
 name: PostgreSQLHistoryFile
 doc: PostgreSQL History file.
 sources:
 - type: FILE
   attributes:
     paths:
+    - /.psql_history
+    - /root/.psql_history
     - '/var/lib/postgresql/.psql_history'
     - '/var/lib/pgsql/.psql_history'
     - '%%users.homedir%%/.psql_history'
 supported_os: [Linux]
 ---
+
 name: PythonHistoryFile
 doc: Python REPL history file.
 sources:
@@ -923,6 +1008,7 @@ sources:
   attributes: {paths: ['%%users.homedir%%/.python_history']}
 supported_os: [Linux]
 ---
+
 name: RHostsFile
 doc: RHosts file.
 sources:
@@ -932,6 +1018,7 @@ sources:
     - '%%users.homedir%%/.rhosts'
 supported_os: [Linux]
 ---
+
 name: SambaLogFiles
 doc: Samba log files.
 sources:
@@ -943,6 +1030,7 @@ supported_os: [Linux]
 urls:
 - 'https://wiki.samba.org/index.php/Configuring_Logging_on_a_Samba_Server'
 ---
+
 name: SecretsServiceDatabaseFile
 doc: The System Security Services Daemon (SSSD) database file.
 sources:
@@ -957,6 +1045,7 @@ urls:
 - 'https://docs.pagure.org/sssd.sssd/design_pages/secrets_service.html'
 - 'https://www.fireeye.com/blog/threat-research/2020/04/kerberos-tickets-on-linux-red-teams.html'
 ---
+
 name: SQLiteHistoryFile
 doc: SQLite History file.
 sources:
@@ -966,6 +1055,7 @@ sources:
     - '%%users.homedir%%/.sqlite_history'
 supported_os: [Linux]
 ---
+
 name: SSHAuthorizedKeysFiles
 doc: SSH authorized keys files.
 sources:
@@ -976,6 +1066,7 @@ sources:
     - '%%users.homedir%%/.ssh/authorized_keys2'
 supported_os: [Linux]
 ---
+
 name: SSHHostPubKeys
 doc: SSH host public keys
 sources:
@@ -986,6 +1077,7 @@ sources:
 labels: [Authentication, Configuration Files]
 supported_os: [Linux]
 ---
+
 name: SSHKnownHostsFiles
 doc: SSH known_hosts files.
 sources:
@@ -996,6 +1088,7 @@ sources:
     - '/etc/ssh/known_hosts'
 supported_os: [Linux]
 ---
+
 name: ThumbnailCacheFolder
 doc: Thumbnail cache folder.
 sources:
@@ -1004,6 +1097,7 @@ sources:
 labels: [Users]
 supported_os: [Linux]
 ---
+
 name: UFWConfigFiles
 doc: UFW Configuration files.
 sources:
@@ -1016,6 +1110,7 @@ sources:
     - '/etc/ufw/applications.d/*'
 supported_os: [Linux]
 ---
+
 name: UFWLogFile
 doc: UFW Log file.
 sources:
@@ -1025,6 +1120,7 @@ sources:
     - '/var/log/ufw.log'
 supported_os: [Linux]
 ---
+
 name: Viminfo
 doc: Viminfo file.
 sources:
@@ -1034,6 +1130,7 @@ sources:
     - '%%users.homedir%%/.viminfo'
 supported_os: [Linux]
 ---
+
 name: WgetHSTSdatabase
 doc: Default wget HTTP Strict Transport Security (HSTS) database
 sources:
@@ -1044,6 +1141,7 @@ sources:
 supported_os: [Linux]
 urls: ['https://www.gnu.org/software/wget/manual/html_node/HTTPS-_0028SSL_002fTLS_0029-Options.html']
 ---
+
 name: XDGAutostartEntries
 doc: XDG Autostart Entries
 sources:
@@ -1055,6 +1153,7 @@ sources:
 supported_os: [Linux]
 urls: ['https://specifications.freedesktop.org/autostart-spec/autostart-spec-latest.html']
 ---
+
 name: YumSources
 doc: Yum package sources list
 sources:
@@ -1067,6 +1166,7 @@ labels: [Configuration Files, System]
 supported_os: [Linux]
 urls: ['https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/deployment_guide/sec-configuring_yum_and_yum_repositories']
 ---
+
 name: ZeitgeistDatabase
 doc: Zeitgeist user activity database.
 sources:
@@ -1078,3 +1178,73 @@ sources:
 labels: [Users, Logs]
 urls: ['https://forensicswiki.xyz/wiki/index.php?title=Zeitgeist']
 supported_os: [Linux]
+---
+
+name: FlatpakAppPaths
+doc: Get paths of installed Flatpak app.
+sources:
+- type: PATH
+  attributes:
+    paths:
+    - /var/lib/flatpak/app/*
+  supported_os:
+  - Linux
+supported_os:
+- Linux
+urls:
+- https://docs.flatpak.org/
+---
+
+name: LinuxNssCachePasswdFile
+doc: Local NSS database for remote directory services.
+sources:
+- type: FILE
+  attributes:
+    paths:
+    - /etc/passwd.cache
+supported_os:
+- Linux
+urls:
+- https://github.com/google/nsscache
+---
+
+name: LessHistoryFile
+doc: less history file which remembers search and shell commands
+sources:
+- type: FILE
+  attributes:
+    paths:
+    - '%%users.homedir%%/.lesshst'
+supported_os:
+- Linux
+urls:
+- https://man7.org/linux/man-pages/man1/less.1.html
+---
+
+name: PythonDistInfoPath
+doc: |
+  Get the path of Python module files distributed in the dist-info format of
+  PEP-0376 (currently Linux only).
+
+  dist-info is always a directory that must contain METADATA, RECORD and
+  INSTALLER. It may also contain REQUESTED.
+sources:
+- type: PATH
+  attributes:
+    paths:
+    - '%%users.homedir%%/.local/lib/python*/dist-packages/*.dist-info'
+    - '%%users.homedir%%/.local/lib/python*/site-packages/*.dist-info'
+    - /usr/lib/python*/dist-packages/*.dist-info
+    - /usr/lib/python*/site-packages/*.dist-info
+    - /usr/lib64/python*/dist-packages/*.dist-info
+    - /usr/lib64/python*/site-packages/*.dist-info
+    - /usr/local/lib/python*/dist-packages/*.dist-info
+    - /usr/local/lib/python*/site-packages/*.dist-info
+    - /usr/local/lib64/python*/dist-packages/*.dist-info
+    - /usr/local/lib64/python*/site-packages/*.dist-info
+  supported_os:
+  - Linux
+supported_os:
+- Linux
+urls:
+- https://www.python.org/dev/peps/pep-0376/

@@ -1,5 +1,6 @@
 # Database Server artifacts
 ---
+
 name: ElasticSearchLogs
 doc: Location where ElasticSearch logs are stored.
 sources:
@@ -11,6 +12,7 @@ sources:
     - '/var/log/elasticsearch/*.json.gz'
 supported_os: [Linux]
 ---
+
 name: ElasticSearchAccessLog
 doc: Location where ElasticSearch access logs are stored.
 sources:
@@ -20,6 +22,7 @@ sources:
     - '/var/log/elasticsearch/*_access.log'
 supported_os: [Linux]
 ---
+
 name: ElasticSearchAuditLog
 doc: Location where ElasticSearch audit logs are stored.
 sources:
@@ -32,6 +35,7 @@ supported_os: [Linux]
 urls:
 - https://www.elastic.co/guide/en/elasticsearch/reference/current/audit-log-output.html
 ---
+
 name: ElasticSearchGCLog
 doc: Location where ElasticSearch GC logs are stored.
 sources:
@@ -44,6 +48,7 @@ supported_os: [Linux]
 urls:
 - https://www.elastic.co/guide/en/elasticsearch/reference/current/important-settings.html#gc-logging
 ---
+
 name: ElasticSearchServerLog
 doc: Location where ElasticSearch server logs are stored.
 sources:
@@ -57,6 +62,7 @@ supported_os: [Linux]
 urls:
 - https://www.elastic.co/guide/en/elasticsearch/reference/current/logging.html#loggin-configuration
 ---
+
 name: MongoDBConfigurationFile
 doc: MongoDB configuration file.
 sources:
@@ -75,6 +81,7 @@ supported_os: [Darwin, Linux]
 urls:
 - 'https://www.mongodb.com/docs/manual/reference/configuration-options/'
 ---
+
 name: MongoDBLogFiles
 doc: MongoDB log files.
 sources:
@@ -84,6 +91,7 @@ sources:
     - /var/log/mongodb/mongod.log*
 supported_os: [Linux]
 ---
+
 name: MongoDBDatabasePath
 doc: MongoDB database Path.
 sources:
@@ -109,6 +117,7 @@ supported_os: [Darwin, Linux, Windows]
 urls:
 - 'https://www.mongodb.com/docs/manual/reference/configuration-options/#mongodb-setting-storage.dbPath'
 ---
+
 name: MySQLConfigurationFiles
 doc: MySQL configuration files.
 sources:
@@ -119,6 +128,7 @@ sources:
     - /etc/mysql/mysql.conf.d/mysqld.cnf
 supported_os: [Linux]
 ---
+
 name: MySQLLogFiles
 doc: MySQL log files.
 sources:
@@ -130,6 +140,7 @@ sources:
     - /var/log/*.log*
 supported_os: [Linux]
 ---
+
 name: MySQLDataDictionary
 doc: MySQL data dictionary.
 sources:
@@ -141,6 +152,7 @@ supported_os: [Linux]
 urls:
 - 'https://dev.mysql.com/doc/refman/8.0/en/data-dictionary-transactional-storage.html'
 ---
+
 name: MySQLDataDirectory
 doc: MySQL data directory.
 sources:
@@ -154,6 +166,7 @@ urls:
 - 'https://dev.mysql.com/doc/refman/8.0/en/data-directory.html'
 - 'https://dev.mysql.com/doc/refman/8.0/en/innodb-architecture.html'
 ---
+
 name: OpenSearchLogFiles
 doc: OpenSearch log files.
 sources:
@@ -166,6 +179,7 @@ supported_os: [Linux]
 urls:
 - 'https://opensearch.org/docs/latest/opensearch/logs/'
 ---
+
 name: PostgreSQLConfigurationFiles
 doc: PostgreSQL configuration files.
 sources:
@@ -187,6 +201,7 @@ urls:
 - 'https://docs.fedoraproject.org/en-US/quick-docs/postgresql/'
 - 'https://wiki.debian.org/PostgreSql'
 ---
+
 name: PostgreSQLDataDirectory
 doc: PostgreSQL data directory.
 sources:
@@ -203,6 +218,7 @@ urls:
 - 'https://docs.fedoraproject.org/en-US/quick-docs/postgresql/'
 - 'https://wiki.debian.org/PostgreSql'
 ---
+
 name: PostgreSQLLogFiles
 doc: PostgreSQL log files.
 sources:
@@ -225,6 +241,7 @@ supported_os: [Linux]
 urls:
 - 'https://www.postgresql.org/docs/14/runtime-config-logging.html'
 ---
+
 name: RedisConfigurationFile
 doc: Redis configuration files.
 sources:
@@ -235,6 +252,7 @@ sources:
     - /etc/init.d/redis_*
 supported_os: [Linux]
 ---
+
 name: RedisLogFiles
 doc: Redis log files.
 sources:
@@ -245,6 +263,7 @@ sources:
     - /var/log/redis*.log*
 supported_os: [Linux]
 ---
+
 name: RedisDataDirectory
 doc: Redis Data Directory.
 sources:

@@ -12,6 +12,7 @@ sources:
     - 'WindowsDeviceSetup'
 supported_os: [Windows]
 ---
+
 name: WindowsUSBDeviceInformations
 doc: |
   Windows USB Device Informations.
@@ -25,6 +26,7 @@ sources:
 supported_os: [Windows]
 urls: ['https://www.researchgate.net/publication/318514858_USB_Storage_Device_Forensics_for_Windows_10']
 ---
+
 name: WindowsUSBVolumeAndDriveMapping
 doc: |
   Windows USB volume and drive mapping.
@@ -38,6 +40,7 @@ sources:
 supported_os: [Windows]
 urls: ['https://www.forensicswiki.org/wiki/USB_History_Viewing']
 ---
+
 name: WindowsUSBUserMountedDevices
 doc: |
   Windows USB user mounted devices.
@@ -51,6 +54,7 @@ sources:
 supported_os: [Windows]
 urls: ['http://techgenix.com/extracting-usb-artifacts-from-windows-7/']
 ---
+
 name: WindowsDeviceSetup
 doc: Logfiles for Windows PNP driver installation
 sources:

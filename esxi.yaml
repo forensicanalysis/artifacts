@@ -1,5 +1,6 @@
 # ESXi artifacts
 ---
+
 name: ESXApiForwarder
 doc: Records activities related to the vSphere Trust Authority API forwarder.
 sources:
@@ -7,6 +8,7 @@ sources:
   attributes: {paths: ['/var/run/log/esxapiadapter.log']}
 supported_os: [ESXi]
 ---
+
 name: ESXiAttestationService
 doc: Records activities related to the vSphere Trust Authority Attestation Service.
 sources:
@@ -14,6 +16,7 @@ sources:
   attributes: {paths: ['/var/run/log/attestd.log']}
 supported_os: [ESXi]
 ---
+
 name: ESXiAuthenticationLog
 doc: Contains all events related to authentication for the local system.
 sources:
@@ -21,6 +24,7 @@ sources:
   attributes: {paths: ['/var/log/auth.log']}
 supported_os: [ESXi]
 ---
+
 name: ESXiHostAgentLog
 doc: Contains information about the agent that manages and configures the ESXi host and its virtual machines.
 sources:
@@ -28,6 +32,7 @@ sources:
   attributes: {paths: ['/var/log/hostd.log']}
 supported_os: [ESXi]
 ---
+
 name: ESXiKeyProviderService
 doc: Records activities related to the vSphere Trust Authority Key Provider Service.
 sources:
@@ -35,6 +40,7 @@ sources:
   attributes: {paths: ['/var/run/log/kmxd.log']}
 supported_os: [ESXi]
 ---
+
 name: ESXiQuickBootLog
 doc: Contains all events related to restarting an ESXi host through Quick Boot.
 sources:
@@ -42,6 +48,7 @@ sources:
   attributes: {paths: ['/var/log/loadESX.log']}
 supported_os: [ESXi]
 ---
+
 name: ESXiShellLog
 doc: Contains a record of all commands typed into the ESXi Shell and shell events (for example, when the shell was enabled)
 sources:
@@ -49,6 +56,7 @@ sources:
   attributes: {paths: ['/var/log/shell.log']}
 supported_os: [ESXi]
 ---
+
 name: ESXiSystemLogsDirectory
 doc: ESXi System Logs Directory
 sources:
@@ -57,6 +65,7 @@ sources:
 supported_os: [ESXi]
 urls: ['https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.monitoring.doc/GUID-DACC9E0E-E857-4AE1-A469-3FDAE2B391A0.html']
 ---
+
 name: ESXiSystemMessageslog
 doc: Contains all general log messages and can be used for troubleshooting. This information was formerly located in the messages log file.
 sources:
@@ -64,6 +73,7 @@ sources:
   attributes: {paths: ['/var/log/syslog.log']}
 supported_os: [ESXi]
 ---
+
 name: ESXTokenService
 doc: Records activities related to the vSphere Trust Authority ESX Token Service.
 sources:
@@ -71,6 +81,7 @@ sources:
   attributes: {paths: ['/var/run/log/esxtokend.log']}
 supported_os: [ESXi]
 ---
+
 name: ESXiTrustedInfrastructureAgentLog
 doc: Records activities related to the Client Service on the ESXi Trusted Host.
 sources:
@@ -78,6 +89,7 @@ sources:
   attributes: {paths: ['/var/run/log/kmxa.log']}
 supported_os: [ESXi]
 ---
+
 name: ESXiVMKernelLog
 doc: Records activities related to virtual machines and ESXi.
 sources:
@@ -85,6 +97,7 @@ sources:
   attributes: {paths: ['/var/log/vmkernel.log']}
 supported_os: [ESXi]
 ---
+
 name: ESXiVMKernelSummaryLog
 doc: Used to determine uptime and availability statistics for ESXi (comma separated).
 sources:
@@ -92,6 +105,7 @@ sources:
   attributes: {paths: ['/var/log/vmksummarylog.log']}
 supported_os: [ESXi]
 ---
+
 name: ESXiVMKernelWarningsLog
 doc: Records activities related to virtual machines.
 sources:
@@ -99,6 +113,7 @@ sources:
   attributes: {paths: ['/var/log/vmkwarning.log']}
 supported_os: [ESXi]
 ---
+
 name: vCenterServerAgentLog
 doc: Contains information about the agent that communicates with vCenter Server (if the host is managed by vCenter Server).
 sources:
@@ -106,6 +121,7 @@ sources:
   attributes: {paths: ['/var/log/vxpa.log']}
 supported_os: [ESXi]
 ---
+
 name: vSphereClientLogsDirectory
 doc: vSphere Client Logs Directory
 sources:

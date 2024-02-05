@@ -1,6 +1,5 @@
 # Docker artifacts
 
----
 name: DockerContainerConfig
 doc: Docker container configuration files
 sources:
@@ -12,6 +11,7 @@ sources:
 labels: [Docker, Configuration Files]
 supported_os: [Linux]
 ---
+
 name: GKEDockerContainerLogs
 doc: Location where stdout and stderr from containers is logged in a Google Kubernetes Engine (GKE) environment.
 sources:

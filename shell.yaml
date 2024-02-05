@@ -1,5 +1,6 @@
 # Shell user-interface artifact definitions.
 ---
+
 name: BashShellConfigurationFile
 doc: Bourne Again shell (bash) configuration files.
 sources:
@@ -29,6 +30,7 @@ sources:
 supported_os: [Darwin, Linux, Windows]
 urls: ['https://forensicswiki.xyz/wiki/index.php?title=Bash_shell']
 ---
+
 name: BashShellHistoryFile
 #aliases: [MacOSBashHistory]
 doc: Bourne Again shell (bash) history files.
@@ -46,6 +48,7 @@ sources:
 supported_os: [Darwin, Linux, Windows]
 urls: ['https://forensicswiki.xyz/wiki/index.php?title=Bash_shell']
 ---
+
 name: BashShellSessionFile
 #aliases: [MacOSBashSessions]
 doc: Bourne Again shell (bash) session files.
@@ -55,6 +58,7 @@ sources:
 supported_os: [Darwin]
 urls: ['https://forensicswiki.xyz/wiki/index.php?title=Bash_shell']
 ---
+
 name: BourneShellHistoryFile
 doc: Bourne shell (sh) history files.
 sources:
@@ -69,6 +73,7 @@ sources:
 supported_os: [Darwin, Linux, Windows]
 urls: ['https://en.wikipedia.org/wiki/Bourne_shell']
 ---
+
 name: CShellConfigurationFile
 doc: C shell (csh) configuration files.
 sources:
@@ -95,6 +100,7 @@ sources:
 supported_os: [Darwin, Linux, Windows]
 urls: ['https://en.wikipedia.org/wiki/C_shell']
 ---
+
 name: FishShellConfigurationFile
 doc: FishShell (fish) configuration files.
 sources:
@@ -109,6 +115,7 @@ sources:
 supported_os: [Linux]
 urls: ['https://fishshell.com/docs/current/language.html#configuration']
 ---
+
 name: FishShellHistoryFile
 doc: Fish shell (fish) history files.
 sources:
@@ -118,6 +125,7 @@ sources:
 supported_os: [Linux]
 urls: ['https://fishshell.com/docs/current/cmds/history.html']
 ---
+
 name: KornShellConfigurationFile
 doc: KornShell (ksh) configuration files.
 sources:
@@ -140,6 +148,7 @@ sources:
 supported_os: [Darwin, Linux, Windows]
 urls: ['https://en.wikipedia.org/wiki/KornShell']
 ---
+
 name: RootUserShellConfigs
 doc: Common Unix root shell configuration files.
 sources:
@@ -160,6 +169,7 @@ sources:
     - '/root/.zprofile'
 supported_os: [Darwin, Linux]
 ---
+
 name: RootUserShellHistory
 doc: Common Unix root shell history files.
 sources:
@@ -173,6 +183,7 @@ sources:
     - '/root/.zsh_history'
 supported_os: [Darwin, Linux]
 ---
+
 name: ShellConfigurationFile
 #aliases: [AllShellConfigs, GlobalShellConfigs, UsersShellConfigs]
 doc: Group of shell configuration files.
@@ -190,6 +201,7 @@ sources:
     - 'ZShellConfigurationFile'
 supported_os: [Darwin, Linux, Windows]
 ---
+
 name: ShellHistoryFile
 #aliases: [AllUsersShellHistory, UserShellHistory]
 doc: Group of shell history files.
@@ -203,6 +215,7 @@ sources:
     - 'ZShellHistoryFile'
 supported_os: [Darwin, Linux, Windows]
 ---
+
 name: ShellLogoutFile
 doc: Shell logout file.
 sources:
@@ -216,6 +229,7 @@ sources:
   supported_os: [Windows]
 supported_os: [Darwin, Linux, Windows]
 ---
+
 name: ShellProfileFile
 doc: Shell profile file.
 sources:
@@ -235,6 +249,7 @@ sources:
   supported_os: [Windows]
 supported_os: [Darwin, Linux, Windows]
 ---
+
 name: TeeShellConfigurationFile
 doc: Tee shell (tcsh) configuration files.
 sources:
@@ -249,6 +264,7 @@ sources:
 supported_os: [Darwin, Linux, Windows]
 urls: ['https://en.wikipedia.org/wiki/Tcsh']
 ---
+
 name: ZShellConfigurationFile
 doc: Z shell (zsh) configuration files.
 sources:
@@ -288,6 +304,7 @@ sources:
 supported_os: [Darwin, Linux, Windows]
 urls: ['https://en.wikipedia.org/wiki/Z_shell']
 ---
+
 name: ZShellHistoryFile
 doc: Z shell (zsh) history files.
 sources:
