@@ -17,6 +17,7 @@ sources:
 labels: [System]
 supported_os: [Windows]
 ---
+
 name: NTFSLogFile
 doc: |
   The NTFS $LogFile file system metadata file.
@@ -33,6 +34,7 @@ urls: ['https://sourceforge.net/projects/linux-ntfs/']
 labels: [System]
 supported_os: [Windows]
 ---
+
 name: NTFSUSNJournal
 doc: |
   The NTFS $UsnJnrl file system metadata file.

@@ -38,6 +38,7 @@ sources:
     supported_os: [Darwin]
 supported_os: [Darwin,Linux,Windows]
 ---
+
 name: Elementary
 doc: Artifacts supported by elementary (https://github.com/forensicanalysis/elementary) tasks
 sources:
@@ -54,6 +55,7 @@ sources:
         - 'WindowsUninstallKeys'
         - 'WindowsUSBInformation'
 ---
+
 # Artifacts from the SANS FOR500 course
 
 name: FOR500
@@ -73,6 +75,7 @@ labels: [System]
 supported_os: [Windows]
 urls: ['https://www.sans.org/security-resources/posters/windows-forensic-analysis/170/download']
 ---
+
 name: WindowsBrowserArtifacts
 doc: WindowsBrowserArtifacts
 sources:
@@ -88,6 +91,7 @@ sources:
         # AdsZoneIdentifier
 supported_os: [Windows]
 ---
+
 name: WindowsProgramExecution
 doc: Program Execution
 sources:
@@ -106,6 +110,7 @@ sources:
         - WindowsPrefetchFiles
 supported_os: [Windows]
 ---
+
 name: WindowsDeletedFiles
 doc: Deleted Files
 sources:
@@ -121,6 +126,7 @@ sources:
         # LastVisitedMRU -> WindowsProgramExecution
 supported_os: [Windows]
 ---
+
 name: WindowsNetworkActivity
 doc: Network Activity
 sources:
@@ -135,6 +141,7 @@ sources:
         # WindowsSystemResourceUsageMonitorDatabaseFile -> WindowsProgramExecution
 supported_os: [Windows]
 # ---
+
 # name: WindowsFileOpening
 # doc: File Opening
 # sources:
@@ -152,6 +159,7 @@ supported_os: [Windows]
 #       # OfficeRecentFiles
 # supported_os: [Windows]
 ---
+
 name: AccountUsage
 doc: Account Usage
 sources:
@@ -162,6 +170,7 @@ sources:
         - WindowsXMLEventLogSecurity
 supported_os: [Windows]
 ---
+
 name: ExternalDevice
 doc: External Device
 sources:

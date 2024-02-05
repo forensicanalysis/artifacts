@@ -8,6 +8,7 @@ sources:
 labels: [Configuration Files]
 supported_os: [Linux]
 ---
+
 name: NfsExportsFile
 doc: NFS Exports configuration
 sources:
@@ -23,6 +24,7 @@ sources:
 labels: [Configuration Files]
 supported_os: [Linux, Darwin]
 ---
+
 name: RedisConfigFile
 doc: Redis configuration file
 sources:
@@ -47,6 +49,7 @@ sources:
 labels: [Configuration Files]
 supported_os: [Darwin, Linux, Windows]
 ---
+
 name: SambaConfigFile
 doc: Samba configuration file
 sources:
@@ -56,6 +59,7 @@ sources:
     - '/etc/samba/smb.conf'
 supported_os: [Linux]
 ---
+
 name: SshdConfigFile
 doc: Sshd configuration
 sources:
@@ -71,6 +75,7 @@ sources:
 labels: [Configuration Files]
 supported_os: [Linux, Darwin]
 ---
+
 name: SshUserConfigFile
 doc: User ssh configuration file
 sources:

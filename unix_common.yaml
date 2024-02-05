@@ -15,6 +15,7 @@ sources:
 labels: [Authentication]
 supported_os: [Linux, Darwin]
 ---
+
 name: UnixHostsFile
 doc: Unix hosts file
 sources:
@@ -30,6 +31,7 @@ sources:
 labels: [Configuration Files]
 supported_os: [Linux, Darwin]
 ---
+
 name: UnixPasswd
 doc: Unix /etc/passwd file.
 sources:
@@ -45,6 +47,7 @@ sources:
 labels: [Authentication]
 supported_os: [Linux, Darwin]
 ---
+
 name: UnixShadowFile
 doc: Unix /etc/shadow file.
 sources:
@@ -60,6 +63,7 @@ sources:
 labels: [Authentication]
 supported_os: [Linux, Darwin]
 ---
+
 name: UnixSudoersConfiguration
 doc: Unix sudoers configuration.
 sources:
@@ -75,6 +79,7 @@ sources:
 labels: [Authentication, Configuration Files]
 supported_os: [Linux, Darwin]
 ---
+
 name: UnixUsersGroups
 doc: Unix users and groups files.
 sources:

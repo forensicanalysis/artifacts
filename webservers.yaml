@@ -1,5 +1,6 @@
 # Webserver related artifacts.
 ---
+
 name: ApacheConfigurationFolder
 doc: Location where Apache keeps configuration files
 sources:
@@ -12,6 +13,7 @@ sources:
     - '/etc/httpd/conf.modules.d/*.conf'
 supported_os: [Linux]
 ---
+
 name: ApacheDefaultSiteConfigurationFile
 doc: Location where Apache keeps the default site configuration file.
 sources:
@@ -21,6 +23,7 @@ sources:
     - '/etc/apache2/sites-available/000-default.conf'
 supported_os: [Linux]
 ---
+
 name: ApacheAccessLogs
 doc: Location where Apache access logs are stored
 sources:
@@ -43,6 +46,7 @@ sources:
   supported_os: [Windows]
 supported_os: [Linux, Windows]
 ---
+
 name: ApacheErrorLogs
 doc: Location where Apache error logs are stored
 sources:
@@ -63,6 +67,7 @@ sources:
   supported_os: [Windows]
 supported_os: [Linux, Windows]
 ---
+
 name: NginxAccessLogs
 doc: Location where nginx access logs are stored
 sources:
@@ -79,6 +84,7 @@ sources:
 labels: [Software, Logs]
 supported_os: [Linux, Windows]
 ---
+
 name: NginxErrorLogs
 doc: Location where nginx error logs are stored
 sources:
@@ -88,6 +94,7 @@ sources:
     - '/var/log/nginx/error.log*'
 supported_os: [Linux]
 ---
+
 name:  WordpressConfigFile
 doc: WordPress configuration file
 sources:
@@ -102,6 +109,7 @@ sources:
 labels: [Configuration Files]
 supported_os: [Linux, Darwin]
 ---
+
 name: MicrosoftIISLogs
 doc: Internet Information Services (IIS) web server's log files.
 sources:

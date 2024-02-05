@@ -1,5 +1,6 @@
 # Anti-Virus artifacts.
 ---
+
 name: Bit9LocalCache
 doc: Bit9 local cache database.
 sources:
@@ -9,6 +10,7 @@ sources:
     separator: '\'
 supported_os: [Windows]
 ---
+
 name: CrowdstrikeQuarantine
 doc: Crowdstrike stores quarantined files encoded on disk.
 sources:
@@ -25,6 +27,7 @@ sources:
   supported_os: [Windows]
 supported_os: [Darwin, Windows]
 ---
+
 name: CrowdstrikeAgentID
 doc: Identifier of a CrowdStrike agent.
 sources:
@@ -43,6 +46,7 @@ sources:
     key_value_pairs: [{key: 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\CSAgent\Sim', value: 'AG'}]
 supported_os: [Darwin, Linux, Windows]
 ---
+
 name: EsetAVQuarantine
 doc: Eset Anti-Virus Quarantine (Infected) files.
 sources:
@@ -57,6 +61,7 @@ sources:
 supported_os: [Darwin,Windows]
 labels: [Antivirus]
 ---
+
 name: MicrosoftAVQuarantine
 doc: Microsoft Anti-Virus Quarantine (Infected) files.
 sources:
@@ -69,6 +74,7 @@ sources:
 supported_os: [Windows]
 labels: [Antivirus]
 ---
+
 name: MicrosoftAVLogs
 doc: Microsoft Anti-Virus log files.
 sources:
@@ -87,6 +93,7 @@ sources:
 supported_os: [Windows]
 labels: [Antivirus, Logs]
 ---
+
 name: WindowsDefenderScanDetectionHistoryFiles
 doc: Microsoft Windows Defender scan detection history files.
 sources:
@@ -97,6 +104,7 @@ sources:
 supported_os: [Windows]
 labels: [Antivirus, Logs]
 ---
+
 name: WindowsDefenderExclusions
 doc: |
   Directories, processes and extensions configured not to be scanned by Windows Defender.
@@ -124,6 +132,7 @@ urls:
 - 'https://blog.talosintelligence.com/2019/05/threat-roundup-0503-0510.html'
 - 'https://news.sophos.com/en-us/2021/07/04/independence-day-revil-uses-supply-chain-exploit-to-attack-hundreds-of-businesses/'
 ---
+
 name: SantaLogs
 doc: Local Santa logs.
 sources:
@@ -134,6 +143,7 @@ sources:
     - '/private/var/db/santa/*'
 supported_os: [Darwin]
 ---
+
 name: SophosAVLogs
 doc: Sophos Anti-Virus log files.
 sources:
@@ -148,6 +158,7 @@ sources:
 supported_os: [Darwin, Windows]
 labels: [Antivirus, Logs]
 ---
+
 name: SophosAVQuarantine
 doc: Sophos Anti-Virus Quarantine (Infected) files.
 sources:
@@ -162,6 +173,7 @@ sources:
 supported_os: [Darwin, Windows]
 labels: [Antivirus]
 ---
+
 name: SymantecAVLogs
 doc: Symantec Anti-Virus Log Files.
 sources:
@@ -177,6 +189,7 @@ sources:
 supported_os: [Windows]
 labels: [Antivirus, Logs]
 ---
+
 name: SymantecAVQuarantine
 doc: Symantec Anti-Virus quarantine (infected) and cloud submission files.
 sources:

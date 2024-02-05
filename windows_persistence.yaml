@@ -33,6 +33,7 @@ sources:
         - 'WindowsLogoffScript'
 supported_os: [Windows]
 ---
+
 name: WindowsBrowserPersistenceKeys
 doc: Registry keys for various browser extensions or wrapper objects.
 sources:
@@ -45,6 +46,7 @@ sources:
         - 'HKEY_LOCAL_MACHINE\Software\Wow6432Node\Microsoft\Internet Explorer\Extensions\*'
 supported_os: [Windows]
 ---
+
 name: WindowsBrowserPersistenceFiles
 doc: Windows Scheduled Tasks.
 sources:
@@ -55,6 +57,7 @@ sources:
     separator: '\'
 supported_os: [Windows]
 ---
+
 name: WindowsFileAssociation
 doc: User file association preferences
 sources:
@@ -66,6 +69,7 @@ sources:
 supported_os: [Windows]
 urls: ['https://attack.mitre.org/techniques/T1042/']
 ---
+
 name: WindowsImageHijacks
 doc: Various image hijack mechanisms used for persistence.
 sources:
@@ -97,6 +101,7 @@ urls:
   - 'https://pentestlab.blog/2020/01/13/persistence-image-file-execution-options-injection/'
   - 'https://www.microsoftpressstore.com/articles/article.aspx?p=2762082&seqNum=2'
 ---
+
 name: WindowsTimeProviders
 doc: Windows time provider services.
 sources:
@@ -107,6 +112,7 @@ sources:
 supported_os: [Windows]
 urls: ['https://attack.mitre.org/techniques/T1209/']
 ---
+
 name: WindowsSIPandTrustProviderHijacking
 doc: SIP are responsible for signature procession and can be abused by adversaries.
 sources:
@@ -124,6 +130,7 @@ urls:
   - 'https://attack.mitre.org/techniques/T1198/'
   - 'https://www.jaiminton.com/cheatsheet/DFIR/#t1198-sip-and-trust-provider-hijacking'
 ---
+
 name: WindowsKnownDLLs
 doc: DLLs that can be abused by search order hijacking.
 sources:
@@ -134,6 +141,7 @@ sources:
 supported_os: [Windows]
 urls: ['https://attack.mitre.org/techniques/T1209/']
 ---
+
 name: WindowsOfficeApplicationStartup
 doc: Add-ins and plug-ins registered to hook into office apps.
 sources:
@@ -155,6 +163,7 @@ urls:
   - 'https://www.jaiminton.com/cheatsheet/DFIR/#t1137-office-application-startup'
   - 'https://www.fireeye.com/blog/threat-research/2019/12/breaking-the-rules-tough-outlook-for-home-page-attacks.html'
 ---
+
 name: WindowsCodecs
 doc: Codecs are executable software that can be loaded by media playback software. They could be abused for system persistence.
 sources:
@@ -187,6 +196,7 @@ supported_os: [Windows]
 urls:
   - 'https://www.microsoftpressstore.com/articles/article.aspx?p=2762082&seqNum=2'
 ---
+
 name: WindowsAppCertDLLsAlt
 doc: Windows AppCertDLLs persistence.
 sources:
@@ -197,6 +207,7 @@ sources:
 supported_os: [Windows]
 urls: ['https://www.jaiminton.com/cheatsheet/DFIR/#t1182-appcert-dlls']
 ---
+
 name: WindowsFontDriversAlt
 doc: Windows font drivers from the Registry.
 sources:

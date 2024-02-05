@@ -11,6 +11,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'https://artifacts-kb.readthedocs.io/en/latest/sources/windows/ActiveDesktop.html' ]
 ---
+
 name: WindowsActiveDirectoryDatabase
 doc: Windows Active Directory data store file.
 sources:
@@ -21,6 +22,7 @@ sources:
 supported_os: [Windows]
 urls: ['https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc772829(v=ws.10)']
 ---
+
 name: WindowsActivitiesCacheDatabase
 doc: SQLite database containing the Windows activities cache.
 sources:
@@ -32,6 +34,7 @@ labels: [ Users ]
 supported_os: [ Windows ]
 urls: [ 'https://artifacts-kb.readthedocs.io/en/latest/sources/windows/ActivitiesCacheDatabase.html' ]
 ---
+
 name: WindowsAlternateShell
 doc: Alternate Shell to be run via Userinit.
 sources:
@@ -46,6 +49,7 @@ urls:
   - 'https://technet.microsoft.com/en-us/library/cc976124.aspx'
   - 'http://gladiator-antivirus.com/forum/index.php?showtopic=24610'
 ---
+
 name: WindowsAMCacheHveFile
 doc: The AMCache file, stored in the Windows NT Registry file format.
 sources:
@@ -59,6 +63,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'https://artifacts-kb.readthedocs.io/en/latest/sources/windows/AMCache.html' ]
 ---
+
 name: WindowsAppCertDLLs
 doc: Windows AppCertDLLs persistence.
 sources:
@@ -68,6 +73,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'http://blogs.technet.com/b/mmpc/archive/2011/03/19/how-to-defang-the-fake-defragmenter.aspx' ]
 ---
+
 name: WindowsAppCompatCache
 doc: Windows Application Compatibility Cache
 sources:
@@ -79,6 +85,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'https://github.com/libyal/winreg-kb/blob/main/documentation/Application%20Compatibility%20Cache%20key.asciidoc' ]
 ---
+
 name: WindowsAppInitDLLs
 doc: |
   Windows Application Initial (AppInit) DLLs persistence.
@@ -98,6 +105,7 @@ urls:
   - 'https://msdn.microsoft.com/en-us/library/windows/desktop/dd744762(v=vs.85).aspx'
   - 'https://support.microsoft.com/en-us/kb/197571'
 ---
+
 name: WindowsApplicationRegistration
 doc: Windows Application Registration (AppPath) Registry keys.
 sources:
@@ -112,6 +120,7 @@ urls:
   - 'http://www.hexacorn.com/blog/2013/01/19/beyond-good-ol-run-key-part-3/'
   - 'https://msdn.microsoft.com/en-us/library/windows/desktop/ee872121(v=vs.85).aspx'
 ---
+
 name: WindowsApplicationCompatibilityInstalledShimDatabases
 doc: |
   Windows Application Compatibility Installed Shim Databases.
@@ -155,6 +164,7 @@ urls:
   - 'http://files.brucon.org/2015/Tomczak_and_Ballenthin_Shims_for_the_Win.pdf'
   - 'https://www.blackhat.com/docs/eu-15/materials/eu-15-Pierce-Defending-Against-Malicious-Application-Compatibility-Shims-wp.pdf'
 ---
+
 name: WindowsApplicationCompatibilityShimDatabaseMappings
 doc: |
   Windows Application Compatibility Shim Database Mappings.
@@ -193,6 +203,7 @@ urls:
   - 'https://attack.mitre.org/techniques/T1138/'
   - 'https://countercept.com/blog/hunting-for-application-shim-databases/'
 ---
+
 name: WindowsApplicationCompatibilityShims
 doc: Windows Application Compatibility Shim Database Files and Application Mappings
 sources:
@@ -204,6 +215,7 @@ sources:
 labels: [ System ]
 supported_os: [ Windows ]
 ---
+
 name: WinAppXRT
 doc: WinAppXRT DLL loaded by .Net applications when the APPX_PROCESS environment variable is set.
 sources:
@@ -218,6 +230,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'http://www.hexacorn.com/blog/2014/08/31/beyond-good-ol-run-key-part-17/' ]
 ---
+
 name: WindowsAutoexecBat
 doc: Windows autoexec.bat file
 sources:
@@ -229,6 +242,7 @@ sources:
       separator: '\'
 supported_os: [ Windows ]
 ---
+
 name: WindowsAutomaticDebugging
 doc: Windows automatic debugging (Aedebug)
 sources:
@@ -241,6 +255,7 @@ urls:
   - 'https://msdn.microsoft.com/en-us/library/windows/desktop/bb204634(v=vs.85).aspx'
   - 'http://gladiator-antivirus.com/forum/index.php?showtopic=24610'
 ---
+
 name: WindowsAutomaticDebuggingExclusionList
 doc: Windows automatic debugging (Aedebug) exclusion list
 sources:
@@ -250,6 +265,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'https://msdn.microsoft.com/en-us/library/windows/desktop/bb204634(v=vs.85).aspx' ]
 ---
+
 name: WindowsAutorun
 doc: Filebased Tests.
 sources:
@@ -259,6 +275,7 @@ sources:
       separator: '\'
 supported_os: [ Windows ]
 ---
+
 name: WindowsAvailableTimeZones
 doc: Timezones available on a Windows system.
 sources:
@@ -267,6 +284,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'https://github.com/libyal/winreg-kb/blob/main/documentation/Time%20zone%20keys.asciidoc' ]
 ---
+
 name: WindowsBackgroundActivityModeratorKeys
 doc: Windows Background Activity Moderator (BAM) and Desktop Activity Moderator (DAM) registry keys.
 sources:
@@ -282,6 +300,7 @@ urls:
 - 'https://dfir.ru/2020/04/08/bam-internals/'
 - 'https://notes.qazeer.io/dfir/windows/_artefacts_overview'
 ---
+
 name: WindowsBITSQueueManagerDatabases
 doc: Databases that contain the Windows BITS jobs definition and state.
 sources:
@@ -294,6 +313,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'http://dfrws.org/2015/proceedings/presentations/DFRWS2015-pres3.pdf' ]
 ---
+
 name: WindowsBootConfigurationDataRegistryFiles
 doc: Boot Configuration Data (BCD) Windows Registry files.
 sources:
@@ -317,6 +337,7 @@ labels: [ System ]
 supported_os: [ Windows ]
 urls: [ 'https://artifacts-kb.readthedocs.io/en/latest/sources/windows/RegistryFiles.html' ]
 ---
+
 name: WindowsBootVerificationProgram
 doc: Path to custom startup verification program.
 sources:
@@ -328,6 +349,7 @@ urls:
   - 'https://technet.microsoft.com/en-us/library/cc786702(WS.10).aspx'
   - 'http://gladiator-antivirus.com/forum/index.php?showtopic=24610'
 ---
+
 name: WindowsCIMRepositoryFiles
 doc: |
   Windows Common Information Model (CIM) repository.
@@ -379,6 +401,7 @@ urls:
   - 'https://github.com/libyal/dtformats/blob/main/documentation/WMI%20repository%20file%20format.asciidoc'
   - 'https://forensicswiki.xyz/wiki/index.php?title=WMI'
 ---
+
 name: WindowsCodePage
 doc: The code page of the system.
 sources:
@@ -391,6 +414,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'http://en.wikipedia.org/wiki/Windows_code_page' ]
 ---
+
 name: WindowsComputerName
 doc: The name of the system.
 sources:
@@ -401,6 +425,7 @@ sources:
         - { key: 'HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\ComputerName\ActiveComputerName', value: 'ComputerName' }
 supported_os: [ Windows ]
 ---
+
 name: WindowsCommandProcessorAutoRun
 doc: Commands that are run each time the Command Processor (Cmd.exe) is started.
 sources:
@@ -418,6 +443,7 @@ urls:
   - 'http://blogs.msdn.com/b/oldnewthing/archive/2007/11/21/6447771.aspx'
   - 'https://technet.microsoft.com/en-us/library/cc756720(v=ws.10).aspx'
 ---
+
 name: WindowsCOMInprocHandlers
 doc: Windows COM in-process handlers
 sources:
@@ -438,6 +464,7 @@ urls:
   - 'https://msdn.microsoft.com/en-us/library/windows/desktop/ms691354(v=vs.85).aspx'
   - 'https://msdn.microsoft.com/en-us/library/windows/desktop/ms693485(v=vs.85).aspx'
 ---
+
 name: WindowsCOMInprocServers
 doc: Windows COM in-process servers
 sources:
@@ -458,6 +485,7 @@ urls:
   - 'https://msdn.microsoft.com/en-us/library/windows/desktop/ms682390(v=vs.85).aspx'
   - 'https://msdn.microsoft.com/en-us/library/windows/desktop/ms694328(v=vs.85).aspx'
 ---
+
 name: WindowsCOMLocalServers
 doc: Windows COM local servers
 sources:
@@ -481,6 +509,7 @@ urls:
   - 'https://msdn.microsoft.com/en-us/library/windows/desktop/ms694515(v=vs.85).aspx'
   - 'https://msdn.microsoft.com/en-us/library/windows/desktop/ms686595(v=vs.85).aspx'
 ---
+
 name: WindowsCOMProperties
 doc: |
   Various properties of Windows COM Objects.
@@ -514,6 +543,7 @@ urls:
   - 'https://ired.team/offensive-security/code-execution/forcing-iexplore.exe-to-load-a-malicious-dll-via-com-abuse'
   - 'https://labs.nettitude.com/blog/com-and-the-powerthief/'
 ---
+
 name: WindowsCOMRegisteredTypeLibraries
 doc: Windows COM registered type libraries
 sources:
@@ -527,6 +557,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'https://github.com/libyal/winreg-kb/blob/main/documentation/Component%20Object%20Model%20keys.asciidoc#type-libraries-key' ]
 ---
+
 name: WindowsSearchFilterHandlers
 doc: |
   Windows Search filter handlers configured for file types and applications.
@@ -565,6 +596,7 @@ urls:
   - 'https://docs.microsoft.com/en-us/windows/desktop/search/-search-ifilter-implementations'
   - 'https://docs.microsoft.com/en-us/windows/desktop/search/-search-ifilter-registering-filters'
 ---
+
 name: WindowsConfigSys
 doc: Windows config.sys file
 sources:
@@ -576,6 +608,7 @@ sources:
       separator: '\'
 supported_os: [ Windows ]
 ---
+
 name: WindowsControlPanelFilePaths
 doc: DLLs listed here will be run when the user opens the Windows Control Panel.
 sources:
@@ -592,6 +625,7 @@ urls:
   - 'http://www.geoffchappell.com/studies/windows/shell/shell32/classes/controlpanel.htm'
   - 'https://msdn.microsoft.com/en-us/library/windows/desktop/ms683844(v=vs.85).aspx'
 ---
+
 name: WindowsNetworkProviderOrder
 doc: Windows Network Provider list that can be used to steal credentials
 sources:
@@ -600,6 +634,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'https://github.com/gtworek/PSBits/tree/master/PasswordStealing/NPPSpy' ]
 ---
+
 name: WindowsCredentialProviderFilters
 doc: Windows Credential Provider Filters
 sources:
@@ -611,6 +646,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'http://blog.leetsys.com/2012/01/02/capturing-windows-7-credentials-at-logon-using-custom-credential-provider/' ]
 ---
+
 name: WindowsCredentialProviders
 doc: CLSIDs of applications to use as Credential Providers
 sources:
@@ -626,6 +662,7 @@ urls:
   - 'http://blog.leetsys.com/2012/01/02/capturing-windows-7-credentials-at-logon-using-custom-credential-provider/'
   - 'https://www.sophos.com/en-us/support/knowledgebase/114190.aspx'
 ---
+
 name: WindowsCommonFilePlacementAttacks
 doc: Common files associated with search order hijacking and other file placement attacks.
 sources:
@@ -648,6 +685,7 @@ urls:
   - 'http://web.cs.ucdavis.edu/~su/publications/issta10-loading.pdf'
   - 'https://www.mandiant.com/blog/fxsst/'
 ---
+
 name: WindowsCurrentVersion
 doc: The Windows current version
 sources:
@@ -656,6 +694,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'https://github.com/libyal/winreg-kb/blob/main/documentation/System%20keys.asciidoc' ]
 ---
+
 name: WindowsDebugger
 doc: Windows Debugger peristence or AV disable.
 sources:
@@ -669,6 +708,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'https://msdn.microsoft.com/en-us/library/a329t4ed%28VS.71%29.aspx' ]
 ---
+
 name: WindowsDomainCachedCredentials
 doc: Windows domain cached credentials
 sources:
@@ -678,6 +718,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'http://juggernaut.wikidot.com/cached-credentials' ]
 ---
+
 name: WindowsDomainName
 doc: The domain the system is connected to.
 sources:
@@ -689,6 +730,7 @@ sources:
       - key: domain
 supported_os: [ Windows ]
 ---
+
 name: WindowsEnvironmentUserLoginScripts
 doc: User login scripts configured via Windows environment variables.
 sources:
@@ -703,6 +745,7 @@ urls:
   - 'http://www.hexacorn.com/blog/2014/11/14/beyond-good-ol-run-key-part-18/'
   - 'https://social.msdn.microsoft.com/Forums/windowsdesktop/en-US/cb6f1d6f-60a6-4369-803e-ec03d902e638/gina-how-to-run-domain-scripts-after-logon'
 ---
+
 name: WindowsEnvironmentVariableAllUsersProfile
 doc: The system-wide %AllUsersProfile% environment variable contains the path of the of the "All Users" or "Common" profile directory.
 sources:
@@ -732,6 +775,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'https://artifacts-kb.readthedocs.io/en/latest/sources/windows/EnvironmentVariables.html' ]
 ---
+
 name: WindowsEnvironmentVariableAppxProcess
 doc: |
   The user-specific %APPX_PROCESS% environment variable is used for .NET applications.
@@ -745,6 +789,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'https://artifacts-kb.readthedocs.io/en/latest/sources/windows/EnvironmentVariables.html' ]
 ---
+
 name: WindowsEnvironmentVariableCommonProgramFiles
 doc: The %COMMONPROGRAMFILES% environment variable contains the path of the common program files folder.
 sources:
@@ -755,6 +800,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'https://artifacts-kb.readthedocs.io/en/latest/sources/windows/EnvironmentVariables.html' ]
 ---
+
 name: WindowsEnvironmentVariableCommonProgramFilesX86
 doc: The %COMMONPROGRAMFILES(X86)% environment variable contains the path of the 32-bit common program files folder on a 64-bit Windows installation.
 sources:
@@ -765,6 +811,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'https://artifacts-kb.readthedocs.io/en/latest/sources/windows/EnvironmentVariables.html' ]
 ---
+
 name: WindowsEnvironmentVariableComSpec
 doc: The %ComSpec% environment variable contains the path of the command processor, typically "cmd.exe".
 sources:
@@ -775,6 +822,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'https://artifacts-kb.readthedocs.io/en/latest/sources/windows/EnvironmentVariables.html' ]
 ---
+
 name: WindowsEnvironmentVariableDriverData
 doc: The %DriverData% environment variable contains the path of the directory used for temporary state files of user-mode drivers.
 sources:
@@ -785,6 +833,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'https://artifacts-kb.readthedocs.io/en/latest/sources/windows/EnvironmentVariables.html' ]
 ---
+
 name: WindowsEnvironmentVariablePath
 doc: The %PATH% environment variable contains an ordered list of paths of directories that will be searched on execution request without a specific path.
 sources:
@@ -797,6 +846,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'https://artifacts-kb.readthedocs.io/en/latest/sources/windows/EnvironmentVariables.html' ]
 ---
+
 name: WindowsEnvironmentVariableProfilesDirectory
 doc: The %ProfilesDirectory% environment variable contain a path of a directory that contains the users' profile directories, typically "%SystemDrive%\Users".
 sources:
@@ -809,6 +859,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'https://artifacts-kb.readthedocs.io/en/latest/sources/windows/EnvironmentVariables.html' ]
 ---
+
 name: WindowsEnvironmentVariableProgramFiles
 doc: The %ProgramFiles% environment variable contains a path of the "Program Files" directory.
 sources:
@@ -825,6 +876,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'https://artifacts-kb.readthedocs.io/en/latest/sources/windows/EnvironmentVariables.html' ]
 ---
+
 name: WindowsEnvironmentVariableProgramFilesX86
 doc: The %ProgramFiles(x86)% environment variable contains a path of the 32-bit "Program Files" directory on a 64-bit Windows installation.
 sources:
@@ -841,6 +893,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'https://artifacts-kb.readthedocs.io/en/latest/sources/windows/EnvironmentVariables.html' ]
 ---
+
 name: WindowsEnvironmentVariableSystemRoot
 doc: The %SystemRoot%, environment variable contains the path of the system directory, typically "C:\Windows".
 sources:
@@ -867,6 +920,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'https://artifacts-kb.readthedocs.io/en/latest/sources/windows/EnvironmentVariables.html' ]
 ---
+
 name: WindowsEnvironmentVariableTemp
 doc: The %TEMP% environment variable.
 sources:
@@ -878,6 +932,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'https://artifacts-kb.readthedocs.io/en/latest/sources/windows/EnvironmentVariables.html' ]
 ---
+
 name: WindowsEnvironmentVariableWinDir
 doc: The %WinDir%, environment variable contains the path of the Windows directory, typically "C:\Windows".
 sources:
@@ -900,6 +955,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'https://artifacts-kb.readthedocs.io/en/latest/sources/windows/EnvironmentVariables.html' ]
 ---
+
 name: WindowsEventLogProviders
 doc: Windows EventLog provider Registry keys.
 sources:
@@ -909,6 +965,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'https://winreg-kb.readthedocs.io/en/latest/sources/EventLog-keys.html' ]
 ---
+
 name: WindowsExcludeFromKnownDLLs
 doc: ExcludeFromKnownDLLs can be used to bypass search order hijacking protection.
 sources:
@@ -918,6 +975,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'https://msdn.microsoft.com/en-us/library/windows/desktop/ms682586%28v=vs.85%29.aspx' ]
 ---
+
 name: WindowsExplorerAppKey
 doc: Handlers for special keys on some keyboards (file path or CLSID).
 sources:
@@ -930,6 +988,7 @@ urls:
   - 'http://answers.microsoft.com/en-us/windows/forum/windows_vista-hardware/assigning-the-special-keys-at-the-top-of-the/d1ab2e13-5297-457d-a8e8-bc2c883d8b58?db=5'
   - 'http://h30434.www3.hp.com/t5/Notebook-Hardware/How-do-I-customize-the-Action-Keys/td-p/379207'
 ---
+
 name: WindowsExplorerAutoplayHandlers
 doc: Handlers for autoplay events in Windows Explorer.
 sources:
@@ -941,6 +1000,7 @@ urls:
   - 'http://gladiator-antivirus.com/forum/index.php?showtopic=24610'
   - 'https://msdn.microsoft.com/en-us/library/windows/desktop/aa468474.aspx'
 ---
+
 name: WindowsExplorerContextMenuHandlers
 doc: Handlers for subcommands on context menu
 sources:
@@ -958,6 +1018,7 @@ urls:
   - 'http://www.windowrdb.com/w.php?w=hklm-software-microsoft-windows-currentversion-explorer-commandstore-shell-windows-closewindow'
   - 'http://www.checkfilename.com/view-details/Windows-7-Ultimate/RespageIndex/4/sTab/2/'
 ---
+
 name: WindowsExplorerNamespaceCommonPlaces
 doc: CLSIDs listed here are used to populate the Common Places items.
 sources:
@@ -982,6 +1043,7 @@ urls:
   - 'http://www.geoffchappell.com/studies/windows/shell/shell32/classes/commonplacesfolder.htm'
   - 'http://www.windowrdb.com/w.php?w=hklm-software-microsoft-windows-currentversion-explorer-commonplaces'
 ---
+
 name: WindowsExplorerNamespaceControlPanel
 doc: CLSIDs listed here are used to populate the Control Panel items.
 sources:
@@ -1013,6 +1075,7 @@ urls:
   - 'https://msdn.microsoft.com/en-us/library/windows/desktop/hh127450(v=vs.85).aspx'
   - 'http://www.geoffchappell.com/studies/windows/shell/shell32/classes/controlpanel.htm'
 ---
+
 name: WindowsExplorerNamespaceDesktop
 doc: CLSIDs listed here are used to populate the Desktop items.
 sources:
@@ -1038,6 +1101,7 @@ urls:
   - 'http://www.geoffchappell.com/notes/windows/shell/controlpanel/desktopicons.htm'
   - 'https://support.microsoft.com/en-us/kb/321777'
 ---
+
 name: WindowsExplorerNamespaceMyComputer
 doc: CLSIDs listed here are used to populate the MyComputer items.
 sources:
@@ -1062,6 +1126,7 @@ urls:
   - 'http://www.howtogeek.com/168081/how-to-remove-the-folders-from-my-computer-in-windows-8.1/'
   - 'http://answers.microsoft.com/en-us/windows/forum/windows8_1-files/how-to-remove-these-folders-from-windows-81/777c4ba3-7853-453e-bfa0-9a0f4245b9e1?db=5'
 ---
+
 name: WindowsExplorerNamespaceNetworkNeighborhood
 doc: CLSIDs listed here are used to populate the Network Neighborhood items.
 sources:
@@ -1086,6 +1151,7 @@ urls:
   - 'http://www.lavasoft.com/mylavasoft/rogues/secretservice'
   - 'http://www.wikihow.com/Manually-Remove-Macatte-Malware'
 ---
+
 name: WindowsExplorerNamespacePrintersAndFaxes
 doc: CLSIDs listed here are used to populate the Printer and Fax items.
 sources:
@@ -1108,6 +1174,7 @@ supported_os: [ Windows ]
 urls:
   - 'http://www.geoffchappell.com/studies/windows/shell/shell32/classes/printers.htm'
 ---
+
 name: WindowsFileTypeAutorunAssociations
 doc: |
   Registry value for what application class identifier (CLSID) to launch for a file extension.
@@ -1129,6 +1196,7 @@ urls:
   - 'https://msdn.microsoft.com/en-us/library/windows/desktop/ms678415(v=vs.85).aspx'
   - 'https://docs.microsoft.com/en-us/windows/desktop/shell/fa-file-types'
 ---
+
 name: WindowsFirewallLogFile
 doc: Windows Firewall default logfile
 sources:
@@ -1140,6 +1208,7 @@ labels: [ System ]
 supported_os: [ Windows ]
 urls: [ 'https://docs.microsoft.com/en-us/windows/access-protection/windows-firewall/configure-the-windows-firewall-log' ]
 ---
+
 name: WindowsFirewallEnabledRules
 doc: Command to list the enabled Windows Firewall rules.
 sources:
@@ -1150,6 +1219,7 @@ sources:
 labels: [ System ]
 supported_os: [ Windows ]
 ---
+
 name: WindowsFirewallRules
 doc: Command to list the configured Windows Firewall rules.
 sources:
@@ -1160,6 +1230,7 @@ sources:
 labels: [ System ]
 supported_os: [ Windows ]
 ---
+
 name: WindowsGroupPolicyScripts
 doc: Windows group policy scripts
 sources:
@@ -1177,6 +1248,7 @@ sources:
       separator: '\'
 supported_os: [ Windows ]
 ---
+
 name: WindowsHostsFiles
 doc: The Windows hosts and lmhosts file.
 sources:
@@ -1188,6 +1260,7 @@ sources:
       separator: '\'
 supported_os: [ Windows ]
 ---
+
 name: WindowsHotkeyReplacement
 doc: Hotkey executable replacement.
 sources:
@@ -1200,6 +1273,7 @@ sources:
       separator: '\'
 supported_os: [ Windows ]
 ---
+
 name: WindowsInstallationDateTime
 doc: Windows installation date and time
 sources:
@@ -1209,6 +1283,7 @@ sources:
         - { key: 'HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion', value: 'InstallDate' }
 supported_os: [ Windows ]
 ---
+
 name: WindowsLogoffScript
 doc: Windows policy logoff script
 sources:
@@ -1220,6 +1295,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'https://technet.microsoft.com/en-us/library/ff404236.aspx' ]
 ---
+
 name: WindowsLogonScript
 doc: Windows policy logon script
 sources:
@@ -1231,6 +1307,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'https://technet.microsoft.com/en-us/library/ff404236.aspx' ]
 ---
+
 name: WindowsLSAAuthenticationPackages
 doc: Authentication Packages can be injected into LSASS.
 sources:
@@ -1244,6 +1321,7 @@ urls:
   - 'http://gladiator-antivirus.com/forum/index.php?showtopic=24610'
   - 'https://technet.microsoft.com/en-us/library/cc963218.aspx'
 ---
+
 name: WindowsLSANotificationPackages
 doc: Notification Packages can be injected into LSASS.
 sources:
@@ -1257,6 +1335,7 @@ urls:
   - 'http://gladiator-antivirus.com/forum/index.php?showtopic=24610'
   - 'https://technet.microsoft.com/en-us/library/cc963221.aspx'
 ---
+
 name: WindowsLSASecurityPackages
 doc: Security Packages can be injected into LSASS.
 sources:
@@ -1270,6 +1349,7 @@ urls:
   - 'https://msdn.microsoft.com/en-us/library/windows/desktop/aa379392(v=vs.85).aspx'
   - 'https://dl.mandiant.com/EE/library/MIRcon2014/MIRcon_2014_IR_Track_Analysis_of_Malicious_SSP.pdf'
 ---
+
 name: WindowsMapNetworkDriveMRU
 doc: Recently mapped network shares.
 sources:
@@ -1278,6 +1358,7 @@ sources:
     keys: ['HKEY_USERS\%%users.sid%%\Software\Microsoft\Windows\CurrentVersion\Explorer\Map Network Drive MRU']
 supported_os: [Windows]
 ---
+
 name: WindowsMetroApplicationCache
 doc: Windows Metro application cache.
 sources:
@@ -1289,6 +1370,7 @@ supported_os: [ Windows ]
 urls:
   - 'http://www.forensicmag.com/article/2012/09/microsoft-windows-8-forensic-first-look'
 ---
+
 name: WindowsMetroApplicationCookies
 doc: Windows Metro application cookies.
 sources:
@@ -1300,6 +1382,7 @@ supported_os: [ Windows ]
 urls:
   - 'http://www.forensicmag.com/article/2012/09/microsoft-windows-8-forensic-first-look'
 ---
+
 name: WindowsMetroApplicationHistory
 doc: Windows Metro application history.
 sources:
@@ -1311,6 +1394,7 @@ supported_os: [ Windows ]
 urls:
   - 'http://www.forensicmag.com/article/2012/09/microsoft-windows-8-forensic-first-look'
 ---
+
 name: WindowsMetroUserPinnedFavoriteTiles
 doc: Windows Metro user-pinned favorite tiles.
 sources:
@@ -1322,6 +1406,7 @@ supported_os: [ Windows ]
 urls:
   - 'http://www.forensicmag.com/article/2012/09/microsoft-windows-8-forensic-first-look'
 ---
+
 name: WindowsMostRecentApplication
 doc: Windows Most Recent Application name key
 sources:
@@ -1335,6 +1420,7 @@ urls:
   - 'http://www.trendmicro.com/vinfo/us/threat-encyclopedia/malware/troj_ransom.smc7'
   - 'https://www.symantec.com/security_response/writeup.jsp?docid=2014-092314-3644-99&tabid=2'
 ---
+
 name: WindowsMSDTCDLLs
 doc: Windows MSDTC attempts to load these DLLs on start
 sources:
@@ -1346,6 +1432,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'https://www.mandiant.com/blog/hikit-rootkit-advanced-persistent-attack-techniques-part-1-2/' ]
 ---
+
 name: WindowsMultiMediaDrivers
 doc: Configured drivers for different multimedia filetypes.
 sources:
@@ -1362,6 +1449,7 @@ urls:
   - 'https://support.microsoft.com/en-us/kb/126054'
   - 'https://www.microsoftpressstore.com/articles/article.aspx?p=2762082&seqNum=2'
 ---
+
 name: WindowsNetworkShellHelpers
 doc: Windows Network Shell (netsh) helpers are loaded on boot
 sources:
@@ -1373,6 +1461,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'https://support.microsoft.com/en-us/kb/242468' ]
 ---
+
 name: WindowsOpenSaveMRU
 doc: Information about files opened or saved in a Windows shell dialog.
 sources:
@@ -1384,6 +1473,7 @@ urls:
   - 'https://forensicswiki.xyz/wiki/index.php?title=OpenSaveMRU'
   - 'https://digital-forensics.sans.org/blog/2010/04/02/openrunsavemru-lastvisitedmru'
 ---
+
 name: WindowsOpenSavePidlMRU
 doc: Information about files opened or saved in a Windows shell dialog.
 sources:
@@ -1395,6 +1485,7 @@ urls:
   - 'https://digital-forensics.sans.org/blog/2010/04/02/openrunsavemru-lastvisitedmru'
   - 'https://forensicswiki.xyz/wiki/index.php?title=OpenSavePidlMRU'
 ---
+
 name: WindowsPendingFileRenames
 doc: Windows Pending file renames on reboot
 sources:
@@ -1405,6 +1496,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'https://technet.microsoft.com/en-us/library/cc960241.aspx' ]
 ---
+
 name: WindowsPendingGPOs
 doc: |
   Windows Pending GPOs registry settings.
@@ -1419,6 +1511,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'https://www.certego.net/en/news/malware-tales-gootkit/' ]
 ---
+
 name: WindowsPersistenceMechanisms
 doc: Persistence mechanisms in Windows.
 sources:
@@ -1432,6 +1525,7 @@ sources:
 labels: [ Software ]
 supported_os: [ Windows ]
 ---
+
 name: WindowsPersistenceRegistryKeys
 doc: Windows Registry keys used for persistence.
 sources:
@@ -1507,6 +1601,7 @@ sources:
 labels: [ Software ]
 supported_os: [ Windows ]
 ---
+
 name: WindowsPLAPProviders
 doc: Windows Pre-Logon Access Provider (PLAP) Providers
 sources:
@@ -1518,6 +1613,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'https://msdn.microsoft.com/en-us/library/windows/desktop/bb530584(v=vs.85).aspx' ]
 ---
+
 name: WindowsPolicyDisallowRun
 doc: Restrict users from running specific applications, typically used by malware to block AV.
 sources:
@@ -1532,6 +1628,7 @@ urls:
   - 'https://support.microsoft.com/en-us/kb/323525'
   - 'https://blog.malwarebytes.com/detections/pum-optional-disallowrun/'
 ---
+
 name: WindowsPowerShellDefaultProfiles
 doc: Default PowerShell Profile files. These files are executed by default when PowerShell starts up.
 sources:
@@ -1548,6 +1645,7 @@ urls:
   - 'https://technet.microsoft.com/en-us/magazine/2008.10.windowspowershell.aspx#id0190010'
   - 'http://www.hexacorn.com/blog/2014/08/27/beyond-good-ol-run-key-part-16/'
 ---
+
 name: WindowsPowerShellEnableScripts
 doc: Registry keys that control whether PowerShell scripts can execute directly.
 sources:
@@ -1561,6 +1659,7 @@ urls:
   - 'https://technet.microsoft.com/library/hh847748.aspx'
   - 'http://www.hexacorn.com/blog/2014/08/27/beyond-good-ol-run-key-part-16/'
 ---
+
 name: WindowsPowerShellExecutionPolicies
 doc: PowerShell Script Execution Policies for all users, and the system.
 sources:
@@ -1574,6 +1673,7 @@ urls:
   - 'https://technet.microsoft.com/library/hh847748.aspx'
   - 'http://www.hexacorn.com/blog/2014/08/27/beyond-good-ol-run-key-part-16/'
 ---
+
 name: WindowsPowerShellHistory
 doc: History of commands executed in an interactive PowerShell session.
 sources:
@@ -1586,6 +1686,7 @@ urls:
   - 'https://0xdf.gitlab.io/2018/11/08/powershell-history-file.html'
   - 'https://docs.microsoft.com/en-us/powershell/module/psreadline/get-psreadlineoption?view=powershell-7.1'
 ---
+
 name: WindowsPrefetchFiles
 doc: Windows Prefetch files.
 sources:
@@ -1597,6 +1698,7 @@ labels: [ System ]
 supported_os: [ Windows ]
 urls: [ 'https://forensicswiki.xyz/wiki/index.php?title=Prefetch' ]
 ---
+
 name: WindowsPrintMonitors
 doc: Windows Print Monitor DLL config.
 sources:
@@ -1608,6 +1710,7 @@ urls:
   - 'http://gladiator-antivirus.com/forum/index.php?showtopic=24610'
   - 'https://support.microsoft.com/en-us/kb/102966'
 ---
+
 name: WindowsProductName
 doc: The Windows product name
 sources:
@@ -1616,6 +1719,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'https://github.com/libyal/winreg-kb/blob/main/documentation/System%20keys.asciidoc' ]
 ---
+
 name: WindowsProgramsCache
 doc: Windows Programs Cache
 sources:
@@ -1627,6 +1731,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'https://github.com/libyal/winreg-kb/blob/main/documentation/Programs%20Cache%20values.asciidoc' ]
 ---
+
 name: WindowsProgramsCacheJumpLists
 doc: Windows Programs Cache Jump Lists
 sources:
@@ -1638,6 +1743,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'https://artifacts-kb.readthedocs.io/en/latest/sources/windows/JumpLists.html' ]
 ---
+
 name: WindowsProxyPACAutoConfigURL
 doc: Windows Proxy PAC AutoConfigURL.
 sources:
@@ -1649,6 +1755,7 @@ labels: [ System, Network ]
 supported_os: [ Windows ]
 urls: [ 'https://blogs.msdn.microsoft.com/askie/2015/07/17/how-can-i-configure-proxy-autoconfigurl-setting-using-group-policy-preference-gpp/' ]
 ---
+
 name: WindowsProxyServerSettings
 doc: |
   Windows Proxy Server Settings.
@@ -1671,6 +1778,7 @@ labels: [ System, Network ]
 supported_os: [ Windows ]
 urls: [ 'https://blog.malwarebytes.com/detections/pum-optional-proxyhijacker/' ]
 ---
+
 name: WindowsRecentFileCacheBCF
 doc: The RecentFileCache.bcf file.
 sources:
@@ -1681,6 +1789,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'https://artifacts-kb.readthedocs.io/en/latest/sources/windows/RecentFileCache.html' ]
 ---
+
 name: WindowsRecycleBin
 doc: Windows Recycle Bin (Recyler, $Recycle.Bin) files.
 sources:
@@ -1694,6 +1803,7 @@ labels: [ Users ]
 supported_os: [ Windows ]
 urls: [ 'https://forensicswiki.xyz/wiki/index.php?title=Windows#Recycle_Bin' ]
 ---
+
 name: WindowsRecycleBinMetadata
 doc: Windows Recycle Bin (Recyler, $Recycle.Bin) metadata files only.
 sources:
@@ -1706,6 +1816,7 @@ sources:
 supported_os: [Windows]
 urls: ['https://forensicswiki.xyz/wiki/index.php?title=Windows#Recycle_Bin']
 ---
+
 name: WindowsRegistryCurrentControlSet
 doc: The current control set of the Windows Registry.
 sources:
@@ -1715,6 +1826,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'https://github.com/libyal/winreg-kb/blob/main/documentation/System%20keys.asciidoc' ]
 ---
+
 name: WindowsRegistryFilesAndTransactionLogs
 doc: Windows user and system Registry files and transaction logs.
 sources:
@@ -1729,6 +1841,7 @@ labels: [ System,Users ]
 supported_os: [ Windows ]
 urls: [ 'https://artifacts-kb.readthedocs.io/en/latest/sources/windows/RegistryFiles.html' ]
 ---
+
 name: WindowsRegistryProfileSIDs
 doc: Get SIDs for all users on the system with profiles present in the Registry.
 labels: [ Users ]
@@ -1741,6 +1854,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'http://msdn.microsoft.com/en-us/library/windows/desktop/bb776892(v=vs.85).aspx' ]
 ---
+
 name: WindowsRegistryProfiles
 doc: |
   Get SIDs for all users on the system with profiles present in the Registry.
@@ -1759,6 +1873,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'http://msdn.microsoft.com/en-us/library/windows/desktop/bb776892(v=vs.85).aspx' ]
 ---
+
 name: WindowsReleaseIdentifier
 doc: |
   The Windows 10 release identifier (or version number).
@@ -1770,6 +1885,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'https://www.microsoft.com/en-us/itpro/windows-10/release-information' ]
 ---
+
 name: WindowsRoverAutostartDLL
 doc: |
   Windows Rover autostart DLL.
@@ -1785,6 +1901,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'http://www.hexacorn.com/blog/2014/05/21/beyond-good-ol-run-key-part-12/' ]
 ---
+
 name: WindowsRoverAutostartKey
 doc: |
   Windows Rover autostart Registry key.
@@ -1796,6 +1913,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'http://www.hexacorn.com/blog/2014/05/21/beyond-good-ol-run-key-part-12/' ]
 ---
+
 name: WindowsRunGrpConv
 doc: |
   The Windows RunGrpConv Registry value.
@@ -1809,6 +1927,7 @@ urls:
   - 'http://www.hexacorn.com/blog/2014/06/18/beyond-good-ol-run-key-part-13/'
   - 'http://www.exploit-id.com/local-exploits/windows-xp-sp2-grpconv-exe'
 ---
+
 name: WindowsRunKeys
 doc: |
   Windows Run and RunOnce keys.
@@ -1847,6 +1966,7 @@ urls:
   - 'http://gladiator-antivirus.com/forum/index.php?showtopic=24610'
   - 'https://technet.microsoft.com/en-us/magazine/ee851671.aspx'
 ---
+
 name: WindowsRunServices
 doc: Windows Run Services.
 sources:
@@ -1866,6 +1986,7 @@ urls:
   - 'https://support.microsoft.com/en-us/kb/179365'
   - 'https://threatvector.cylance.com/en_us/home/windows-registry-persistence-part-2-the-run-keys-and-search-order.html'
 ---
+
 name: WindowsScheduledTasks
 doc: Windows Scheduled Tasks.
 sources:
@@ -1879,6 +2000,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'https://forensicswiki.xyz/wiki/index.php?title=Windows#Scheduled_Tasks' ]
 ---
+
 name: WindowsScreenSaverExecutable
 doc: ScreenSaver Executable
 sources:
@@ -1893,6 +2015,7 @@ urls:
   - 'https://technet.microsoft.com/en-us/library/cc737855(v=ws.10).aspx'
   - 'https://technet.microsoft.com/en-us/library/cc957840.aspx'
 ---
+
 name: WindowsSearchDatabase
 doc: Windows Search database (Windows.edb).
 sources:
@@ -1904,6 +2027,7 @@ labels: [ Software ]
 supported_os: [ Windows ]
 urls: [ 'https://forensicswiki.xyz/wiki/index.php?title=Windows_Desktop_Search' ]
 ---
+
 name: WindowsSecurityProviders
 doc: Security Providers DLLs
 sources:
@@ -1915,6 +2039,7 @@ urls:
   - 'http://gladiator-antivirus.com/forum/index.php?showtopic=24610'
   - 'https://github.com/wmark/security-configuration/blob/master/Windows/disable-weak-ciphers-and-enable-TLS1.x.reg'
 ---
+
 name: WindowsServiceControlManagerExtension
 doc: Windows service control manager extension
 sources:
@@ -1929,6 +2054,7 @@ urls:
   - 'http://gladiator-antivirus.com/forum/index.php?showtopic=24610'
   - 'http://www.silentrunners.org/Silent%20Runners.vbs'
 ---
+
 name: WindowsServices
 doc: |
   Windows services from the Registry.
@@ -1955,6 +2081,7 @@ urls:
   - 'http://support.microsoft.com/kb/103000'
   - 'https://github.com/libyal/winreg-kb/blob/main/documentation/System%20keys.asciidoc'
 ---
+
 name: WindowsActionCenterSettings
 doc: |
   Windows Action Center Settings
@@ -1977,6 +2104,7 @@ urls:
   - 'https://blog.talosintelligence.com/2019/05/threat-roundup-0517-0524.html'
   - 'https://blogs.technet.microsoft.com/platforms_lync_cloud/2017/05/05/disabling-windows-10-action-center-notifications/'
 ---
+
 name: WindowsBootConfigurationSettings
 doc: |
   Windows Boot Configuration Settings.
@@ -2011,6 +2139,7 @@ urls:
   - 'https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/bcd-system-store-settings-for-uefi'
   - 'https://blog.talosintelligence.com/2019/04/sodinokibi-ransomware-exploits-weblogic.html'
 ---
+
 name: WindowsDisallowedSystemCertificates
 doc: |
   Windows Disallowed System Certificates
@@ -2031,6 +2160,7 @@ supported_os: [ Windows ]
 urls:
   - 'https://blog.malwarebytes.com/detections/pum-optional-misplacedcertificate/'
 ---
+
 name: WindowsExplorerSettings
 doc: |
   Windows Explorer Settings
@@ -2090,6 +2220,7 @@ urls:
   - 'https://blog.malwarebytes.com/detections/pum-optional-disabledrightclick/'
   - 'https://blog.malwarebytes.com/detections/pum-optional-disableshowcontrolpanel/'
 ---
+
 name: WindowsSystemSettings
 doc: |
   Windows System Settings
@@ -2131,6 +2262,7 @@ urls:
   - 'https://blog.malwarebytes.com/detections/pum-optional-nodispcpl/'
   - 'https://blog.malwarebytes.com/detections/pum-optional-disablecmdprompt/'
 ---
+
 name: WindowsFirewallAuthorizedApplications
 doc: |
   Windows Firewall Authorized Applications
@@ -2155,6 +2287,7 @@ urls:
   - 'https://threatvector.cylance.com/en_us/home/threat-spotlight-eyepyramid-malware.html'
   - 'https://blog.talosintelligence.com/2019/05/threat-roundup-0524-0531.html'
 ---
+
 name: WindowsFirewallGloballyOpenPorts
 doc: |
   Windows Firewall Globally Open Ports
@@ -2179,6 +2312,7 @@ urls:
   - 'https://qaforce.wordpress.com/2009/10/06/windows-firewall-registry-keys/'
   - 'https://github.com/steeve85/Malwares/wiki/Registry'
 ---
+
 name: WindowsFirewallPolicySettings
 doc: |
   Windows Firewall Policy Settings
@@ -2212,6 +2346,7 @@ urls:
   - 'https://docs.microsoft.com/en-us/windows-hardware/customize/desktop/unattend/networking-mpssvc-svc-privateprofile-disablenotifications'
   - 'https://blog.talosintelligence.com/2019/05/threat-roundup-0503-0510.html'
 ---
+
 name: WindowsSecurityCenterSettings
 doc: |
   Windows Security Center Settings
@@ -2248,6 +2383,7 @@ urls:
   - 'https://blog.appriver.com/phorphiex/trik-botnet-campaign-leads-to-multiple-infections-ransomware-banking-trojan-cryptojacking'
   - 'https://ccm.net/faq/1446-disabling-security-alerts-under-vista'
 ---
+
 name: WindowsSystemRestoreSettings
 doc: |
   Windows System Restore Settings
@@ -2275,6 +2411,7 @@ urls:
   - 'https://www.windows-commandline.com/enable-disable-system-restore-service/'
   - 'https://docs.microsoft.com/en-us/windows/desktop/msi/limitsystemrestorecheckpointing'
 ---
+
 name: WindowsUserAccountControlSettings
 doc: |
   Windows User Account Control Settings
@@ -2296,6 +2433,7 @@ urls:
   - 'https://blog.talosintelligence.com/2019/05/threat-roundup-0503-0510.html'
   - 'https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-gpsb/341747f5-6b5d-4d30-85fc-fa1cc04038d4'
 ---
+
 name: WindowsUpgradeSettings
 doc: |
   Windows Upgrade Settings
@@ -2317,6 +2455,7 @@ urls:
   - 'https://www.ghacks.net/2016/01/08/disableosupgrade-prevents-the-upgrade-to-windows-10/'
   - 'https://blog.talosintelligence.com/2019/05/threat-roundup-0517-0524.html'
 ---
+
 name: WindowsUpdateSettings
 doc: Windows Update Settings
 sources:
@@ -2331,6 +2470,7 @@ urls:
   - 'https://docs.microsoft.com/en-us/windows/deployment/update/waas-wu-settings'
   - 'https://blog.talosintelligence.com/2019/06/threat-roundup-0531-0607.html'
 ---
+
 name: WindowsFontDrivers
 doc: Windows font drivers from the Registry.
 sources:
@@ -2343,6 +2483,7 @@ supported_os: [ Windows ]
 urls:
   - 'https://www.microsoftpressstore.com/articles/article.aspx?p=2762082&seqNum=2'
 ---
+
 name: WindowsSessionManagerBootExecute
 doc: Windows Session Manager BootExecute persistence.
 sources:
@@ -2352,6 +2493,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'https://technet.microsoft.com/en-us/library/cc963230.aspx' ]
 ---
+
 name: WindowsSessionManagerExecute
 doc: |
   Windows Session Manager Execute persistence
@@ -2366,6 +2508,7 @@ urls:
   - 'https://technet.microsoft.com/en-us/library/cc976130.aspx'
   - 'https://www.microsoftpressstore.com/articles/article.aspx?p=2762082&seqNum=2'
 ---
+
 name: WindowsSessionManagerS0InitialCommand
 doc: |
   Windows Session Manager S0InitialCommand persistence
@@ -2380,6 +2523,7 @@ urls:
   - 'https://msdn.microsoft.com/en-us/library/windows/desktop/dd392286%28v=vs.85%29.aspx'
   - 'https://www.microsoftpressstore.com/articles/article.aspx?p=2762082&seqNum=2'
 ---
+
 name: WindowsSessionManagerSetupExecute
 doc: |
   Windows Session Manager SetupExecute persistence
@@ -2394,6 +2538,7 @@ urls:
   - 'https://msdn.microsoft.com/en-us/library/windows/desktop/dd392286%28v=vs.85%29.aspx'
   - 'https://www.microsoftpressstore.com/articles/article.aspx?p=2762082&seqNum=2'
 ---
+
 name: WindowsSessionManagerSubSystems
 doc: Windows Session Manager SubSystems persistence
 sources:
@@ -2405,6 +2550,7 @@ urls:
   - 'https://technet.microsoft.com/en-us/library/cc976130.aspx'
   - 'http://gladiator-antivirus.com/forum/index.php?showtopic=24610'
 ---
+
 name: WindowsSessionManagerWOWCommandLine
 doc: Windows Session Manager Windows-on-Windows (WOW) command line
 sources:
@@ -2416,6 +2562,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'https://support.microsoft.com/en-us/kb/102986' ]
 ---
+
 name: WindowsSetupCommandLine
 doc: Command line invocation used for custom setup and deployment tasks
 sources:
@@ -2426,6 +2573,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'https://www.microsoftpressstore.com/articles/article.aspx?p=2762082&seqNum=2' ]
 ---
+
 name: WindowsSharedTaskScheduler
 doc: Runs on windows boot.
 sources:
@@ -2439,6 +2587,7 @@ urls:
   - 'http://gladiator-antivirus.com/forum/index.php?showtopic=24610'
   - 'http://www.bleepingcomputer.com/tutorials/windows-program-automatic-startup-locations/'
 ---
+
 name: WindowsShellExecuteHooks
 doc: Shell execution hooks are called when ShellExecuteEx() is called.
 sources:
@@ -2453,6 +2602,7 @@ urls:
   - 'http://regenerus.com/malware-common-loadpoints/'
   - 'https://code.google.com/p/regripper/wiki/ASEPs'
 ---
+
 name: WindowsShellExtensions
 doc: Approved extensions to the Windows Shell (explorer.exe).
 sources:
@@ -2466,6 +2616,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'https://msdn.microsoft.com/en-us/library/windows/desktop/cc144110(v=vs.85).aspx' ]
 ---
+
 name: WindowsShellHandlersRegistryKeys
 doc: |
   Windows registry values for shell handler artifacts.
@@ -2519,6 +2670,7 @@ urls:
   - 'http://www.codeguru.com/cpp/com-tech/shell/article.php/c4515/Logging-the-Shell-Activity.htm'
   - 'http://www.trendmicro.com/vinfo/us/threat-encyclopedia/archive/malware/troj_qoolaid.r'
 ---
+
 name: WindowsShellIconOverlayIdentifiers
 doc: Called to display custom icons.
 sources:
@@ -2534,6 +2686,7 @@ urls:
   - 'http://gladiator-antivirus.com/forum/index.php?showtopic=24610'
   - 'https://msdn.microsoft.com/en-us/library/windows/desktop/hh127455(v=vs.85).aspx'
 ---
+
 name: WindowsShellLoadAndRun
 doc: Windows Shell Load and Run values
 sources:
@@ -2547,6 +2700,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'https://support.microsoft.com/en-us/kb/103865' ]
 ---
+
 name: WindowsIconServiceLib
 doc: |
   Windows Icon Service Library Name
@@ -2560,6 +2714,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'https://www.microsoftpressstore.com/articles/article.aspx?p=2762082&seqNum=2' ]
 ---
+
 name: WindowsShellOpenCommand
 doc: Executed every time this file type is opened. For most file types, the value should be '"%1" %*'.
 sources:
@@ -2580,6 +2735,7 @@ urls:
   - 'https://www.microsoftpressstore.com/articles/article.aspx?p=2762082&seqNum=2'
   - 'https://pentestlab.blog/2017/06/09/uac-bypass-sdclt/'
 ---
+
 name: WindowsShellRunasCommand
 doc: |
   Executed every time an executable or script file type is run as administrator.
@@ -2606,6 +2762,7 @@ urls:
   - 'https://www.microsoftpressstore.com/articles/article.aspx?p=2762082&seqNum=2'
   - 'https://enigma0x3.net/2017/03/17/fileless-uac-bypass-using-sdclt-exe/'
 ---
+
 name: WindowsShellServiceObjects
 doc: Windows Shell (explorer.exe) service objects delayed load.
 sources:
@@ -2617,6 +2774,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'http://www.microsoft.com/security/portal/threat/encyclopedia/Entry.aspx?Name=TrojanClicker:Win32/Zirit.X#tab=2' ]
 ---
+
 name: WindowsSetupApiLogs
 doc: Windows setup API logs.
 sources:
@@ -2632,6 +2790,7 @@ labels: [ Logs ]
 supported_os: [ Windows ]
 urls: [ 'https://forensicswiki.xyz/wiki/index.php?title=Setup_API_Logs' ]
 ---
+
 name: WindowsShutdownScript
 doc: Windows policy shutdown script
 sources:
@@ -2648,6 +2807,7 @@ urls:
   - 'https://technet.microsoft.com/en-us/library/ff404236.aspx'
   - 'https://www.microsoftpressstore.com/articles/article.aspx?p=2762082&seqNum=2'
 ---
+
 name: WindowsStartupFolderModification
 doc: Windows startup folder Registry values.
 sources:
@@ -2676,6 +2836,7 @@ sources:
     provides: [ { key: users.startup } ]
 supported_os: [ Windows ]
 ---
+
 name: WindowsStartupFolders
 doc: Windows startup folder persistence.
 sources:
@@ -2689,6 +2850,7 @@ sources:
       separator: '\'
 supported_os: [ Windows ]
 ---
+
 name: WindowsStartupScript
 doc: Windows policy startup script
 sources:
@@ -2705,6 +2867,7 @@ urls:
   - 'https://technet.microsoft.com/en-us/library/ff404236.aspx'
   - 'https://www.microsoftpressstore.com/articles/article.aspx?p=2762082&seqNum=2'
 ---
+
 name: WindowsStubPaths
 doc: |
   Windows StubPath persistence.
@@ -2729,6 +2892,7 @@ urls:
   - 'https://www.microsoftpressstore.com/articles/article.aspx?p=2762082&seqNum=2'
   - 'http://bonemanblog.blogspot.com/2004/12/active-setup-registry-keys-and-their.html'
 ---
+
 name: WindowsSuperFetchFiles
 doc: Windows SuperFetch files.
 sources:
@@ -2742,6 +2906,7 @@ labels: [ System ]
 supported_os: [ Windows ]
 urls: [ 'https://forensicswiki.xyz/wiki/index.php?title=SuperFetch' ]
 ---
+
 name: WindowsSystemIniFiles
 doc: Windows system ini files
 sources:
@@ -2754,6 +2919,7 @@ sources:
       separator: '\'
 supported_os: [ Windows ]
 ---
+
 name: WindowsSystemPolicyShell
 doc: Windows System policy replacement shell (custom user interface).
 sources:
@@ -2765,6 +2931,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'https://technet.microsoft.com/en-us/library/cc728472(v=ws.10).aspx' ]
 ---
+
 name: WindowsSystemRegistryFilesBackup
 doc: Backup of Windows system Registry files.
 sources:
@@ -2780,6 +2947,7 @@ labels: [ System ]
 supported_os: [ Windows ]
 urls: [ 'https://artifacts-kb.readthedocs.io/en/latest/sources/windows/RegistryFiles.html' ]
 ---
+
 name: WindowsSystemRegistryTransactionLogFilesBackup
 doc: |
   Backup of Windows system Registry transaction log files.
@@ -2806,6 +2974,7 @@ labels: [ System ]
 supported_os: [ Windows ]
 urls: [ 'https://artifacts-kb.readthedocs.io/en/latest/sources/windows/RegistryFiles.html' ]
 ---
+
 name: WindowsSystemRegistryFilesAndTransactionLogsBackup
 doc: Backup of Windows system Registry files and transaction logs.
 sources:
@@ -2818,22 +2987,24 @@ labels: [ System,Users ]
 supported_os: [ Windows ]
 urls: [ 'https://artifacts-kb.readthedocs.io/en/latest/sources/windows/RegistryFiles.html' ]
 ---
+
 name: WindowsSystemRegistryFiles
 doc: Windows system Registry files.
 sources:
   - type: FILE
     attributes:
       paths:
+        - '%%environ_systemdrive%%\System Volume Information\Syscache.hve'
         - '%%environ_systemroot%%\System32\config\SAM'
         - '%%environ_systemroot%%\System32\config\SECURITY'
         - '%%environ_systemroot%%\System32\config\SOFTWARE'
         - '%%environ_systemroot%%\System32\config\SYSTEM'
-        - '\System Volume Information\Syscache.hve'
       separator: '\'
 labels: [ System ]
 supported_os: [ Windows ]
 urls: [ 'https://artifacts-kb.readthedocs.io/en/latest/sources/windows/RegistryFiles.html' ]
 ---
+
 name: WindowsSystemRegistryTransactionLogFiles
 doc: Windows system Registry transaction log files.
 sources:
@@ -2857,6 +3028,7 @@ labels: [ System ]
 supported_os: [ Windows ]
 urls: [ 'https://artifacts-kb.readthedocs.io/en/latest/sources/windows/RegistryFiles.html' ]
 ---
+
 name: WindowsSystemRegistryFilesAndTransactionLogs
 doc: Windows system Registry files and transaction logs.
 sources:
@@ -2869,6 +3041,7 @@ labels: [ System ]
 supported_os: [ Windows ]
 urls: [ 'https://artifacts-kb.readthedocs.io/en/latest/sources/windows/RegistryFiles.html' ]
 ---
+
 name: WindowsSystemResourceUsageMonitorDatabaseFile
 doc: Windows System Resource Usage Monitor (SRUM) database file.
 sources:
@@ -2879,6 +3052,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'https://github.com/libyal/esedb-kb/blob/main/documentation/System%20Resource%20Usage%20Monitor%20(SRUM).asciidoc' ]
 ---
+
 name: WindowsTempDirectories
 doc: Contents of the Windows temporary directories
 sources:
@@ -2892,6 +3066,7 @@ sources:
 
 supported_os: [ Windows ]
 ---
+
 name: WindowsTerminalServerRunKeys
 doc: Windows Terminal Server Run keys
 sources:
@@ -2913,6 +3088,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'http://gladiator-antivirus.com/forum/index.php?showtopic=24610' ]
 ---
+
 name: WindowsTerminalServerStartupPrograms
 doc: Windows Terminal Server Startup Programs
 sources:
@@ -2923,6 +3099,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'http://forum.sysinternals.com/rdpclip_topic4729.html' ]
 ---
+
 name: WindowsTerminalServerInitialProgram
 doc: Windows Terminal Server Initial Program
 sources:
@@ -2937,6 +3114,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'https://www.microsoftpressstore.com/articles/article.aspx?p=2762082&seqNum=2' ]
 ---
+
 name: WindowsActiveSyncAutoStart
 doc: Windows ActiveSync AutoStart entries
 sources:
@@ -2950,6 +3128,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'https://www.microsoftpressstore.com/articles/article.aspx?p=2762082&seqNum=2' ]
 ---
+
 name: WindowsTimezone
 doc: The time zone of the system as a Windows time zone name or in MUI form.
 sources:
@@ -2961,6 +3140,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'https://winreg-kb.readthedocs.io/en/latest/sources/system-keys/Time-zones.html' ]
 ---
+
 name: WindowsToolPaths
 doc: Paths to windows tools such as defrag, chkdsk.
 sources:
@@ -2976,6 +3156,7 @@ urls:
   - 'http://gladiator-antivirus.com/forum/index.php?showtopic=24610'
   - 'http://www.liutilities.com/products/registrybooster/tweaklibrary/tweaks/11118/'
 ---
+
 name: WindowsUninstallKeys
 doc: Uninstall Registry keys
 sources:
@@ -2988,6 +3169,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'https://msdn.microsoft.com/en-us/library/aa372105(v=vs.85).aspx' ]
 ---
+
 name: WindowsUpdateBuildRevision
 doc: |
   Windows kernel update build revision (UBR).
@@ -2999,6 +3181,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'https://social.technet.microsoft.com/Forums/en-US/cadee4de-24d0-403e-9f3e-75868abf8f34' ]
 ---
+
 name: WindowsUpdateStatus
 doc: Windows auto update status.
 sources:
@@ -3016,6 +3199,7 @@ urls:
   - 'https://forensicswiki.xyz/wiki/index.php?title=Windows_Update'
   - 'http://blogs.msdn.com/b/aruns_blog/archive/2011/06/20/active-setup-registry-key-what-it-is-and-how-to-create-in-the-package-using-admin-studio-install-shield.aspx'
 ---
+
 name: WindowsUserAutomaticDestinationsJumpLists
 doc: Windows user AutomaticDestinations Jump Lists.
 sources:
@@ -3027,6 +3211,7 @@ labels: [ Users ]
 supported_os: [ Windows ]
 urls: [ 'https://artifacts-kb.readthedocs.io/en/latest/sources/windows/JumpLists.html' ]
 ---
+
 name: WindowsUserCustomDestinationsJumpLists
 doc: Windows user CustomDestinations Jump Lists.
 sources:
@@ -3038,6 +3223,7 @@ labels: [ Users ]
 supported_os: [ Windows ]
 urls: [ 'https://artifacts-kb.readthedocs.io/en/latest/sources/windows/JumpLists.html' ]
 ---
+
 name: WindowsUserDownloadsDirectory
 doc: User downloads directory
 sources:
@@ -3048,6 +3234,7 @@ sources:
 labels: [ Users ]
 supported_os: [ Windows ]
 ---
+
 name: WindowsUserJumpLists
 doc: Windows user Jump Lists.
 sources:
@@ -3061,6 +3248,7 @@ labels: [ Users ]
 supported_os: [ Windows ]
 urls: [ 'https://artifacts-kb.readthedocs.io/en/latest/sources/windows/JumpLists.html' ]
 ---
+
 name: WindowsUserRecentFiles
 doc: Windows user specific recent files.
 sources:
@@ -3073,6 +3261,7 @@ sources:
 labels: [ Users ]
 supported_os: [ Windows ]
 ---
+
 name: WindowsUserRegistryFiles
 doc: Windows user specific Registry files.
 sources:
@@ -3087,6 +3276,7 @@ labels: [ Users ]
 supported_os: [ Windows ]
 urls: [ 'https://artifacts-kb.readthedocs.io/en/latest/sources/windows/RegistryFiles.html' ]
 ---
+
 name: WindowsUserRegistryTransactionLogFiles
 doc: Windows user Registry transaction log files.
 sources:
@@ -3104,6 +3294,7 @@ labels: [ Users ]
 supported_os: [ Windows ]
 urls: [ 'https://artifacts-kb.readthedocs.io/en/latest/sources/windows/RegistryFiles.html' ]
 ---
+
 name: WindowsUserRegistryFilesAndTransactionLogs
 doc: Windows user Registry files and transaction logs.
 sources:
@@ -3116,6 +3307,7 @@ labels: [ Users ]
 supported_os: [ Windows ]
 urls: [ 'https://artifacts-kb.readthedocs.io/en/latest/sources/windows/RegistryFiles.html' ]
 ---
+
 name: WindowsUserShellFoldersOfInterest
 doc: The Shell Folders information for Windows users, defined as single values for knowledge base extraction
 sources:
@@ -3167,6 +3359,7 @@ sources:
     provides: [ { key: users.temp } ]
 supported_os: [ Windows ]
 ---
+
 name: WindowsUserShellFolders
 doc: The Shell Folders information for Windows users.
 sources:
@@ -3178,6 +3371,7 @@ sources:
         - 'HKEY_USERS\%%users.sid%%\Volatile Environment'
 supported_os: [ Windows ]
 ---
+
 name: WindowsWinlogonGinaDLL
 doc: Windows Gina DLL replacement.
 sources:
@@ -3189,6 +3383,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'https://technet.microsoft.com/en-us/library/cc939701.aspx' ]
 ---
+
 name: WindowsWinlogonNotify
 doc: Windows Winlogon Notify DLL names.
 sources:
@@ -3200,6 +3395,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'https://msdn.microsoft.com/en-us/library/windows/desktop/aa379402(v=vs.85).aspx' ]
 ---
+
 name: WindowsWinlogonShell
 doc: Windows shell replacement.
 sources:
@@ -3211,6 +3407,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'https://msdn.microsoft.com/en-us/library/ms838576%28v=winembedded.5%29.aspx' ]
 ---
+
 name: WindowsWinlogonSystem
 doc: Applications launched by Winlogon in the system context during the system initialisation.
 sources:
@@ -3225,6 +3422,7 @@ urls:
   - 'http://gladiator-antivirus.com/forum/index.php?showtopic=24610'
   - 'http://regenerus.com/malware-common-loadpoints/'
 ---
+
 name: WindowsWinlogonTaskman
 doc: Windows Winlogon Taskman replacement.
 sources:
@@ -3236,6 +3434,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'https://technet.microsoft.com/en-us/library/cc939701.aspx' ]
 ---
+
 name: WindowsWinlogonUiHost
 doc: Windows Winlogon UI screen application
 sources:
@@ -3249,6 +3448,7 @@ urls:
   - 'http://gladiator-antivirus.com/forum/index.php?showtopic=24610'
   - 'http://www.bleepingcomputer.com/forums/t/14028/change-the-loginwelcome-screen/'
 ---
+
 name: WindowsWinlogonUserinit
 doc: Windows Winlogon Userinit replacement.
 sources:
@@ -3260,6 +3460,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'https://technet.microsoft.com/en-us/library/cc939862.aspx' ]
 ---
+
 name: WindowsWinlogonAvailableShells
 doc: |
   Windows Server Winlogon Available Shells
@@ -3278,6 +3479,7 @@ urls:
   - https://andymorgan.wordpress.com/2012/03/30/changing-the-default-shell-of-windows-server-8-core/
   - https://www.microsoftpressstore.com/articles/article.aspx?p=2762082&seqNum=2
 ---
+
 name: WindowsWinlogonVMApplet
 doc: Windows VMApplet replacement.
 sources:
@@ -3289,6 +3491,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'https://technet.microsoft.com/en-us/library/cc939701.aspx' ]
 ---
+
 name: WindowsWinstart
 doc: Windows winstart.bat file
 sources:
@@ -3300,6 +3503,7 @@ sources:
       separator: '\'
 supported_os: [ Windows ]
 ---
+
 name: WindowsWinlogonAppSetup
 doc: Windows Winlogon Appsetup
 sources:
@@ -3310,6 +3514,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'https://technet.microsoft.com/en-us/library/cc939701.aspx' ]
 ---
+
 name: WindowsWinlogonGPExtensions
 doc: |
   Windows Winlogon Group Policy Extensions
@@ -3327,6 +3532,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'https://www.microsoftpressstore.com/articles/article.aspx?p=2762082&seqNum=2' ]
 ---
+
 name: WinSock2LayeredServiceProviders
 doc: Used to filter TCP/IP traffic through WinSock2.
 sources:
@@ -3341,6 +3547,7 @@ urls:
   - 'https://en.wikipedia.org/wiki/Layered_Service_Provider'
   - 'https://www.microsoftpressstore.com/articles/article.aspx?p=2762082&seqNum=2'
 ---
+
 name: WinSock2NamespaceProviders
 doc: Used to provide name-resolution services through WinSock2
 sources:
@@ -3356,6 +3563,7 @@ urls:
   - 'https://msdn.microsoft.com/en-us/library/windows/desktop/ms739923(v=vs.85).aspx'
   - 'https://www.microsoftpressstore.com/articles/article.aspx?p=2762082&seqNum=2'
 ---
+
 name: WindowsDNSSettings
 doc: Windows Registry Keys that contain DNS and DHCP settings.
 sources:
@@ -3371,6 +3579,7 @@ labels: [ System, Network ]
 supported_os: [ Windows ]
 urls: [ 'https://technet.microsoft.com/en-us/library/dd197418(v=ws.10).aspx' ]
 ---
+
 name: CurrentControlSet
 doc: The control set the system is currently using.
 sources:
@@ -3380,6 +3589,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'https://github.com/libyal/winreg-kb/blob/master/documentation/System%20keys.asciidoc' ]
 ---
+
 name: WindowsJobFiles
 doc: Files for the Windows Task Scheduler
 sources:
@@ -3392,6 +3602,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'https://stackoverflow.com/questions/2913816/how-to-find-the-location-of-the-scheduled-tasks-folder' ]
 ---
+
 name: WindowsNetworkInterfaceInformation
 doc: Details for network interfaces and their names
 sources:
@@ -3403,6 +3614,7 @@ sources:
 labels: [ System, Network ]
 supported_os: [ Windows ]
 ---
+
 name: WindowsHotfixes
 doc: Windows Registry Keys that contain Hotfix information
 sources:
@@ -3415,6 +3627,7 @@ sources:
 labels: [ System ]
 supported_os: [ Windows ]
 ---
+
 name: WindowsDefaultPaths
 doc: Default Paths for many parameters
 sources:
@@ -3504,6 +3717,7 @@ sources:
     provides: [ { key: users.recent } ]
 supported_os: [ Windows ]
 ---
+
 name: UserSIDDefaultKeys
 doc: Bruteforce SIDs
 sources:
@@ -3514,6 +3728,7 @@ sources:
     provides: [ { key: users.sid, regex: '.*\\(.+)' } ]
 supported_os: [ Windows ]
 ---
+
 name: WindowsUserAssist
 doc: Artifact of execution in the user's UserAssist key
 sources:
@@ -3527,6 +3742,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'https://www.aldeid.com/wiki/Windows-userassist-keys' ]
 ---
+
 name: WindowsRDPClientBitmapCache
 doc: Artifacts of RDP connection contents
 sources:
@@ -3537,6 +3753,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'https://github.com/BSI-Bund/RdpCacheStitcher' ]
 ---
+
 name: WindowsStartupInfo
 doc: |
   StartupInfo XML files.
@@ -3555,6 +3772,7 @@ labels: [ Execution ]
 supported_os: [ Windows ]
 urls: [ 'https://forensicswiki.xyz/wiki/index.php?title=Windows#Startup_info' ]
 ---
+
 name: WindowsCrashDumps
 doc: |
   Windows Error Reporting (WER) files and crash dumps.
@@ -3583,6 +3801,7 @@ labels: [ Execution ]
 supported_os: [ Windows ]
 urls: [ 'https://forensicswiki.xyz/wiki/index.php?title=Windows#Crash_and_minidumps' ]
 ---
+
 name: WindowsMsOfficeAutosave
 doc: Recovery files automatically created by Microsoft Office applications.
 sources:
@@ -3598,6 +3817,7 @@ labels: [ Users ]
 supported_os: [ Windows ]
 urls: [ 'https://forensicswiki.xyz/wiki/index.php?title=Windows#Microsoft_Office_Autosave' ]
 ---
+
 name: WindowsUserAccessLogging
 doc: |
   User Access Logging (UAL) databases.
@@ -3616,6 +3836,7 @@ labels: [ Users ]
 supported_os: [ Windows ]
 urls: [ 'https://forensicswiki.xyz/wiki/index.php?title=Windows#User_Access_Logging_(UAL)' ]
 ---
+
 name: WindowsEventTracingLogFiles
 doc: Event Tracing for Windows (ETW) log files.
 sources:
@@ -3646,6 +3867,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'https://forensicswiki.xyz/wiki/index.php?title=Event_Tracing_for_Windows_(ETW)' ]
 ---
+
 name: WindowsMountedDevices
 doc: Windows mounted devices
 sources:
@@ -3654,6 +3876,7 @@ sources:
 supported_os: [ Windows ]
 urls: [ 'https://winreg-kb.readthedocs.io/en/latest/sources/system-keys/Mounted-devices.html' ]
 ---
+
 name: WindowsLanguage
 doc: The system language.
 sources:
@@ -3664,6 +3887,7 @@ sources:
 supported_os: [Windows]
 urls: ['https://winreg-kb.readthedocs.io/en/latest/sources/system-keys/Language.html']
 ---
+
 name: WindowsPortProxyConfiguration
 doc: Windows PortProxy registry keys (set by netsh portproxy command or manually).
 sources:
@@ -3677,6 +3901,7 @@ urls:
   - 'https://adepts.of0x.cc/netsh-portproxy-code/'
   - 'https://www.dfirnotes.net/portproxy_detection/'
 ---
+
 name: WindowsEventLogPublishers
 doc: Windows EventLog publishers (or providers) Registry keys.
 sources:
@@ -3686,6 +3911,7 @@ sources:
 supported_os: [Windows]
 urls: ['https://winreg-kb.readthedocs.io/en/latest/sources/EventLog-keys.html']
 ---
+
 name: WindowsCortanaDatabase
 doc: Windows Cortana database
 sources:
@@ -3698,6 +3924,7 @@ sources:
 supported_os: [Windows]
 urls: ['https://forensicswiki.xyz/wiki/index.php?title=Cortana']
 ---
+
 name: WindowsCryptnetUrlCacheContent
 doc: |
   Content of a Windows cache of files downloaded from the internet.
@@ -3717,6 +3944,7 @@ supported_os: [Windows]
 urls:
   - https://forensicswiki.xyz/wiki/index.php?title=Windows#Cryptnet_URL_Cache
 ---
+
 name: WindowsCryptnetUrlCacheMetadata
 doc: |
   Metadata of a Windows cache of files downloaded from the internet.
@@ -3735,6 +3963,7 @@ sources:
 supported_os: [Windows]
 urls: ['https://forensicswiki.xyz/wiki/index.php?title=Windows#Cryptnet_URL_Cache']
 ---
+
 name: WindowsSecuritySettingsDatabases
 doc: Windows security settings databases (secedit.sdb and spsecupd.sdb)
 sources:
@@ -3746,6 +3975,7 @@ sources:
       separator: '\'
 supported_os: [Windows]
 ---
+
 name: WindowsTileDataLayerDatabase
 doc: |
   Windows tile data layer database (vedatamodel.edb)
@@ -3759,6 +3989,7 @@ sources:
 supported_os: [Windows]
 urls: ['https://forensicswiki.xyz/wiki/index.php?title=Extensible_Storage_Engine_(ESE)_Database_File_(EDB)_format#Tile_Data_Layer_database']
 ---
+
 name: WindowsWordWheelQueryRegistryKey
 doc: Keywords searched in from the Windows start menu, potentially resulting in files or folders access or program executions.
 sources:
@@ -3766,3 +3997,102 @@ sources:
   attributes:
     keys: ['HKEY_USERS\%%users.sid%%\Software\Microsoft\Windows\CurrentVersion\Explorer\WordWheelQuery\*']
 supported_os: [Windows]
+---
+
+name: WindowsWebCacheStorageQuotaDatabaseFile
+doc: Windows WebCache storage quota database file (CacheStorage.edb)
+sources:
+- type: FILE
+  attributes:
+    paths:
+    - '%%users.localappdata%%\Packages\*\AppData\CacheStorage\CacheStorage.edb'
+    separator: \
+supported_os:
+- Windows
+---
+
+name: WindowsStateRepositoryMachineDatabaseFile
+doc: The State Reposistory machine database file (StateRepository-Machine.srd).
+sources:
+- type: FILE
+  attributes:
+    paths:
+    - '%%environ_programdata%%\Microsoft\Windows\AppRepository\StateRepository-Machine.srd'
+    separator: \
+supported_os:
+- Windows
+---
+
+name: WindowsPushNotificationDatabaseFile
+doc: The Windows Push Notification (WPN) database file.
+sources:
+- type: FILE
+  attributes:
+    paths:
+    - '%%users.localappdata%%\Microsoft\Windows\Notifications\wpndatabase.db'
+    - '%%environ_systemroot%%\System32\config\ystemprofile\AppData\Local\Microsoft\Windows\Notifications\wpndatabase.db'
+    separator: \
+supported_os:
+- Windows
+---
+
+name: WindowsStateRepositoryDeploymentDatabaseFile
+doc: The State Reposistory deployment database file (StateRepository-Deployment.srd).
+sources:
+- type: FILE
+  attributes:
+    paths:
+    - '%%environ_programdata%%\Microsoft\Windows\AppRepository\StateRepository-Deployment.srd'
+    separator: \
+supported_os:
+- Windows
+---
+
+name: WindowsUpdateStoreDatabaseFile
+doc: The Update Service Orchestrator (USO) private update store database file.
+sources:
+- type: FILE
+  attributes:
+    paths:
+    - '%%environ_programdata%%\USOPrivate\UpdateStore\store.db'
+    separator: \
+supported_os:
+- Windows
+---
+
+name: WindowsUpdateDataStoreDatabaseFile
+doc: Windows Update data store database file (DataStore.edb).
+sources:
+- type: FILE
+  attributes:
+    paths:
+    - '%%environ_windir%%\SoftwareDistribution\DataStore\DataStore.edb'
+    separator: \
+supported_os:
+- Windows
+---
+
+name: WindowsSmsRouterInterceptStoreDatabaseFile
+doc: Windows SmsRouter intercept store database file (SmsInterceptStore.db)
+sources:
+- type: FILE
+  attributes:
+    paths:
+    - '%%environ_programdata%%\Microsoft\SmsRouter\MessageStore\SmsInterceptStore.db'
+    separator: \
+supported_os:
+- Windows
+---
+
+name: WindowsUpdateCatalogDatabaseFile
+doc: Windows Update catalog package signatures database file (catdb).
+sources:
+- type: FILE
+  attributes:
+    paths:
+    - '%%environ_systemroot%%\System32\catroot2\{*-*-*-*-*}\catdb'
+    separator: \
+supported_os:
+- Windows
+urls:
+- https://learn.microsoft.com/en-us/windows-hardware/drivers/install/catalog-files

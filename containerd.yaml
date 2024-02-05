@@ -1,6 +1,5 @@
 # containerd artifacts
 
----
 name: ContainerdConfig
 doc: containerd configuration files
 sources:
@@ -15,6 +14,7 @@ sources:
 labels: [Containerd, Configuration Files]
 supported_os: [Linux]
 ---
+
 name: ContainerdLogs
 doc: containerd related events in the log files
 sources:

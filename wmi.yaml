@@ -21,6 +21,7 @@ labels: [Users]
 supported_os: [Windows]
 urls: ['http://msdn.microsoft.com/en-us/library/windows/desktop/aa394507(v=vs.85).aspx']
 ---
+
 name: WMIAntivirusProduct
 doc: Enumerate the registered antivirus.
 sources:
@@ -28,6 +29,7 @@ sources:
   attributes: {query: SELECT * FROM AntivirusProduct, base_object: 'winmgmts:\root\SecurityCenter2'}
 supported_os: [Windows]
 ---
+
 name: WMIComputerSystemProduct
 doc: Computer System Product including Identifiying number queried from WMI.
 sources:
@@ -37,6 +39,7 @@ labels: [System]
 supported_os: [Windows]
 urls: ['http://msdn.microsoft.com/en-us/library/aa394105(v=vs.85).aspx']
 ---
+
 name: WMIDNSClientCache
 doc: DNS client cache via Windows Management Instrumentation (WMI).
 sources:
@@ -46,6 +49,7 @@ labels: [Network]
 supported_os: [Windows]
 urls: ['https://docs.microsoft.com/en-us/previous-versions/windows/desktop/dnsclientcimprov/msft-dnsclientcache']
 ---
+
 name: WMIDrivers
 doc: Installed drivers via Windows Management Instrumentation (WMI).
 sources:
@@ -55,6 +59,7 @@ sources:
 labels: [Software]
 supported_os: [Windows]
 ---
+
 name: WMIEnumerateASEC
 doc: Enumerate instances of ActiveScriptEventConsumer.
 sources:
@@ -62,6 +67,7 @@ sources:
   attributes: {query: SELECT * FROM ActiveScriptEventConsumer, base_object: 'winmgmts:\root\subscription'}
 supported_os: [Windows]
 ---
+
 name: WMIEnumerateCLEC
 doc: Enumerate instances of CommandLineEventConsumer.
 sources:
@@ -69,6 +75,7 @@ sources:
   attributes: {query: SELECT * FROM CommandLineEventConsumer, base_object: 'winmgmts:\root\subscription'}
 supported_os: [Windows]
 ---
+
 name: WMIHotFixes
 doc: Installed hotfixes via Windows Management Instrumentation (WMI).
 sources:
@@ -77,6 +84,7 @@ sources:
 labels: [Software]
 supported_os: [Windows]
 ---
+
 name: WMIInstalledSoftware
 doc: Installed software via Windows Management Instrumentation (WMI).
 sources:
@@ -86,6 +94,7 @@ sources:
 labels: [Software]
 supported_os: [Windows]
 ---
+
 name: WMILastBootupTime
 doc: Last system boot time (UTC) retrieved from WMI.
 sources:
@@ -95,6 +104,7 @@ labels: [System]
 supported_os: [Windows]
 urls: ['https://msdn.microsoft.com/en-us/library/windows/desktop/aa394239(v=vs.85).aspx']
 ---
+
 name: WMILogicalDisks
 doc: Disk information via Windows Management Instrumentation (WMI).
 sources:
@@ -104,6 +114,7 @@ labels: [System]
 supported_os: [Windows]
 urls: ['http://msdn.microsoft.com/en-us/library/aa394173(v=vs.85).aspx']
 ---
+
 name: WMILoggedOnSessions
 doc: Logged on users queried from WMI.
 sources:
@@ -111,6 +122,7 @@ sources:
   attributes: {query: SELECT * FROM Win32_LogonSession}
 supported_os: [Windows]
 ---
+
 name: WMILoggedOnUsers
 doc: Logged on users queried from WMI.
 sources:
@@ -118,6 +130,7 @@ sources:
   attributes: {query: SELECT * FROM Win32_LoggedonUser}
 supported_os: [Windows]
 ---
+
 name: WMILoginUsers
 doc: |
   Login Users via Windows Management Instrumentation (WMI).
@@ -130,6 +143,7 @@ sources:
 labels: [Software]
 supported_os: [Windows]
 ---
+
 name: WMINetNeighbors
 doc: TCP/IP neighbors via Windows Management Instrumentation (WMI).
 sources:
@@ -139,6 +153,7 @@ labels: [Network]
 supported_os: [Windows]
 urls: ['https://docs.microsoft.com/en-us/previous-versions/windows/desktop/nettcpipprov/msft-netneighbor']
 ---
+
 name: WMINetTCPConnections
 doc: TCP connections via Windows Management Instrumentation (WMI).
 sources:
@@ -148,6 +163,7 @@ labels: [Network]
 supported_os: [Windows]
 urls: ['https://docs.microsoft.com/en-us/previous-versions/windows/desktop/nettcpipprov/msft-nettcpconnection']
 ---
+
 name: WMINetUDPEndpoints
 doc: UDP endpoints via Windows Management Instrumentation (WMI).
 sources:
@@ -157,6 +173,7 @@ labels: [Network]
 supported_os: [Windows]
 urls: ['https://docs.microsoft.com/en-us/previous-versions/windows/desktop/nettcpipprov/msft-netudpendpoint']
 ---
+
 name: WMIOperatingSystem
 doc: Operating system installed on the computer via Windows Management Instrumentation (WMI).
 sources:
@@ -166,6 +183,7 @@ labels: [System]
 supported_os: [Windows]
 urls: ['https://docs.microsoft.com/en-us/windows/desktop/cimwin32prov/win32-operatingsystem']
 ---
+
 name: WMIPhysicalMemory
 doc: Physical memory information via Windows Management Instrumentation (WMI).
 sources:
@@ -175,6 +193,7 @@ labels: [System]
 supported_os: [Windows]
 urls: ["http://msdn.microsoft.com/en-us/library/aa394347%28v=vs.85%29.aspx"]
 ---
+
 name: WMIProcessList
 doc: Process listing via Windows Management Instrumentation (WMI).
 sources:
@@ -183,6 +202,7 @@ sources:
 labels: [Software]
 supported_os: [Windows]
 ---
+
 name: WMIProfileUsersHomeDir
 doc: |
   Get user homedir from Win32_UserProfile based on a known user's SID.
@@ -197,6 +217,7 @@ labels: [Users]
 supported_os: [Windows]
 urls: ['http://msdn.microsoft.com/en-us/library/windows/desktop/ee886409(v=vs.85).aspx']
 ---
+
 name: WMIScheduledTasks
 doc: Scheduled tasks that are registered on the computer via Windows Management Instrumentation (WMI).
 sources:
@@ -206,6 +227,7 @@ labels: [System]
 supported_os: [Windows]
 urls: ['https://wutils.com/wmi/root/microsoft/windows/taskscheduler/msft_scheduledtask/']
 ---
+
 name: WMIServices
 doc: Services queried from WMI.
 sources:
@@ -213,6 +235,7 @@ sources:
   attributes: {query: SELECT * FROM Win32_Service}
 supported_os: [Windows]
 ---
+
 name: WMIStartupCommands
 doc: Commands that run automatically when a user logs onto the computer system via Windows Management Instrumentation (WMI).
 sources:
@@ -222,6 +245,7 @@ labels: [System]
 supported_os: [Windows]
 urls: ['https://docs.microsoft.com/en-us/windows/desktop/cimwin32prov/win32-startupcommand']
 ---
+
 name: WMIUsers
 doc: |
   Users via Windows Management Instrumentation (WMI).
@@ -236,6 +260,7 @@ labels: [Users]
 supported_os: [Windows]
 urls: ['http://msdn.microsoft.com/en-us/library/windows/desktop/aa394507(v=vs.85).aspx']
 ---
+
 name: WMIVolumeShadowCopies
 doc: A List of Volume Shadow Copies from WMI.
 sources:
@@ -244,6 +269,7 @@ sources:
 labels: [System]
 supported_os: [Windows]
 ---
+
 name: WMICCMRUA
 doc: Enumerate instances of CCM_RecentlyUsedApps.
 sources:

@@ -11,6 +11,7 @@ sources:
 supported_os: [Darwin]
 urls: ['https://media.kasperskycontenthub.com/wp-content/uploads/sites/43/2018/03/20133638/unveilingthemask_v1.0.pdf']
 ---
+
 name: KasperskyCaretoIndicators
 doc: Kaspersky Careto Indicators.
 sources:
@@ -23,6 +24,7 @@ sources:
 supported_os: [Windows, Darwin]
 urls: ['https://media.kasperskycontenthub.com/wp-content/uploads/sites/43/2018/03/20133638/unveilingthemask_v1.0.pdf']
 ---
+
 name: KasperskyCaretoWindowsFiles
 doc: Windows Careto IOCs.
 sources:
@@ -86,6 +88,7 @@ sources:
 supported_os: [Windows]
 urls: ['https://media.kasperskycontenthub.com/wp-content/uploads/sites/43/2018/03/20133638/unveilingthemask_v1.0.pdf']
 ---
+
 name: KasperskyCaretoWindowsRegKeys
 doc: Windows Careto IOCs.
 sources:
