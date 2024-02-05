@@ -1285,6 +1285,7 @@ supported_os:
 urls:
 - https://forensics.wiki/mac_os_x_10.9_artifacts_location#autorun-locations
 - https://developer.apple.com/library/archive/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/StartupItems.html
+---
 
 name: MacOSSystemPolicySQLiteDatabaseFile
 doc: System policy database.
@@ -1296,6 +1297,7 @@ sources:
     - /var/db/SystemPolicy
 supported_os:
 - Darwin
+---
 
 name: MacOSTextReplacementsSQLiteDatabaseFile
 doc: Text replacements SQLite database file.
@@ -1306,6 +1308,7 @@ sources:
     - '%%users.homedir%%/Library/KeyboardServices/TextReplacements.db'
 supported_os:
 - Darwin
+---
 
 name: MacOSWalletSQLiteDatabaseFile
 doc: Apple Wallet SQLite database file.
@@ -1316,6 +1319,7 @@ sources:
     - '%%users.homedir%%/Library/Passes/passes23.sqlite'
 supported_os:
 - Darwin
+---
 
 name: MacOSXcodeiOSDeviceLogsSQLiteDatabaseFile
 doc: Xcode iOS Device Logs SQLite database file.
@@ -1326,6 +1330,7 @@ sources:
     - '%%users.homedir%%/Library/Developer/Xcode/iOS Device Logs/iOS Device Logs *.db'
 supported_os:
 - Darwin
+---
 
 name: MacOSAddressBookImagesSQLiteDatabaseFile
 doc: Address book images SQLite database file.
@@ -1337,6 +1342,7 @@ sources:
     - '%%users.homedir%%/Library/Developer/CoreSimulator/Devices/*/data/Library/AddressBook/AddressBookImages.sqlitedb'
 supported_os:
 - Darwin
+---
 
 name: SafariAutoFillCorrectionsSQLiteDatabaseFile
 doc: Safari browser auto-fill corrections SQLite database file.
@@ -1350,6 +1356,7 @@ supported_os:
 - Darwin
 urls:
 - https://forensics.wiki/apple_safari
+---
 
 name: MacOSSiriSuggestionsSnippetsSQLiteDatabaseFile
 doc: Siri suggestions snippets SQLite database file.
@@ -1361,6 +1368,7 @@ sources:
     - '%%users.homedir%%/Library/Suggestions/snippets.db-wal'
 supported_os:
 - Darwin
+---
 
 name: SafariCookies
 doc: Safari Cookies database.
@@ -1374,6 +1382,7 @@ supported_os:
 - Darwin
 urls:
 - https://forensics.wiki/apple_safari
+---
 
 name: MacOSSiriSuggestionsPendingQueueSQLiteDatabaseFile
 doc: Siri suggestions pending queue SQLite database file.
@@ -1385,6 +1394,7 @@ sources:
     - '%%users.homedir%%/Library/Suggestions/pending/queue.db-wal'
 supported_os:
 - Darwin
+---
 
 name: MacOSSiriAnalyticsSQLiteDatabaseFile
 doc: Siri analytics SQLite database file.
@@ -1395,6 +1405,7 @@ sources:
     - '%%users.homedir%%/Library/Assistant/SiriAnalytics.db'
 supported_os:
 - Darwin
+---
 
 name: MacOSUserLocalItemsKeychainRecordsSQLiteDatabaseFile
 doc: User (iCloud) local items keychain encrypted records SQLite database file.
@@ -1429,6 +1440,7 @@ sources:
     - /var/db/CoreDuet/coreduetd.db
 supported_os:
 - Darwin
+---
 
 name: MacOSGatekeeperOpaqueConfigurationSQLiteDatabaseFile
 doc: Gatekeeper opaque configuration database.
@@ -1440,6 +1452,7 @@ sources:
     - /var/db/gkopaque.bundle/Contents/Resources/gkopaque.db
 supported_os:
 - Darwin
+---
 
 name: MacOSUserKeychainOCSPCacheSQLiteDatabaseFile
 doc: User keychain CRL and OCSP cache SQLite database file.
@@ -1450,6 +1463,7 @@ sources:
     - '%%users.homedir%%/Library/Keychains/*/ocspcache.sqlite3'
 supported_os:
 - Darwin
+---
 
 name: MacOSUserLocalItemsKeychainKeybagSQLiteDatabaseFile
 doc: User (iCloud) local items keychain keybag SQLite database file.
@@ -1483,6 +1497,7 @@ sources:
     - '%%users.homedir%%/Library/Caches/*/Cache.db'
 supported_os:
 - Darwin
+---
 
 name: SafariPerSitePreferencesSQLiteDatabaseFile
 doc: Safari browser per site preferences SQLite database file.
@@ -1496,6 +1511,7 @@ supported_os:
 - Darwin
 urls:
 - https://forensics.wiki/apple_safari
+---
 
 name: MacOSApplePushServiceSQLiteDatabaseFile
 doc: Apple push service SQLite database file.
@@ -1506,6 +1522,7 @@ sources:
     - /Library/Application Support/ApplePushService/aps.db
 supported_os:
 - Darwin
+---
 
 name: MacOSCallHistoryCacheSQLiteDatabaseFile
 doc: Call history cache SQLite database file.
@@ -1516,6 +1533,7 @@ sources:
     - '%%users.homedir%%/Library/Application Support/CallHistoryDB/CallHistory.storedata'
 supported_os:
 - Darwin
+---
 
 name: WebKitPubSubSQLiteDatabaseFile
 doc: WebKit RSS feed (PubSub) SQLite database file.
@@ -1538,6 +1556,7 @@ sources:
     - /var/db/DuetActivityScheduler/DuetActivitySchedulerClassC.db
 supported_os:
 - Darwin
+---
 
 name: MacOSUserDockDesktopPictureSQLiteDatabaseFile
 doc: Dock user desktop picture SQLite database file.

@@ -20,7 +20,7 @@ sources:
 - type: ARTIFACT_GROUP
   attributes:
     names:
-    - 'ChromiumBasedBrowsersHistory'
+    - 'ChromiumBasedBrowsersHistoryDatabaseFile'
     - 'FirefoxHistory'
     - 'InternetExplorerHistory'
     - 'OperaHistoryFile'
@@ -224,7 +224,6 @@ sources:
 - type: FILE
   attributes:
     paths:
-exit status 76
     - '%%users.homedir%%/Caches/Chromium/*/Cache/*'
     - '%%users.homedir%%/Caches/Google/Chrome/*/Cache/*'
     - '%%users.homedir%%/Caches/Google/Chrome Canary/*/Cache/*'
@@ -232,8 +231,7 @@ exit status 76
     - '%%users.homedir%%/Library/Application Support/BraveSoftware/Brave-Browser/*/Cache/*'
     - '%%users.homedir%%/Library/Application Support/BraveSoftware/Brave-Browser/Cache/*'
     - '%%users.homedir%%/Library/Application Support/BraveSoftware/Brave-Browser/*/GPUCache/*'
-    - '%%users.homedir%%/Library/Application Support/BraveSoftware/Brave-Browser/*/Media
-      Cache/*'
+    - '%%users.homedir%%/Library/Application Support/BraveSoftware/Brave-Browser/*/Media Cache/*'
     - '%%users.homedir%%/Library/Application Support/BraveSoftware/Brave-Browser/PnaclTranslationCache/*'
     - '%%users.homedir%%/Library/Application Support/Chromium/*/Application Cache/*'
     - '%%users.homedir%%/Library/Application Support/Chromium/*/Application Cache/Cache/*'
@@ -1567,6 +1565,7 @@ supported_os:
 - Darwin
 - Linux
 - Windows
+---
 
 name: ChromiumBasedBrowsersFaviconsDatabaseFile
 doc: |
@@ -1800,6 +1799,7 @@ supported_os:
 - Windows
 urls:
 - https://forensics.wiki/mozilla_firefox
+---
 
 name: FirefoxDownloads
 doc: Firefox browser downloads (downloads.sqlite).
@@ -1834,6 +1834,7 @@ supported_os:
 - Windows
 urls:
 - https://forensics.wiki/mozilla_firefox
+---
 
 name: SafariCloudAutoFillCorrectionsSQLiteDatabaseFile
 doc: Safari browser cloud auto-fill corrections SQLite database file.
