@@ -11,46 +11,7 @@ of the artifacts definitions.
 ## Revision history
 
 | Version  | Author    | Date           | Comments                                                                            |
-|---
----
----
--|---
----
----
---|---
----
----
----
----
--|---
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
--|
+|----------|-----------|----------------|-------------------------------------------------------------------------------------|
 | 0.0.1    | G. Castle | November 2014  | Initial version.                                                                    |
 | 0.0.2    | G. Castle | December 2014  | Minor format changes.                                                               |
 | 0.0.3    | J.B. Metz | April 2015     | Merged style guide and artifact definitions wiki page.                              |
@@ -146,102 +107,7 @@ urls: [ 'http://www.forensicswiki.org/wiki/Windows_XML_Event_Log_(EVTX)' ]
 The artifact definition can have the following values:
 
 | Key            | Description                                                                                                                                                                                                                                                                  |
-|---
----
----
----
----
--|---
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
-|
+|----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | name           | The name. An unique string that identifies the artifact definition. Also see section: [Name](#Name).                                                                                                                                                                         |
 | doc            | The description (or documentation). A human readable string that describes the artifact definition. *Style note*: Typically one line description of the artifact, mentioning important caveats. If more description is necessary, use the [Long docs form](#long-docs-form). |
 | sources        | A list of source definitions. See section: [sources](#sources).                                                                                                                                                                                                              |
@@ -323,61 +189,7 @@ one-line {} form should be used to save on line breaks as below:
 ```
 
 | Key            | Description                                                                                                                                        |
-|---
----
----
----
----
--|---
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
--|
+|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
 | attributes     | A dictionary of keyword attributes specific to the type of source definition.                                                                      |
 | type           | The source type.                                                                                                                                   |
 | provides       | Optional list of dictonaries that describe knowledge base entries that this artifact can supply. See section: [Source provides](#source-provides). |
@@ -389,42 +201,7 @@ one-line {} form should be used to save on line breaks as below:
 Currently the following different source types are defined:
 
 | Value          | Description                                                                               |
-|---
----
----
----
----
--|---
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
--|
+|----------------|-------------------------------------------------------------------------------------------|
 | ARTIFACT_GROUP | A source that consists of a group of other artifacts.                                     |
 | COMMAND        | A source that consists of the output of a command.                                        |
 | DIRECTORY      | A source that consists of the file listing of a directories.                              |
@@ -468,47 +245,7 @@ sources:
 ```
 
 | Key     | Description                                                                                                    |
-|---
----
----
-|---
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
--|
+|---------|----------------------------------------------------------------------------------------------------------------|
 | key     | Defines the knowledge base key that is provided.                                                               |
 | wmi_key | Required for provides in WMI sources, disallowed otherwise. WMI object key to select the provided value.       |
 | regex   | Optional regular expression to filter the provided data. The first capturing group defines the provided value. |
@@ -516,26 +253,7 @@ sources:
 Provided values are dependent on the source type as follows:
 
 | Type           | Added entries to knowledge base          |
-|---
----
----
----
----
--|---
----
----
----
----
----
----
----
----
----
----
----
----
----
-|
+|----------------|------------------------------------------|
 | COMMAND        | The lines of the stdout of the command.  |
 | FILE           | The lines of the file content.           |
 | PATH           | The defined paths.                       |
@@ -559,63 +277,7 @@ artifacts e.g.
 Where `attributes` can contain the following values:
 
 | Value | Description                                                                                                                                                        |
-|---
----
--|---
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
---|
+|-------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | names | A list of artifact definition names that make up this "composite" artifact. This can also be used to group multiple artifact definitions into one for convenience. |
 
 ### Command source
@@ -632,59 +294,7 @@ The command source is a source that consists of the output of a command e.g.
 Where `attributes` can contain the following values:
 
 | Value | Description                                                                                                                                          |
-|---
----
--|---
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
-|
+|-------|------------------------------------------------------------------------------------------------------------------------------------------------------|
 | args  | A list arguments to pass to the command.                                                                                                             |
 | cmd   | The path of the command. The path can either be relative or absolute. Handling of relative paths depends on the application processing the artifact. |
 
@@ -702,88 +312,7 @@ The directory source is a source that consists of a file listing of directory co
 Where `attributes` can contain the following values:
 
 | Value     | Description                                                                                                                                                                                                                               |
-|---
----
----
---|---
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
--|
+|-----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | paths     | A list of file paths that can potentially be collected. These paths should be absolute. The paths can use parameter expansion e.g. `%%environ_systemroot%%`. See section: [Parameter expansion and globs](#parameter-expansion-and-globs) |
 | separator | Optional path separator e.g. '\' for Windows systems.                                                                                                                                                                                     |
 
@@ -800,88 +329,7 @@ The file source is a source that consists of the binary contents of files e.g.
 Where `attributes` can contain the following values:
 
 | Value     | Description                                                                                                                                                                                                                               |
-|---
----
----
---|---
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
--|
+|-----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | paths     | A list of file paths that can potentially be collected. These paths should be absolute. The paths can use parameter expansion e.g. `%%environ_systemroot%%`. See section: [Parameter expansion and globs](#parameter-expansion-and-globs) |
 | separator | Optional path separator e.g. '\' for Windows systems.                                                                                                                                                                                     |
 
@@ -899,86 +347,7 @@ The path source is a source that consists of a list of paths e.g.
 Where `attributes` can contain the following values:
 
 | Value     | Description                                                                                                                                                                                                                         |
-|---
----
----
---|---
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
--|
+|-----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | paths     | A list of file paths that can potentially be collected. These paths can should be absolute. The paths can use parameter expansion e.g. `%%environ_systemroot%%`. See section: [Parameter expansion and globs](#parameter-expansion) |
 | separator | Optional path separator e.g. '\' for Windows systems.                                                                                                                                                                               |
 
@@ -1000,75 +369,7 @@ sources:
 Where `attributes` can contain the following values:
 
 | Value | Description                                                                                                                                                                                            |
-|---
----
--|---
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
---|
+|-------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | keys  | A list of Windows Registry key paths that can potentially be collected. The paths can use parameter expansion e.g. `%%users.sid%%`. See section: [Parameter expansion and globs](#parameter-expansion) |
 
 ### Windows Registry value source
@@ -1086,85 +387,7 @@ Windows registry values e.g.
 Where `attributes` can contain the following values:
 
 | Value           | Description                                                                                                                                                                                                               |
-|---
----
----
----
----
---|---
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
-|
+|-----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | key_value_pairs | A list of Windows Registry key paths and value names that can potentially be collected. The key path can use parameter expansion e.g. `%%users.sid%%`. See section: [Parameter expansion and globs](#parameter-expansion) |
 
 ### Windows Management Instrumentation (WMI) query source
@@ -1181,76 +404,7 @@ consists of the output of a Windows Management Instrumentation (WMI) query e.g.
 Where `attributes` can contain the following values:
 
 | Value       | Description                                                                                                                                                                                       |
-|---
----
----
----
--|---
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
-|
+|-------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | query       | The Windows Management Instrumentation (WMI) query. The query can use parameter expansion e.g. `%%users.username%%`. See section: [Parameter expansion and globs](#parameter-expansion-and-globs) |
 | base_object | Optional WMI base object e.g. `winmgmts:\root\SecurityCenter2`                                                                                                                                    |
 
@@ -1274,32 +428,7 @@ supported_os: [ Darwin, Linux, Windows ]
 Currently the following different labels are pre-defined:
 
 | Value               | Description                                            |
-|---
----
----
----
----
----
----
-|---
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
---|
+|---------------------|--------------------------------------------------------|
 | Antivirus           | Antivirus related artifacts, e.g. quarantine files.    |
 | Authentication      | Authentication artifacts.                              |
 | Browser             | Web Browser artifacts.                                 |
