@@ -42,7 +42,6 @@ sources:
         - '%%windows_event_logs%%\*.evt'
         - '%%windows_event_logs%%\*.evtx'
       separator: '\'
-    provides: [ { key: windows_event_logs } ]
 supported_os: [Windows]
 urls: ['https://artifacts-kb.readthedocs.io/en/latest/sources/windows/EventLog.html']
 ---
